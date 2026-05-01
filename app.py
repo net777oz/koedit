@@ -56,17 +56,24 @@ def get_images():
         p2_static = f'{i:04d}_v2_static.png'
         p2_anim = f'{i:04d}_v2_anim.webp'
         
-        p = os.path.join(EXPORT_DIR, p1_static)
-        if os.path.exists(p):
-            img_info = {
-                'id': i,
-                'name': names.get(i, ''),
-                'p1_static': f'/export/{p1_static}',
-                'p1_anim': f'/export/{p1_anim}' if os.path.exists(os.path.join(EXPORT_DIR, p1_anim)) else None,
-                'p2_static': f'/export/{p2_static}' if os.path.exists(os.path.join(EXPORT_DIR, p2_static)) else None,
-                'p2_anim': f'/export/{p2_anim}' if os.path.exists(os.path.join(EXPORT_DIR, p2_anim)) else None
-            }
-            imgs.append(img_info)
+        # Determine P1 source
+        p1_src = f'/export/{p1_static}'
+        if not os.path.exists(os.path.join(EXPORT_DIR, p1_static)):
+            # Fallback to originals if not in export
+            if os.path.exists(os.path.join(BASE_DIR, 'originals', p1_static)):
+                p1_src = f'/originals/{p1_static}'
+            else:
+                continue # Skip if nowhere found
+        
+        img_info = {
+            'id': i,
+            'name': names.get(i, ''),
+            'p1_static': p1_src,
+            'p1_anim': f'/export/{p1_anim}' if os.path.exists(os.path.join(EXPORT_DIR, p1_anim)) else None,
+            'p2_static': f'/export/{p2_static}' if os.path.exists(os.path.join(EXPORT_DIR, p2_static)) else None,
+            'p2_anim': f'/export/{p2_anim}' if os.path.exists(os.path.join(EXPORT_DIR, p2_anim)) else None
+        }
+        imgs.append(img_info)
     return jsonify({'images': imgs})
 
 @app.route('/api/upload_v1/<int:image_id>', methods=['POST'])
@@ -161,6 +168,9 @@ def get_characters(): return jsonify(scenario_engine.CHAR_NAMES)
 
 @app.route('/export/<filename>')
 def serve_export(filename): return send_from_directory(EXPORT_DIR, filename)
+
+@app.route('/originals/<filename>')
+def serve_originals(filename): return send_from_directory(os.path.join(BASE_DIR, 'originals'), filename)
 
 @app.route('/emulator')
 @app.route('/emulator/')
