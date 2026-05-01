@@ -1,4 +1,4 @@
-import os, shutil, subprocess, zipfile, math
+import os, shutil, subprocess, zipfile, math, json
 from flask import Flask, render_template, request, jsonify, send_from_directory, redirect
 from PIL import Image
 import scenario_engine
@@ -46,10 +46,12 @@ def home(): return redirect('/editor')
 @app.route('/editor/')
 def index(): return render_template('index.html')
 
+import sys
+
 def get_in_game_names():
     mapping_path = os.path.join(BASE_DIR, 'game_data', 'char_mapping.json')
     if not os.path.exists(mapping_path):
-        print(f"Error: Mapping file not found at {mapping_path}")
+        sys.stderr.write(f"Error: Mapping file not found at {mapping_path}\n")
         return {}
     try:
         with open(mapping_path, 'r', encoding='utf-8') as f:
@@ -58,12 +60,17 @@ def get_in_game_names():
             data = z.read('KOUKAI2.DAT')
         
         names = {}
+        count = 0
         for entry in mapping:
             try:
                 base = entry['offset']
                 size = entry['size']
                 pid = entry['portrait_id']
                 
+                # We skip if this portrait already has a name (prioritize first occurrences)
+                if (pid + 1) in names:
+                    continue
+
                 if size == 50:
                     first = data[base+20 : base+33].split(b'\x00')[0]
                     last = data[base+33 : base+46].split(b'\x00')[0]
@@ -79,12 +86,14 @@ def get_in_game_names():
                 
                 if name:
                     names[pid + 1] = name
+                    count += 1
             except Exception as e:
-                print(f"Error processing entry {entry.get('name')}: {e}")
+                sys.stderr.write(f"Error processing entry: {e}\n")
                 continue
+        sys.stderr.write(f"Successfully loaded {count} unique portrait names.\n")
         return names
     except Exception as e:
-        print(f"Global error in get_in_game_names: {e}")
+        sys.stderr.write(f"Global error in get_in_game_names: {e}\n")
         return {}
 
 @app.route('/api/images')
