@@ -7,3 +7,4 @@ __pycache__/
 web_client/dist/
 .env
 .antigravity/
+venv/
