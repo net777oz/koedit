@@ -8,3 +8,4 @@ web_client/dist/
 .env
 .antigravity/
 venv/
+export/
