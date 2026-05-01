@@ -47,72 +47,55 @@ def home(): return redirect('/editor')
 def index(): return render_template('index.html')
 
 def get_in_game_names():
+    mapping_path = os.path.join(BASE_DIR, 'game_data', 'char_mapping.json')
+    if not os.path.exists(mapping_path): return {}
     try:
+        with open(mapping_path, 'r', encoding='utf-8') as f:
+            mapping = json.load(f)
         with zipfile.ZipFile(GAME_DATA_ZIP, 'r') as z:
             data = z.read('KOUKAI2.DAT')
-            names = {}
-            # 1. Scan 128 Mates (50 bytes each, starts at 0x0695)
-            # Entry structure: Stats(20), First(13), Last(13), PortraitID(1), ...
-            for i in range(128):
-                base = 0x0695 + (i * 50)
-                if base + 50 > len(data): break
-                
-                # Portrait ID is at offset 46 of the 50-byte entry
-                pid = data[base + 46]
-                
-                # Names start at offset 20
+        
+        names = {}
+        for entry in mapping:
+            base = entry['offset']
+            size = entry['size']
+            pid = entry['portrait_id']
+            # Re-read name from data in case it was updated
+            if size == 50:
                 first = data[base+20 : base+33].split(b'\x00')[0]
                 last = data[base+33 : base+46].split(b'\x00')[0]
                 try: 
                     fname = first.decode('cp949').strip()
                     lname = last.decode('cp949').strip()
-                    full_name = f"{fname} {lname}".strip()
-                    # Map the name to the Portrait ID (pid + 1 as we use 1-indexed for images)
-                    if full_name:
-                        names[pid + 1] = full_name
-                except: pass
+                    name = f"{fname} {lname}".strip()
+                except: name = entry['name']
+            else: # NPC 17 bytes
+                name_chunk = data[base : base+11].split(b'\x00')[0]
+                try: name = name_chunk.decode('cp949').strip()
+                except: name = entry['name']
             
-            # 2. Special NPCs/Barmaids (17 bytes starting at 0x1FAA)
-            # These usually have fixed portrait IDs in the higher range (101-128)
-            # We'll map them sequentially for now if they don't have explicit IDs
-            for i in range(60): 
-                base = 0x1FAA + (i * 17)
-                if base + 17 > len(data): break
-                name_chunk = data[base:base+11].split(b'\x00')[0]
-                try:
-                    name = name_chunk.decode('cp949').strip()
-                    # If this slot in names is empty, fill it
-                    # Barmaids/NPCs often start appearing from ID 90+ in gallery
-                    target_pid = 90 + i
-                    if target_pid not in names:
-                        names[target_pid] = name
-                except: pass
-            return names
+            # Map by Portrait ID (1-indexed for images)
+            names[pid + 1] = name
+        return names
     except: return {}
 
 @app.route('/api/images')
 def get_images():
     imgs = []
-    hardcoded_names = {
-        1: '조안 페레로', 2: '카탈리나 에란초', 3: '오토 스피노라', 4: '에르네스트 로페스', 5: '피에트로 콘티', 6: '알리 베자스'
-    }
     game_names = get_in_game_names()
-    
     for i in range(1, 129):
         p1_static = f'{i:04d}.png'
         p1_anim = f'{i:04d}_v1_anim.webp'
         p2_static = f'{i:04d}_v2_static.png'
         p2_anim = f'{i:04d}_v2_anim.webp'
-        
         p1_src = f'/export/{p1_static}'
         if not os.path.exists(os.path.join(EXPORT_DIR, p1_static)):
             if os.path.exists(os.path.join(BASE_DIR, 'originals', p1_static)):
                 p1_src = f'/originals/{p1_static}'
             else: continue
-            
         img_info = {
             'id': i,
-            'name': game_names.get(i, hardcoded_names.get(i, '')),
+            'name': game_names.get(i, f"Portrait {i}"),
             'p1_static': p1_src,
             'p1_anim': f'/export/{p1_anim}' if os.path.exists(os.path.join(EXPORT_DIR, p1_anim)) else None,
             'p2_static': f'/export/{p2_static}' if os.path.exists(os.path.join(EXPORT_DIR, p2_static)) else None,
@@ -126,40 +109,31 @@ def update_name(image_id):
     full_name = request.json.get('name', '')
     if not full_name: return jsonify({'error': 'empty name'}), 400
     
-    parts = full_name.split(' ', 1)
-    fname = parts[0]
-    lname = parts[1] if len(parts) > 1 else ""
-    
+    mapping_path = os.path.join(BASE_DIR, 'game_data', 'char_mapping.json')
     try:
+        with open(mapping_path, 'r', encoding='utf-8') as f:
+            mapping = json.load(f)
         with zipfile.ZipFile(GAME_DATA_ZIP, 'r') as z:
             data = bytearray(z.read('KOUKAI2.DAT'))
         
         target_pid = image_id - 1
         updated = False
-        
-        # 1. Search in 128 Mates
-        for i in range(128):
-            base = 0x0695 + (i * 50)
-            if base + 50 > len(data): break
-            
-            # Check if this character uses the target portrait
-            if data[base + 46] == target_pid:
-                f_enc = fname.encode('cp949', 'ignore')[:12]
-                data[base+20 : base+33] = f_enc.ljust(13, b'\x00')
-                l_enc = lname.encode('cp949', 'ignore')[:12]
-                data[base+33 : base+46] = l_enc.ljust(13, b'\x00')
+        for entry in mapping:
+            if entry['portrait_id'] == target_pid:
+                base = entry['offset']
+                if entry['size'] == 50:
+                    parts = full_name.split(' ', 1)
+                    fname = parts[0]
+                    lname = parts[1] if len(parts) > 1 else ""
+                    f_enc = fname.encode('cp949', 'ignore')[:12]
+                    data[base+20 : base+33] = f_enc.ljust(13, b'\x00')
+                    l_enc = lname.encode('cp949', 'ignore')[:12]
+                    data[base+33 : base+46] = l_enc.ljust(13, b'\x00')
+                else: # NPC 17 bytes
+                    encoded = full_name.encode('cp949', 'ignore')[:10]
+                    data[base : base+11] = encoded.ljust(11, b'\x00')
                 updated = True
         
-        # 2. Search in Special NPCs/Barmaids (if target_pid is high)
-        # (Assuming they are mapped starting from 90 if no explicit ID)
-        if not updated and image_id >= 90:
-            idx_in_npc = image_id - 90
-            base = 0x1FAA + (idx_in_npc * 17)
-            if base + 17 <= len(data):
-                encoded = full_name.encode('cp949', 'ignore')[:10]
-                data[base : base+11] = encoded.ljust(11, b'\x00')
-                updated = True
-
         if not updated:
             return jsonify({'error': 'no character found for this portrait'}), 404
             

@@ -1,0 +1,1346 @@
+[
+  {
+    "char_index": 0,
+    "type": "sailor",
+    "offset": 1685,
+    "size": 50,
+    "portrait_id": 0,
+    "name": "조안 페레로"
+  },
+  {
+    "char_index": 1,
+    "type": "sailor",
+    "offset": 1735,
+    "size": 50,
+    "portrait_id": 1,
+    "name": "카탈리나 에란초"
+  },
+  {
+    "char_index": 2,
+    "type": "sailor",
+    "offset": 1785,
+    "size": 50,
+    "portrait_id": 2,
+    "name": "옷토 스피노라"
+  },
+  {
+    "char_index": 3,
+    "type": "sailor",
+    "offset": 1835,
+    "size": 50,
+    "portrait_id": 3,
+    "name": "에르네스트 로페스"
+  },
+  {
+    "char_index": 4,
+    "type": "sailor",
+    "offset": 1885,
+    "size": 50,
+    "portrait_id": 4,
+    "name": "피에트로 콘티"
+  },
+  {
+    "char_index": 5,
+    "type": "sailor",
+    "offset": 1935,
+    "size": 50,
+    "portrait_id": 5,
+    "name": "알 베자스"
+  },
+  {
+    "char_index": 6,
+    "type": "sailor",
+    "offset": 1985,
+    "size": 50,
+    "portrait_id": 61,
+    "name": "시몬 세게이라"
+  },
+  {
+    "char_index": 7,
+    "type": "sailor",
+    "offset": 2035,
+    "size": 50,
+    "portrait_id": 62,
+    "name": "루이 코스타"
+  },
+  {
+    "char_index": 8,
+    "type": "sailor",
+    "offset": 2085,
+    "size": 50,
+    "portrait_id": 36,
+    "name": "로렌소 핀트"
+  },
+  {
+    "char_index": 9,
+    "type": "sailor",
+    "offset": 2135,
+    "size": 50,
+    "portrait_id": 190,
+    "name": "로포 페레이라"
+  },
+  {
+    "char_index": 10,
+    "type": "sailor",
+    "offset": 2185,
+    "size": 50,
+    "portrait_id": 63,
+    "name": "라파엘 셀란"
+  },
+  {
+    "char_index": 11,
+    "type": "sailor",
+    "offset": 2235,
+    "size": 50,
+    "portrait_id": 133,
+    "name": "디에고 소사"
+  },
+  {
+    "char_index": 12,
+    "type": "sailor",
+    "offset": 2285,
+    "size": 50,
+    "portrait_id": 226,
+    "name": "알퐁소 안드레드"
+  },
+  {
+    "char_index": 13,
+    "type": "sailor",
+    "offset": 2335,
+    "size": 50,
+    "portrait_id": 64,
+    "name": "가르시아 알바레스"
+  },
+  {
+    "char_index": 14,
+    "type": "sailor",
+    "offset": 2385,
+    "size": 50,
+    "portrait_id": 108,
+    "name": "곤사로 실베이라"
+  },
+  {
+    "char_index": 15,
+    "type": "sailor",
+    "offset": 2435,
+    "size": 50,
+    "portrait_id": 65,
+    "name": "에스테반 오르테가"
+  },
+  {
+    "char_index": 16,
+    "type": "sailor",
+    "offset": 2485,
+    "size": 50,
+    "portrait_id": 214,
+    "name": "스테판 페론"
+  },
+  {
+    "char_index": 17,
+    "type": "sailor",
+    "offset": 2535,
+    "size": 50,
+    "portrait_id": 175,
+    "name": "페론소 아기레"
+  },
+  {
+    "char_index": 18,
+    "type": "sailor",
+    "offset": 2585,
+    "size": 50,
+    "portrait_id": 66,
+    "name": "발보아 오리드"
+  },
+  {
+    "char_index": 19,
+    "type": "sailor",
+    "offset": 2635,
+    "size": 50,
+    "portrait_id": 67,
+    "name": "제곱 포르툰드"
+  },
+  {
+    "char_index": 20,
+    "type": "sailor",
+    "offset": 2685,
+    "size": 50,
+    "portrait_id": 68,
+    "name": "우고 몬카다"
+  },
+  {
+    "char_index": 21,
+    "type": "sailor",
+    "offset": 2735,
+    "size": 50,
+    "portrait_id": 83,
+    "name": "페드로 나발로"
+  },
+  {
+    "char_index": 22,
+    "type": "sailor",
+    "offset": 2785,
+    "size": 50,
+    "portrait_id": 145,
+    "name": "베르나르 로요라"
+  },
+  {
+    "char_index": 23,
+    "type": "sailor",
+    "offset": 2835,
+    "size": 50,
+    "portrait_id": 69,
+    "name": "에르난 베리오"
+  },
+  {
+    "char_index": 24,
+    "type": "sailor",
+    "offset": 2885,
+    "size": 50,
+    "portrait_id": 73,
+    "name": "우즌 카이브"
+  },
+  {
+    "char_index": 25,
+    "type": "sailor",
+    "offset": 2935,
+    "size": 50,
+    "portrait_id": 242,
+    "name": "이스칼 야사르"
+  },
+  {
+    "char_index": 26,
+    "type": "sailor",
+    "offset": 2985,
+    "size": 50,
+    "portrait_id": 70,
+    "name": "카라 룸루"
+  },
+  {
+    "char_index": 27,
+    "type": "sailor",
+    "offset": 3035,
+    "size": 50,
+    "portrait_id": 71,
+    "name": "다라 쉰"
+  },
+  {
+    "char_index": 28,
+    "type": "sailor",
+    "offset": 3085,
+    "size": 50,
+    "portrait_id": 72,
+    "name": "쉬나인 파샤"
+  },
+  {
+    "char_index": 29,
+    "type": "sailor",
+    "offset": 3135,
+    "size": 50,
+    "portrait_id": 73,
+    "name": "거쉰 케말"
+  },
+  {
+    "char_index": 30,
+    "type": "sailor",
+    "offset": 3185,
+    "size": 50,
+    "portrait_id": 242,
+    "name": "아프멧 무히딘"
+  },
+  {
+    "char_index": 31,
+    "type": "sailor",
+    "offset": 3235,
+    "size": 50,
+    "portrait_id": 188,
+    "name": "사림 고브데"
+  },
+  {
+    "char_index": 32,
+    "type": "sailor",
+    "offset": 3285,
+    "size": 50,
+    "portrait_id": 74,
+    "name": "다니엘 미르자"
+  },
+  {
+    "char_index": 33,
+    "type": "sailor",
+    "offset": 3335,
+    "size": 50,
+    "portrait_id": 75,
+    "name": "조셉 이스트만"
+  },
+  {
+    "char_index": 34,
+    "type": "sailor",
+    "offset": 3385,
+    "size": 50,
+    "portrait_id": 233,
+    "name": "토마스 그레샴"
+  },
+  {
+    "char_index": 35,
+    "type": "sailor",
+    "offset": 3435,
+    "size": 50,
+    "portrait_id": 76,
+    "name": "알프레드 로우"
+  },
+  {
+    "char_index": 36,
+    "type": "sailor",
+    "offset": 3485,
+    "size": 50,
+    "portrait_id": 235,
+    "name": "에드문드 하베이"
+  },
+  {
+    "char_index": 37,
+    "type": "sailor",
+    "offset": 3535,
+    "size": 50,
+    "portrait_id": 77,
+    "name": "로버트 와일드"
+  },
+  {
+    "char_index": 38,
+    "type": "sailor",
+    "offset": 3585,
+    "size": 50,
+    "portrait_id": 78,
+    "name": "빅터 러셀"
+  },
+  {
+    "char_index": 39,
+    "type": "sailor",
+    "offset": 3635,
+    "size": 50,
+    "portrait_id": 179,
+    "name": "윌리암 크라이브"
+  },
+  {
+    "char_index": 40,
+    "type": "sailor",
+    "offset": 3685,
+    "size": 50,
+    "portrait_id": 166,
+    "name": "월터 로렌스"
+  },
+  {
+    "char_index": 41,
+    "type": "sailor",
+    "offset": 3735,
+    "size": 50,
+    "portrait_id": 219,
+    "name": "찰스 그라프튼"
+  },
+  {
+    "char_index": 42,
+    "type": "sailor",
+    "offset": 3785,
+    "size": 50,
+    "portrait_id": 79,
+    "name": "구이드 벤소"
+  },
+  {
+    "char_index": 43,
+    "type": "sailor",
+    "offset": 3835,
+    "size": 50,
+    "portrait_id": 60,
+    "name": "조셉페 루드윅스"
+  },
+  {
+    "char_index": 44,
+    "type": "sailor",
+    "offset": 3885,
+    "size": 50,
+    "portrait_id": 136,
+    "name": "카미로 사보나로라"
+  },
+  {
+    "char_index": 45,
+    "type": "sailor",
+    "offset": 3935,
+    "size": 50,
+    "portrait_id": 80,
+    "name": "조반니 베세리스"
+  },
+  {
+    "char_index": 46,
+    "type": "sailor",
+    "offset": 3985,
+    "size": 50,
+    "portrait_id": 81,
+    "name": "안드레아 그리마니"
+  },
+  {
+    "char_index": 47,
+    "type": "sailor",
+    "offset": 4035,
+    "size": 50,
+    "portrait_id": 12,
+    "name": "가브리엘 카르도치"
+  },
+  {
+    "char_index": 48,
+    "type": "sailor",
+    "offset": 4085,
+    "size": 50,
+    "portrait_id": 62,
+    "name": "아코스타 발바리고"
+  },
+  {
+    "char_index": 49,
+    "type": "sailor",
+    "offset": 4135,
+    "size": 50,
+    "portrait_id": 82,
+    "name": "안드레아 도리아"
+  },
+  {
+    "char_index": 50,
+    "type": "sailor",
+    "offset": 4185,
+    "size": 50,
+    "portrait_id": 153,
+    "name": "호안 바스케스"
+  },
+  {
+    "char_index": 51,
+    "type": "sailor",
+    "offset": 4235,
+    "size": 50,
+    "portrait_id": 83,
+    "name": "휴고 올잭"
+  },
+  {
+    "char_index": 52,
+    "type": "sailor",
+    "offset": 4285,
+    "size": 50,
+    "portrait_id": 36,
+    "name": "크리스찬 그로티스"
+  },
+  {
+    "char_index": 53,
+    "type": "sailor",
+    "offset": 4335,
+    "size": 50,
+    "portrait_id": 94,
+    "name": "유리스 휴이겐"
+  },
+  {
+    "char_index": 54,
+    "type": "sailor",
+    "offset": 4385,
+    "size": 50,
+    "portrait_id": 14,
+    "name": "모리스 라이덴"
+  },
+  {
+    "char_index": 55,
+    "type": "sailor",
+    "offset": 4435,
+    "size": 50,
+    "portrait_id": 29,
+    "name": "피에토르 웬후크"
+  },
+  {
+    "char_index": 56,
+    "type": "sailor",
+    "offset": 4485,
+    "size": 50,
+    "portrait_id": 84,
+    "name": "빌렘 헤인"
+  },
+  {
+    "char_index": 57,
+    "type": "sailor",
+    "offset": 4535,
+    "size": 50,
+    "portrait_id": 85,
+    "name": "줄리안 페르메르"
+  },
+  {
+    "char_index": 58,
+    "type": "sailor",
+    "offset": 4585,
+    "size": 50,
+    "portrait_id": 7,
+    "name": "코르네리스 핸드릭"
+  },
+  {
+    "char_index": 59,
+    "type": "sailor",
+    "offset": 4635,
+    "size": 50,
+    "portrait_id": 86,
+    "name": "잭스 브룸"
+  },
+  {
+    "char_index": 60,
+    "type": "sailor",
+    "offset": 4685,
+    "size": 50,
+    "portrait_id": 87,
+    "name": "안토니오 칸"
+  },
+  {
+    "char_index": 61,
+    "type": "sailor",
+    "offset": 4735,
+    "size": 50,
+    "portrait_id": 184,
+    "name": "피에르 루글란"
+  },
+  {
+    "char_index": 62,
+    "type": "sailor",
+    "offset": 4785,
+    "size": 50,
+    "portrait_id": 71,
+    "name": "루이스 스콧트"
+  },
+  {
+    "char_index": 63,
+    "type": "sailor",
+    "offset": 4835,
+    "size": 50,
+    "portrait_id": 223,
+    "name": "존 데이비스"
+  },
+  {
+    "char_index": 64,
+    "type": "sailor",
+    "offset": 4885,
+    "size": 50,
+    "portrait_id": 88,
+    "name": "하이레딘 레이스"
+  },
+  {
+    "char_index": 65,
+    "type": "sailor",
+    "offset": 4935,
+    "size": 50,
+    "portrait_id": 89,
+    "name": "아이딘 레이스"
+  },
+  {
+    "char_index": 66,
+    "type": "sailor",
+    "offset": 4985,
+    "size": 50,
+    "portrait_id": 90,
+    "name": "마호메드 샤룩"
+  },
+  {
+    "char_index": 67,
+    "type": "sailor",
+    "offset": 5035,
+    "size": 50,
+    "portrait_id": 91,
+    "name": "울구 아리"
+  },
+  {
+    "char_index": 68,
+    "type": "sailor",
+    "offset": 5085,
+    "size": 50,
+    "portrait_id": 179,
+    "name": "잭 라캄"
+  },
+  {
+    "char_index": 69,
+    "type": "sailor",
+    "offset": 5135,
+    "size": 50,
+    "portrait_id": 31,
+    "name": "로코 알렘켈"
+  },
+  {
+    "char_index": 70,
+    "type": "sailor",
+    "offset": 5185,
+    "size": 50,
+    "portrait_id": 32,
+    "name": "엔리코 마리오네"
+  },
+  {
+    "char_index": 71,
+    "type": "sailor",
+    "offset": 5235,
+    "size": 50,
+    "portrait_id": 33,
+    "name": "도밍고 마나나"
+  },
+  {
+    "char_index": 72,
+    "type": "sailor",
+    "offset": 5285,
+    "size": 50,
+    "portrait_id": 34,
+    "name": "프랑코 사누드"
+  },
+  {
+    "char_index": 73,
+    "type": "sailor",
+    "offset": 5335,
+    "size": 50,
+    "portrait_id": 35,
+    "name": "안드레아 기지"
+  },
+  {
+    "char_index": 74,
+    "type": "sailor",
+    "offset": 5385,
+    "size": 50,
+    "portrait_id": 26,
+    "name": "에드먼드 길버트"
+  },
+  {
+    "char_index": 75,
+    "type": "sailor",
+    "offset": 5435,
+    "size": 50,
+    "portrait_id": 36,
+    "name": "마슈 로이"
+  },
+  {
+    "char_index": 76,
+    "type": "sailor",
+    "offset": 5485,
+    "size": 50,
+    "portrait_id": 38,
+    "name": "카미로 스테파노"
+  },
+  {
+    "char_index": 77,
+    "type": "sailor",
+    "offset": 5535,
+    "size": 50,
+    "portrait_id": 39,
+    "name": "로이드 스탓텐"
+  },
+  {
+    "char_index": 78,
+    "type": "sailor",
+    "offset": 5585,
+    "size": 50,
+    "portrait_id": 40,
+    "name": "자한 사림"
+  },
+  {
+    "char_index": 79,
+    "type": "sailor",
+    "offset": 5635,
+    "size": 50,
+    "portrait_id": 41,
+    "name": "필리 레이스"
+  },
+  {
+    "char_index": 80,
+    "type": "sailor",
+    "offset": 5685,
+    "size": 50,
+    "portrait_id": 48,
+    "name": "하프멧 그라니에"
+  },
+  {
+    "char_index": 81,
+    "type": "sailor",
+    "offset": 5735,
+    "size": 50,
+    "portrait_id": 18,
+    "name": "알 파시"
+  },
+  {
+    "char_index": 82,
+    "type": "sailor",
+    "offset": 5785,
+    "size": 50,
+    "portrait_id": 49,
+    "name": "자가노스 베이"
+  },
+  {
+    "char_index": 83,
+    "type": "sailor",
+    "offset": 5835,
+    "size": 50,
+    "portrait_id": 42,
+    "name": "페르난 핀트"
+  },
+  {
+    "char_index": 84,
+    "type": "sailor",
+    "offset": 5885,
+    "size": 50,
+    "portrait_id": 77,
+    "name": "조안 카스트로"
+  },
+  {
+    "char_index": 85,
+    "type": "sailor",
+    "offset": 5935,
+    "size": 50,
+    "portrait_id": 44,
+    "name": "미구엘 레아르"
+  },
+  {
+    "char_index": 86,
+    "type": "sailor",
+    "offset": 5985,
+    "size": 50,
+    "portrait_id": 201,
+    "name": "디오고 파군데스"
+  },
+  {
+    "char_index": 87,
+    "type": "sailor",
+    "offset": 6035,
+    "size": 50,
+    "portrait_id": 43,
+    "name": "달테 페레이라"
+  },
+  {
+    "char_index": 88,
+    "type": "sailor",
+    "offset": 6085,
+    "size": 50,
+    "portrait_id": 68,
+    "name": "마누엘 페레스토레로"
+  },
+  {
+    "char_index": 89,
+    "type": "sailor",
+    "offset": 6135,
+    "size": 50,
+    "portrait_id": 188,
+    "name": "프란시스코 알바레스"
+  },
+  {
+    "char_index": 90,
+    "type": "sailor",
+    "offset": 6185,
+    "size": 50,
+    "portrait_id": 140,
+    "name": "루이 파레이로"
+  },
+  {
+    "char_index": 91,
+    "type": "sailor",
+    "offset": 6235,
+    "size": 50,
+    "portrait_id": 46,
+    "name": "판 코사"
+  },
+  {
+    "char_index": 92,
+    "type": "sailor",
+    "offset": 6285,
+    "size": 50,
+    "portrait_id": 166,
+    "name": "마르틴 발보아"
+  },
+  {
+    "char_index": 93,
+    "type": "sailor",
+    "offset": 6335,
+    "size": 50,
+    "portrait_id": 47,
+    "name": "베르나르도 고메스"
+  },
+  {
+    "char_index": 94,
+    "type": "sailor",
+    "offset": 6385,
+    "size": 50,
+    "portrait_id": 45,
+    "name": "디에고 베라스케스"
+  },
+  {
+    "char_index": 95,
+    "type": "sailor",
+    "offset": 6435,
+    "size": 50,
+    "portrait_id": 32,
+    "name": "판피로 오리드"
+  },
+  {
+    "char_index": 96,
+    "type": "sailor",
+    "offset": 6485,
+    "size": 50,
+    "portrait_id": 4,
+    "name": "아론소 멘도사"
+  },
+  {
+    "char_index": 97,
+    "type": "sailor",
+    "offset": 6535,
+    "size": 50,
+    "portrait_id": 51,
+    "name": "안소니 존슨"
+  },
+  {
+    "char_index": 98,
+    "type": "sailor",
+    "offset": 6585,
+    "size": 50,
+    "portrait_id": 50,
+    "name": "로렌스 에드워드"
+  },
+  {
+    "char_index": 99,
+    "type": "sailor",
+    "offset": 6635,
+    "size": 50,
+    "portrait_id": 52,
+    "name": "라울 핏치"
+  },
+  {
+    "char_index": 100,
+    "type": "sailor",
+    "offset": 6685,
+    "size": 50,
+    "portrait_id": 91,
+    "name": "안토니 샤리"
+  },
+  {
+    "char_index": 101,
+    "type": "sailor",
+    "offset": 6735,
+    "size": 50,
+    "portrait_id": 53,
+    "name": "알로이지 조반니"
+  },
+  {
+    "char_index": 102,
+    "type": "sailor",
+    "offset": 6785,
+    "size": 50,
+    "portrait_id": 54,
+    "name": "장 람지오"
+  },
+  {
+    "char_index": 103,
+    "type": "sailor",
+    "offset": 6835,
+    "size": 50,
+    "portrait_id": 55,
+    "name": "니콜로 스테파노"
+  },
+  {
+    "char_index": 104,
+    "type": "sailor",
+    "offset": 6885,
+    "size": 50,
+    "portrait_id": 126,
+    "name": "알렉산드 밧조"
+  },
+  {
+    "char_index": 105,
+    "type": "sailor",
+    "offset": 6935,
+    "size": 50,
+    "portrait_id": 10,
+    "name": "알베로 스키랏치"
+  },
+  {
+    "char_index": 106,
+    "type": "sailor",
+    "offset": 6985,
+    "size": 50,
+    "portrait_id": 56,
+    "name": "코넬리우스 쇼텐"
+  },
+  {
+    "char_index": 107,
+    "type": "sailor",
+    "offset": 7035,
+    "size": 50,
+    "portrait_id": 37,
+    "name": "암브로이즈 에인거"
+  },
+  {
+    "char_index": 108,
+    "type": "sailor",
+    "offset": 7085,
+    "size": 50,
+    "portrait_id": 56,
+    "name": "게오르그 슈파이야"
+  },
+  {
+    "char_index": 109,
+    "type": "sailor",
+    "offset": 7135,
+    "size": 50,
+    "portrait_id": 57,
+    "name": "한스 슈타텐"
+  },
+  {
+    "char_index": 110,
+    "type": "sailor",
+    "offset": 7185,
+    "size": 50,
+    "portrait_id": 58,
+    "name": "야곱 울웨이크"
+  },
+  {
+    "char_index": 111,
+    "type": "sailor",
+    "offset": 7235,
+    "size": 50,
+    "portrait_id": 31,
+    "name": "장 알퐁스"
+  },
+  {
+    "char_index": 112,
+    "type": "sailor",
+    "offset": 7285,
+    "size": 50,
+    "portrait_id": 94,
+    "name": "안토니오 핀데아도"
+  },
+  {
+    "char_index": 113,
+    "type": "sailor",
+    "offset": 7335,
+    "size": 50,
+    "portrait_id": 212,
+    "name": "체자레 페델리티"
+  },
+  {
+    "char_index": 114,
+    "type": "sailor",
+    "offset": 7385,
+    "size": 50,
+    "portrait_id": 204,
+    "name": "프란차 로로노아"
+  },
+  {
+    "char_index": 115,
+    "type": "sailor",
+    "offset": 7435,
+    "size": 50,
+    "portrait_id": 253,
+    "name": "헨리 만스펠"
+  },
+  {
+    "char_index": 116,
+    "type": "sailor",
+    "offset": 7485,
+    "size": 50,
+    "portrait_id": 227,
+    "name": "개빈 핏셔"
+  },
+  {
+    "char_index": 117,
+    "type": "sailor",
+    "offset": 7535,
+    "size": 50,
+    "portrait_id": 151,
+    "name": "에드워드 단피어"
+  },
+  {
+    "char_index": 118,
+    "type": "sailor",
+    "offset": 7585,
+    "size": 50,
+    "portrait_id": 60,
+    "name": "로버트 로우"
+  },
+  {
+    "char_index": 119,
+    "type": "sailor",
+    "offset": 7635,
+    "size": 50,
+    "portrait_id": 246,
+    "name": "리차드 헉슬리"
+  },
+  {
+    "char_index": 120,
+    "type": "sailor",
+    "offset": 7685,
+    "size": 50,
+    "portrait_id": 186,
+    "name": "집사 마르코"
+  },
+  {
+    "char_index": 121,
+    "type": "sailor",
+    "offset": 7735,
+    "size": 50,
+    "portrait_id": 0,
+    "name": "모데나공 호안"
+  },
+  {
+    "char_index": 122,
+    "type": "sailor",
+    "offset": 7785,
+    "size": 50,
+    "portrait_id": 199,
+    "name": "노"
+  },
+  {
+    "char_index": 123,
+    "type": "sailor",
+    "offset": 7835,
+    "size": 50,
+    "portrait_id": 0,
+    "name": "＠肩 \u0001"
+  },
+  {
+    "char_index": 124,
+    "type": "sailor",
+    "offset": 7885,
+    "size": 50,
+    "portrait_id": 255,
+    "name": "㈎ㄳ굴"
+  },
+  {
+    "char_index": 125,
+    "type": "sailor",
+    "offset": 7935,
+    "size": 50,
+    "portrait_id": 174,
+    "name": "제"
+  },
+  {
+    "char_index": 126,
+    "type": "sailor",
+    "offset": 7985,
+    "size": 50,
+    "portrait_id": 0,
+    "name": "스 총독"
+  },
+  {
+    "char_index": 127,
+    "type": "sailor",
+    "offset": 8035,
+    "size": 50,
+    "portrait_id": 0,
+    "name": ""
+  },
+  {
+    "char_index": 0,
+    "type": "npc",
+    "offset": 8106,
+    "size": 17,
+    "portrait_id": 90,
+    "name": "프 박사"
+  },
+  {
+    "char_index": 2,
+    "type": "npc",
+    "offset": 8140,
+    "size": 17,
+    "portrait_id": 92,
+    "name": "o루치아"
+  },
+  {
+    "char_index": 3,
+    "type": "npc",
+    "offset": 8157,
+    "size": 17,
+    "portrait_id": 93,
+    "name": "?라디아"
+  },
+  {
+    "char_index": 4,
+    "type": "npc",
+    "offset": 8174,
+    "size": 17,
+    "portrait_id": 94,
+    "name": "=프로라"
+  },
+  {
+    "char_index": 5,
+    "type": "npc",
+    "offset": 8191,
+    "size": 17,
+    "portrait_id": 95,
+    "name": "테레사"
+  },
+  {
+    "char_index": 6,
+    "type": "npc",
+    "offset": 8208,
+    "size": 17,
+    "portrait_id": 96,
+    "name": "\u000e마틸다"
+  },
+  {
+    "char_index": 7,
+    "type": "npc",
+    "offset": 8225,
+    "size": 17,
+    "portrait_id": 97,
+    "name": "지아나"
+  },
+  {
+    "char_index": 8,
+    "type": "npc",
+    "offset": 8242,
+    "size": 17,
+    "portrait_id": 98,
+    "name": "\u000e뮤리네"
+  },
+  {
+    "char_index": 9,
+    "type": "npc",
+    "offset": 8259,
+    "size": 17,
+    "portrait_id": 99,
+    "name": "-넬리"
+  },
+  {
+    "char_index": 10,
+    "type": "npc",
+    "offset": 8276,
+    "size": 17,
+    "portrait_id": 100,
+    "name": "9안나"
+  },
+  {
+    "char_index": 11,
+    "type": "npc",
+    "offset": 8293,
+    "size": 17,
+    "portrait_id": 101,
+    "name": "엘레느"
+  },
+  {
+    "char_index": 12,
+    "type": "npc",
+    "offset": 8310,
+    "size": 17,
+    "portrait_id": 102,
+    "name": "리리안"
+  },
+  {
+    "char_index": 13,
+    "type": "npc",
+    "offset": 8327,
+    "size": 17,
+    "portrait_id": 103,
+    "name": "완다"
+  },
+  {
+    "char_index": 14,
+    "type": "npc",
+    "offset": 8344,
+    "size": 17,
+    "portrait_id": 104,
+    "name": "*릴"
+  },
+  {
+    "char_index": 15,
+    "type": "npc",
+    "offset": 8361,
+    "size": 17,
+    "portrait_id": 105,
+    "name": "?크라우디"
+  },
+  {
+    "char_index": 16,
+    "type": "npc",
+    "offset": 8378,
+    "size": 17,
+    "portrait_id": 106,
+    "name": "-안나"
+  },
+  {
+    "char_index": 17,
+    "type": "npc",
+    "offset": 8395,
+    "size": 17,
+    "portrait_id": 107,
+    "name": "=나타리"
+  },
+  {
+    "char_index": 18,
+    "type": "npc",
+    "offset": 8412,
+    "size": 17,
+    "portrait_id": 108,
+    "name": "이사벨"
+  },
+  {
+    "char_index": 19,
+    "type": "npc",
+    "offset": 8429,
+    "size": 17,
+    "portrait_id": 109,
+    "name": "아메리아"
+  },
+  {
+    "char_index": 20,
+    "type": "npc",
+    "offset": 8446,
+    "size": 17,
+    "portrait_id": 110,
+    "name": "?실비아"
+  },
+  {
+    "char_index": 21,
+    "type": "npc",
+    "offset": 8463,
+    "size": 17,
+    "portrait_id": 111,
+    "name": "베리사"
+  },
+  {
+    "char_index": 22,
+    "type": "npc",
+    "offset": 8480,
+    "size": 17,
+    "portrait_id": 112,
+    "name": "<예루마"
+  },
+  {
+    "char_index": 23,
+    "type": "npc",
+    "offset": 8497,
+    "size": 17,
+    "portrait_id": 113,
+    "name": "\u001b하토라"
+  },
+  {
+    "char_index": 24,
+    "type": "npc",
+    "offset": 8514,
+    "size": 17,
+    "portrait_id": 114,
+    "name": "=하디"
+  },
+  {
+    "char_index": 25,
+    "type": "npc",
+    "offset": 8531,
+    "size": 17,
+    "portrait_id": 115,
+    "name": "%사라이"
+  },
+  {
+    "char_index": 26,
+    "type": "npc",
+    "offset": 8548,
+    "size": 17,
+    "portrait_id": 116,
+    "name": "쿤티"
+  },
+  {
+    "char_index": 27,
+    "type": "npc",
+    "offset": 8565,
+    "size": 17,
+    "portrait_id": 117,
+    "name": "-루키아"
+  },
+  {
+    "char_index": 28,
+    "type": "npc",
+    "offset": 8582,
+    "size": 17,
+    "portrait_id": 118,
+    "name": "티티스"
+  },
+  {
+    "char_index": 29,
+    "type": "npc",
+    "offset": 8599,
+    "size": 17,
+    "portrait_id": 119,
+    "name": "\u000e미화"
+  },
+  {
+    "char_index": 30,
+    "type": "npc",
+    "offset": 8616,
+    "size": 17,
+    "portrait_id": 120,
+    "name": "?오나쓰"
+  },
+  {
+    "char_index": 31,
+    "type": "npc",
+    "offset": 8633,
+    "size": 17,
+    "portrait_id": 121,
+    "name": "-"
+  },
+  {
+    "char_index": 33,
+    "type": "npc",
+    "offset": 8667,
+    "size": 17,
+    "portrait_id": 123,
+    "name": "\u0002\u0002\u0002\u0002\u0002\u0002\u0002\u0002\u0002\u0002"
+  },
+  {
+    "char_index": 34,
+    "type": "npc",
+    "offset": 8684,
+    "size": 17,
+    "portrait_id": 124,
+    "name": "\u0002\u0002\u0002\u0002\u0002\u0002\u0002\u0002\u0002\u0002\u0002"
+  },
+  {
+    "char_index": 47,
+    "type": "npc",
+    "offset": 8905,
+    "size": 17,
+    "portrait_id": 137,
+    "name": "P"
+  },
+  {
+    "char_index": 48,
+    "type": "npc",
+    "offset": 8922,
+    "size": 17,
+    "portrait_id": 138,
+    "name": "\u0014P"
+  },
+  {
+    "char_index": 49,
+    "type": "npc",
+    "offset": 8939,
+    "size": 17,
+    "portrait_id": 139,
+    "name": "0\u0015-"
+  },
+  {
+    "char_index": 50,
+    "type": "npc",
+    "offset": 8956,
+    "size": 17,
+    "portrait_id": 140,
+    "name": "1\u0016d"
+  },
+  {
+    "char_index": 55,
+    "type": "npc",
+    "offset": 9041,
+    "size": 17,
+    "portrait_id": 145,
+    "name": "2AU\u001e0\u0014P"
+  },
+  {
+    "char_index": 56,
+    "type": "npc",
+    "offset": 9058,
+    "size": 17,
+    "portrait_id": 146,
+    "name": "22AU\u001e0\u0015P"
+  },
+  {
+    "char_index": 58,
+    "type": "npc",
+    "offset": 9092,
+    "size": 17,
+    "portrait_id": 148,
+    "name": "d"
+  }
+]
