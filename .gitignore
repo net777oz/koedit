@@ -9,3 +9,4 @@ web_client/dist/
 .antigravity/
 venv/
 export/
+backup*
