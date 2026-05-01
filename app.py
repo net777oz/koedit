@@ -1,5 +1,5 @@
 import os, shutil, subprocess, zipfile, math
-from flask import Flask, render_template, request, jsonify, send_from_directory
+from flask import Flask, render_template, request, jsonify, send_from_directory, redirect
 from PIL import Image
 import scenario_engine
 
@@ -40,6 +40,10 @@ def create_breath_webp(input_path, output_path, frames=60, zoom_factor=0.08, pan
     except Exception as e: return False
 
 @app.route('/')
+def home(): return redirect('/editor')
+
+@app.route('/editor')
+@app.route('/editor/')
 def index(): return render_template('index.html')
 
 @app.route('/api/images')

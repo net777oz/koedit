@@ -54,7 +54,7 @@ echo -e "  ${GREEN}OK${NC} Flask started (PID: $FLASK_PID)"
 # 4. Wait for server (foreground)
 echo -e "\n${YELLOW}[4/4]${NC} Server running..."
 echo -e "\n${GREEN}=======================================${NC}"
-echo -e "${GREEN}  Editor:  ${NC}http://localhost:5005"
+echo -e "${GREEN}  Editor:  ${NC}http://localhost:5005/editor/"
 echo -e "${GREEN}  Game:    ${NC}http://localhost:5005/emulator/"
 echo -e "${GREEN}  Stop:    ${NC}Ctrl+C"
 echo -e "${GREEN}=======================================${NC}"
