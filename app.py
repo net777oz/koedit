@@ -48,7 +48,9 @@ def index(): return render_template('index.html')
 
 def get_in_game_names():
     mapping_path = os.path.join(BASE_DIR, 'game_data', 'char_mapping.json')
-    if not os.path.exists(mapping_path): return {}
+    if not os.path.exists(mapping_path):
+        print(f"Error: Mapping file not found at {mapping_path}")
+        return {}
     try:
         with open(mapping_path, 'r', encoding='utf-8') as f:
             mapping = json.load(f)
@@ -57,27 +59,33 @@ def get_in_game_names():
         
         names = {}
         for entry in mapping:
-            base = entry['offset']
-            size = entry['size']
-            pid = entry['portrait_id']
-            # Re-read name from data in case it was updated
-            if size == 50:
-                first = data[base+20 : base+33].split(b'\x00')[0]
-                last = data[base+33 : base+46].split(b'\x00')[0]
-                try: 
-                    fname = first.decode('cp949').strip()
-                    lname = last.decode('cp949').strip()
-                    name = f"{fname} {lname}".strip()
-                except: name = entry['name']
-            else: # NPC 17 bytes
-                name_chunk = data[base : base+11].split(b'\x00')[0]
-                try: name = name_chunk.decode('cp949').strip()
-                except: name = entry['name']
-            
-            # Map by Portrait ID (1-indexed for images)
-            names[pid + 1] = name
+            try:
+                base = entry['offset']
+                size = entry['size']
+                pid = entry['portrait_id']
+                
+                if size == 50:
+                    first = data[base+20 : base+33].split(b'\x00')[0]
+                    last = data[base+33 : base+46].split(b'\x00')[0]
+                    try: 
+                        fname = first.decode('cp949', 'ignore').strip()
+                        lname = last.decode('cp949', 'ignore').strip()
+                        name = f"{fname} {lname}".strip()
+                    except: name = entry.get('name', f"Char {pid}")
+                else:
+                    name_chunk = data[base : base+11].split(b'\x00')[0]
+                    try: name = name_chunk.decode('cp949', 'ignore').strip()
+                    except: name = entry.get('name', f"NPC {pid}")
+                
+                if name:
+                    names[pid + 1] = name
+            except Exception as e:
+                print(f"Error processing entry {entry.get('name')}: {e}")
+                continue
         return names
-    except: return {}
+    except Exception as e:
+        print(f"Global error in get_in_game_names: {e}")
+        return {}
 
 @app.route('/api/images')
 def get_images():
