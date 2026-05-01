@@ -43,4 +43,8 @@
 3.  브라우저에서 `http://localhost:5005` 접속
 
 ---
+## 🤝 Acknowledgement
+본 프로젝트는 **대항해시대 2 웹 버전** 프로젝트의 오픈 소스 결과물과 기술적 기반을 바탕으로 제작되었습니다. 뛰어난 에뮬레이션 환경과 기초 자산을 공유해 주신 원작 개발자분들과 커뮤니티의 기여에 깊은 존경과 감사를 표합니다.
+
+---
 *Developed with ❤️ by Antigravity AI for Koedit Community*
