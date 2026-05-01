@@ -49,13 +49,17 @@ def index(): return render_template('index.html')
 def get_in_game_names():
     try:
         with zipfile.ZipFile(GAME_DATA_ZIP, 'r') as z:
-            data = z.read('NAME.TBL')
+            data = z.read('KOUKAI2.DAT')
             names = {}
-            for i in range(192):
-                start = i * 13
-                end = start + 13
-                chunk = data[start:end].split(b'\x00')[0]
-                try: names[i + 1] = chunk.decode('cp949')
+            start_off = 0x06A9
+            for i in range(128):
+                base = start_off + (i * 50)
+                first = data[base:base+13].split(b'\x00')[0]
+                last = data[base+13:base+26].split(b'\x00')[0]
+                try: 
+                    fname = first.decode('cp949').strip()
+                    lname = last.decode('cp949').strip()
+                    names[i + 1] = f"{fname} {lname}".strip()
                 except: names[i + 1] = f"Unknown {i+1}"
             return names
     except: return {}
@@ -63,26 +67,20 @@ def get_in_game_names():
 @app.route('/api/images')
 def get_images():
     imgs = []
-    hardcoded_names = {
-        1: '조안 페레로', 2: '카탈리나 에란초', 3: '오토 스피노라', 4: '에르네스트 로페스', 5: '피에트로 콘티', 6: '알리 베자스'
-    }
     game_names = get_in_game_names()
-    
     for i in range(1, 129):
         p1_static = f'{i:04d}.png'
         p1_anim = f'{i:04d}_v1_anim.webp'
         p2_static = f'{i:04d}_v2_static.png'
         p2_anim = f'{i:04d}_v2_anim.webp'
-        
         p1_src = f'/export/{p1_static}'
         if not os.path.exists(os.path.join(EXPORT_DIR, p1_static)):
             if os.path.exists(os.path.join(BASE_DIR, 'originals', p1_static)):
                 p1_src = f'/originals/{p1_static}'
             else: continue
-            
         img_info = {
             'id': i,
-            'name': game_names.get(i, hardcoded_names.get(i, '')),
+            'name': game_names.get(i, f"Char {i}"),
             'p1_static': p1_src,
             'p1_anim': f'/export/{p1_anim}' if os.path.exists(os.path.join(EXPORT_DIR, p1_anim)) else None,
             'p2_static': f'/export/{p2_static}' if os.path.exists(os.path.join(EXPORT_DIR, p2_static)) else None,
@@ -93,25 +91,29 @@ def get_images():
 
 @app.route('/api/update_name/<int:image_id>', methods=['POST'])
 def update_name(image_id):
-    new_name = request.json.get('name', '')
-    if not new_name: return jsonify({'error': 'empty name'}), 400
+    full_name = request.json.get('name', '')
+    if not full_name: return jsonify({'error': 'empty name'}), 400
+    
+    parts = full_name.split(' ', 1)
+    fname = parts[0]
+    lname = parts[1] if len(parts) > 1 else ""
     
     try:
-        # 1. Read existing NAME.TBL
         with zipfile.ZipFile(GAME_DATA_ZIP, 'r') as z:
-            data = bytearray(z.read('NAME.TBL'))
-            
-        # 2. Update the 13-byte slot (image_id is 1-indexed, so -1)
-        idx = (image_id - 1) * 13
-        encoded = new_name.encode('cp949', 'ignore')[:12] # Max 12 bytes + null
-        new_chunk = encoded.ljust(13, b'\x00')
-        data[idx:idx+13] = new_chunk
+            data = bytearray(z.read('KOUKAI2.DAT'))
         
-        # 3. Write back to zip
+        idx = 0x06A9 + (image_id - 1) * 50
+        # Update First Name
+        f_enc = fname.encode('cp949', 'ignore')[:12]
+        data[idx:idx+13] = f_enc.ljust(13, b'\x00')
+        # Update Last Name
+        l_enc = lname.encode('cp949', 'ignore')[:12]
+        data[idx+13:idx+26] = l_enc.ljust(13, b'\x00')
+        
         tmp_zip = GAME_DATA_ZIP + '.tmp'
         with zipfile.ZipFile(GAME_DATA_ZIP, 'r') as zin, zipfile.ZipFile(tmp_zip, 'w') as zout:
             for item in zin.infolist():
-                if item.filename == 'NAME.TBL': zout.writestr('NAME.TBL', data)
+                if item.filename == 'KOUKAI2.DAT': zout.writestr('KOUKAI2.DAT', data)
                 else: zout.writestr(item, zin.read(item.filename))
         os.replace(tmp_zip, GAME_DATA_ZIP)
         return jsonify({'success': True})
