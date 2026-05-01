@@ -1,0 +1,3894 @@
+{
+  "node_0000": {
+    "id": "node_0000",
+    "offset": 0,
+    "commands": [
+      {
+        "op": "D4",
+        "bytes": "d4 01 06 03 53",
+        "offset": 31,
+        "text": "⚙️ 기타 동작 (D4)",
+        "significant": true
+      }
+    ],
+    "next_nodes": [
+      "node_002C"
+    ]
+  },
+  "node_002C": {
+    "id": "node_002C",
+    "offset": 44,
+    "commands": [
+      {
+        "op": "AC",
+        "bytes": "ac 00 00 40",
+        "offset": 46,
+        "text": "🔍 [조건 체크] node_002C 확인",
+        "significant": true
+      },
+      {
+        "op": "C0",
+        "bytes": "c0 00",
+        "offset": 54,
+        "text": "📍 위치: 중앙",
+        "significant": true
+      },
+      {
+        "op": "C8",
+        "bytes": "c8 00 00",
+        "offset": 56,
+        "text": "💬 \"아, $s중위님,\n아까 사누드중위님이 오셔서 당신을 찾으셨는데요.\"",
+        "significant": true
+      },
+      {
+        "op": "C0",
+        "bytes": "c0 00",
+        "offset": 60,
+        "text": "📍 위치: 중앙",
+        "significant": true
+      },
+      {
+        "op": "C8",
+        "bytes": "c8 00 01",
+        "offset": 62,
+        "text": "💬 \"즉각 사령실로 출두하라고 하셨는데요.\"",
+        "significant": true
+      }
+    ],
+    "next_nodes": [
+      "node_0040"
+    ]
+  },
+  "node_0040": {
+    "id": "node_0040",
+    "offset": 64,
+    "commands": [
+      {
+        "op": "C0",
+        "bytes": "c0 00",
+        "offset": 66,
+        "text": "📍 위치: 중앙",
+        "significant": true
+      },
+      {
+        "op": "C8",
+        "bytes": "c8 00 02",
+        "offset": 68,
+        "text": "💬 \"아까 신대륙에서 함대가 돌아왔는데, 그것과 뭔가 관계가 있는지 모르겠군요.\"",
+        "significant": true
+      },
+      {
+        "op": "AC",
+        "bytes": "ac 00 00 5e",
+        "offset": 73,
+        "text": "🔍 [조건 체크] node_0040 확인",
+        "significant": true
+      }
+    ],
+    "next_nodes": [
+      "node_005E"
+    ]
+  },
+  "node_004D": {
+    "id": "node_004D",
+    "offset": 77,
+    "commands": [
+      {
+        "op": "C0",
+        "bytes": "c0 00",
+        "offset": 81,
+        "text": "📍 위치: 중앙",
+        "significant": true
+      },
+      {
+        "op": "C8",
+        "bytes": "c8 00 03",
+        "offset": 83,
+        "text": "💬 \"어머나, $s중위님.\n오늘은 혼자이신가요？\"",
+        "significant": true
+      },
+      {
+        "op": "C0",
+        "bytes": "c0 00",
+        "offset": 87,
+        "text": "📍 위치: 중앙",
+        "significant": true
+      },
+      {
+        "op": "C8",
+        "bytes": "c8 00 04",
+        "offset": 89,
+        "text": "💬 \"그러고 보니, 아까 사누드중위님이 오셔서 당신을 찾으셨는데요.\"",
+        "significant": true
+      },
+      {
+        "op": "C0",
+        "bytes": "c0 00",
+        "offset": 93,
+        "text": "📍 위치: 중앙",
+        "significant": true
+      }
+    ],
+    "next_nodes": [
+      "node_005E"
+    ]
+  },
+  "node_005E": {
+    "id": "node_005E",
+    "offset": 94,
+    "commands": [
+      {
+        "op": "C8",
+        "bytes": "c8 00 05",
+        "offset": 95,
+        "text": "💬 \"그리곤 성쪽으로 향하는 것 같았으니까, 분명 성 오른쪽 사령실로 가신 걸겁니다.\"",
+        "significant": true
+      },
+      {
+        "op": "AD",
+        "bytes": "ad 04 00 78",
+        "offset": 102,
+        "text": "➔ [조건부 점프] node_005E로 이동",
+        "significant": true
+      }
+    ],
+    "next_nodes": [
+      "node_006D"
+    ]
+  },
+  "node_006D": {
+    "id": "node_006D",
+    "offset": 109,
+    "commands": [
+      {
+        "op": "C0",
+        "bytes": "c0 01",
+        "offset": 110,
+        "text": "📍 위치: 왼쪽",
+        "significant": true
+      },
+      {
+        "op": "CC",
+        "bytes": "cc 00 22",
+        "offset": 112,
+        "text": "👤 인물 34 등장",
+        "significant": true
+      },
+      {
+        "op": "C8",
+        "bytes": "c8 00 06",
+        "offset": 115,
+        "text": "💬 \"에제키엘 사령관이 토벌을 허락해 줄까？\"",
+        "significant": true
+      },
+      {
+        "op": "C0",
+        "bytes": "c0 02",
+        "offset": 119,
+        "text": "📍 위치: 오른쪽",
+        "significant": true
+      }
+    ],
+    "next_nodes": [
+      "node_0078"
+    ]
+  },
+  "node_0078": {
+    "id": "node_0078",
+    "offset": 120,
+    "commands": [
+      {
+        "op": "CC",
+        "bytes": "cc 00 01",
+        "offset": 121,
+        "text": "👤 조안 등장",
+        "significant": true
+      },
+      {
+        "op": "C8",
+        "bytes": "c8 00 07",
+        "offset": 124,
+        "text": "💬 \"그건………\n모르겠군요.\"",
+        "significant": true
+      },
+      {
+        "op": "AC",
+        "bytes": "ac 04 01 7e",
+        "offset": 128,
+        "text": "🔍 [조건 체크] node_0078 확인",
+        "significant": true
+      },
+      {
+        "op": "AC",
+        "bytes": "ac 03 00 8d",
+        "offset": 132,
+        "text": "🔍 [조건 체크] node_0078 확인",
+        "significant": true
+      },
+      {
+        "op": "C0",
+        "bytes": "c0 02",
+        "offset": 136,
+        "text": "📍 위치: 오른쪽",
+        "significant": true
+      },
+      {
+        "op": "CC",
+        "bytes": "cc 00 22",
+        "offset": 138,
+        "text": "👤 인물 34 등장",
+        "significant": true
+      }
+    ],
+    "next_nodes": [
+      "node_008D"
+    ]
+  },
+  "node_008D": {
+    "id": "node_008D",
+    "offset": 141,
+    "commands": [
+      {
+        "op": "C8",
+        "bytes": "c8 00 08",
+        "offset": 141,
+        "text": "💬 \"술집이라, $n, 뭔가 단서를 잡을수 있을 지 몰라.\"",
+        "significant": true
+      },
+      {
+        "op": "C0",
+        "bytes": "c0 02",
+        "offset": 153,
+        "text": "📍 위치: 오른쪽",
+        "significant": true
+      },
+      {
+        "op": "CC",
+        "bytes": "cc 00 22",
+        "offset": 155,
+        "text": "👤 인물 34 등장",
+        "significant": true
+      },
+      {
+        "op": "C8",
+        "bytes": "c8 00 09",
+        "offset": 158,
+        "text": "💬 \"아, 주인영감\n늘 바쁘신 것 같군요.\"",
+        "significant": true
+      },
+      {
+        "op": "C0",
+        "bytes": "c0 00",
+        "offset": 162,
+        "text": "📍 위치: 중앙",
+        "significant": true
+      },
+      {
+        "op": "C8",
+        "bytes": "c8 00 0a",
+        "offset": 164,
+        "text": "💬 \"어이, 사누드씨\n오랜만입니다.\"",
+        "significant": true
+      },
+      {
+        "op": "C0",
+        "bytes": "c0 02",
+        "offset": 168,
+        "text": "📍 위치: 오른쪽",
+        "significant": true
+      },
+      {
+        "op": "CC",
+        "bytes": "cc 00 22",
+        "offset": 170,
+        "text": "👤 인물 34 등장",
+        "significant": true
+      },
+      {
+        "op": "C8",
+        "bytes": "c8 00 0b",
+        "offset": 173,
+        "text": "💬 \"마딜라산 포도주 두잔 주세요.\"",
+        "significant": true
+      },
+      {
+        "op": "C0",
+        "bytes": "c0 02",
+        "offset": 178,
+        "text": "📍 위치: 오른쪽",
+        "significant": true
+      },
+      {
+        "op": "CC",
+        "bytes": "cc 00 01",
+        "offset": 180,
+        "text": "👤 조안 등장",
+        "significant": true
+      },
+      {
+        "op": "C8",
+        "bytes": "c8 00 0c",
+        "offset": 183,
+        "text": "💬 \"사누드, 난 오빠가 폭풍우로 난파했다고 생각안돼요.\"",
+        "significant": true
+      },
+      {
+        "op": "C0",
+        "bytes": "c0 01",
+        "offset": 187,
+        "text": "📍 위치: 왼쪽",
+        "significant": true
+      },
+      {
+        "op": "CC",
+        "bytes": "cc 00 22",
+        "offset": 189,
+        "text": "👤 인물 34 등장",
+        "significant": true
+      },
+      {
+        "op": "C8",
+        "bytes": "c8 00 0d",
+        "offset": 192,
+        "text": "💬 \"그래, 나도 동감이야.\"",
+        "significant": true
+      },
+      {
+        "op": "C0",
+        "bytes": "c0 02",
+        "offset": 196,
+        "text": "📍 위치: 오른쪽",
+        "significant": true
+      },
+      {
+        "op": "CC",
+        "bytes": "cc 00 01",
+        "offset": 198,
+        "text": "👤 조안 등장",
+        "significant": true
+      },
+      {
+        "op": "C8",
+        "bytes": "c8 00 0e",
+        "offset": 201,
+        "text": "💬 \"그래도 에스파니아함대가 당하다니！\"",
+        "significant": true
+      },
+      {
+        "op": "C0",
+        "bytes": "c0 01",
+        "offset": 205,
+        "text": "📍 위치: 왼쪽",
+        "significant": true
+      },
+      {
+        "op": "CC",
+        "bytes": "cc 00 22",
+        "offset": 207,
+        "text": "👤 인물 34 등장",
+        "significant": true
+      },
+      {
+        "op": "C8",
+        "bytes": "c8 00 0f",
+        "offset": 210,
+        "text": "💬 \"적은 분명 카리브해적이야.\n해군에 있는 한 언젠가는 만나겠지.\"",
+        "significant": true
+      },
+      {
+        "op": "C0",
+        "bytes": "c0 02",
+        "offset": 214,
+        "text": "📍 위치: 오른쪽",
+        "significant": true
+      },
+      {
+        "op": "CC",
+        "bytes": "cc 00 01",
+        "offset": 216,
+        "text": "👤 조안 등장",
+        "significant": true
+      },
+      {
+        "op": "C8",
+        "bytes": "c8 00 10",
+        "offset": 219,
+        "text": "💬 \"앞으로 어떻게 할꺼야？\"",
+        "significant": true
+      },
+      {
+        "op": "C0",
+        "bytes": "c0 01",
+        "offset": 223,
+        "text": "📍 위치: 왼쪽",
+        "significant": true
+      },
+      {
+        "op": "CC",
+        "bytes": "cc 00 22",
+        "offset": 225,
+        "text": "👤 인물 34 등장",
+        "significant": true
+      },
+      {
+        "op": "C8",
+        "bytes": "c8 00 11",
+        "offset": 228,
+        "text": "💬 \"우린 해군사관이야. 항해도 잦아.\n항구에 들를때마다 정보를 수집해가면 꼭 알 수 있을꺼야.\"",
+        "significant": true
+      },
+      {
+        "op": "C0",
+        "bytes": "c0 01",
+        "offset": 232,
+        "text": "📍 위치: 왼쪽",
+        "significant": true
+      },
+      {
+        "op": "CC",
+        "bytes": "cc 00 22",
+        "offset": 234,
+        "text": "👤 인물 34 등장",
+        "significant": true
+      },
+      {
+        "op": "C8",
+        "bytes": "c8 00 12",
+        "offset": 237,
+        "text": "💬 \"흠. $n, 저 사람들이 무언가 쑥덕거리고 있군.\"",
+        "significant": true
+      },
+      {
+        "op": "C0",
+        "bytes": "c0 01",
+        "offset": 242,
+        "text": "📍 위치: 왼쪽",
+        "significant": true
+      },
+      {
+        "op": "CC",
+        "bytes": "cc 00 2d",
+        "offset": 244,
+        "text": "👤 인물 45 등장",
+        "significant": true
+      },
+      {
+        "op": "C8",
+        "bytes": "c8 00 13",
+        "offset": 247,
+        "text": "💬 \"이봐 조반니, 자네 그 사건 들었나？\"",
+        "significant": true
+      },
+      {
+        "op": "C0",
+        "bytes": "c0 02",
+        "offset": 251,
+        "text": "📍 위치: 오른쪽",
+        "significant": true
+      },
+      {
+        "op": "CC",
+        "bytes": "cc 00 35",
+        "offset": 253,
+        "text": "👤 인물 53 등장",
+        "significant": true
+      },
+      {
+        "op": "C8",
+        "bytes": "c8 00 14",
+        "offset": 256,
+        "text": "💬 \"아, 카리브해에서 왕립함대가 사라져 버린 사건？\"",
+        "significant": true
+      }
+    ],
+    "next_nodes": [
+      "node_0101"
+    ]
+  },
+  "node_0101": {
+    "id": "node_0101",
+    "offset": 257,
+    "commands": [],
+    "next_nodes": [
+      "node_0104"
+    ]
+  },
+  "node_0104": {
+    "id": "node_0104",
+    "offset": 260,
+    "commands": [
+      {
+        "op": "C0",
+        "bytes": "c0 02",
+        "offset": 260,
+        "text": "📍 위치: 오른쪽",
+        "significant": true
+      },
+      {
+        "op": "CC",
+        "bytes": "cc 00 35",
+        "offset": 262,
+        "text": "👤 인물 53 등장",
+        "significant": true
+      },
+      {
+        "op": "C8",
+        "bytes": "c8 00 15",
+        "offset": 265,
+        "text": "💬 \"해적 「흑수염」짓이란 소문이야.\"",
+        "significant": true
+      },
+      {
+        "op": "C0",
+        "bytes": "c0 01",
+        "offset": 269,
+        "text": "📍 위치: 왼쪽",
+        "significant": true
+      },
+      {
+        "op": "CC",
+        "bytes": "cc 00 2d",
+        "offset": 271,
+        "text": "👤 인물 45 등장",
+        "significant": true
+      },
+      {
+        "op": "C8",
+        "bytes": "c8 00 16",
+        "offset": 274,
+        "text": "💬 \"아냐, 큰소리로 말 못해도 실은 그렇지 않다든데.\"",
+        "significant": true
+      },
+      {
+        "op": "C0",
+        "bytes": "c0 01",
+        "offset": 278,
+        "text": "📍 위치: 왼쪽",
+        "significant": true
+      },
+      {
+        "op": "CC",
+        "bytes": "cc 00 2d",
+        "offset": 280,
+        "text": "👤 인물 45 등장",
+        "significant": true
+      },
+      {
+        "op": "C8",
+        "bytes": "c8 00 17",
+        "offset": 283,
+        "text": "💬 \"이건 아는 선장한테 들은 얘긴데, 아무래도 포르투갈놈들이 한 몫 낀것 같대.\"",
+        "significant": true
+      },
+      {
+        "op": "C0",
+        "bytes": "c0 01",
+        "offset": 287,
+        "text": "📍 위치: 왼쪽",
+        "significant": true
+      },
+      {
+        "op": "CC",
+        "bytes": "cc 00 2d",
+        "offset": 289,
+        "text": "👤 인물 45 등장",
+        "significant": true
+      }
+    ],
+    "next_nodes": [
+      "node_0123"
+    ]
+  },
+  "node_0123": {
+    "id": "node_0123",
+    "offset": 291,
+    "commands": [
+      {
+        "op": "C8",
+        "bytes": "c8 00 18",
+        "offset": 292,
+        "text": "💬 \"그자말론 산토도밍고항에서 보급중에 놈들이 배를 뺏고 불질렀대.\"",
+        "significant": true
+      },
+      {
+        "op": "C0",
+        "bytes": "c0 01",
+        "offset": 296,
+        "text": "📍 위치: 왼쪽",
+        "significant": true
+      },
+      {
+        "op": "CC",
+        "bytes": "cc 00 2d",
+        "offset": 298,
+        "text": "👤 인물 45 등장",
+        "significant": true
+      },
+      {
+        "op": "C8",
+        "bytes": "c8 00 19",
+        "offset": 301,
+        "text": "💬 \"그때 적함 돛대에 마르타기사단의 붉은 십자가가 새겨있었다는군.\"",
+        "significant": true
+      },
+      {
+        "op": "C0",
+        "bytes": "c0 02",
+        "offset": 305,
+        "text": "📍 위치: 오른쪽",
+        "significant": true
+      },
+      {
+        "op": "CC",
+        "bytes": "cc 00 35",
+        "offset": 307,
+        "text": "👤 인물 53 등장",
+        "significant": true
+      },
+      {
+        "op": "C8",
+        "bytes": "c8 00 1a",
+        "offset": 310,
+        "text": "💬 \"뭐라고, 그렇다면 페레로공작가의 사설전함대란 말이야？\"",
+        "significant": true
+      },
+      {
+        "op": "C0",
+        "bytes": "c0 01",
+        "offset": 314,
+        "text": "📍 위치: 왼쪽",
+        "significant": true
+      },
+      {
+        "op": "CC",
+        "bytes": "cc 00 2d",
+        "offset": 316,
+        "text": "👤 인물 45 등장",
+        "significant": true
+      },
+      {
+        "op": "C8",
+        "bytes": "c8 00 1b",
+        "offset": 319,
+        "text": "💬 \"야, 도무지 포르투갈놈들은 신용할 수 없다니까.\"",
+        "significant": true
+      },
+      {
+        "op": "C0",
+        "bytes": "c0 02",
+        "offset": 323,
+        "text": "📍 위치: 오른쪽",
+        "significant": true
+      },
+      {
+        "op": "CC",
+        "bytes": "cc 00 01",
+        "offset": 325,
+        "text": "👤 조안 등장",
+        "significant": true
+      }
+    ],
+    "next_nodes": [
+      "node_0147"
+    ]
+  },
+  "node_0147": {
+    "id": "node_0147",
+    "offset": 327,
+    "commands": [
+      {
+        "op": "C8",
+        "bytes": "c8 00 1c",
+        "offset": 328,
+        "text": "💬 \"이봐요, 당신들 그 얘기 한번 더 해줄 수 없겠어요？\"",
+        "significant": true
+      },
+      {
+        "op": "C0",
+        "bytes": "c0 01",
+        "offset": 332,
+        "text": "📍 위치: 왼쪽",
+        "significant": true
+      },
+      {
+        "op": "CC",
+        "bytes": "cc 00 2d",
+        "offset": 334,
+        "text": "👤 인물 45 등장",
+        "significant": true
+      },
+      {
+        "op": "C8",
+        "bytes": "c8 00 1d",
+        "offset": 337,
+        "text": "💬 \"………\n당신 뭐야.\"",
+        "significant": true
+      },
+      {
+        "op": "C0",
+        "bytes": "c0 02",
+        "offset": 341,
+        "text": "📍 위치: 오른쪽",
+        "significant": true
+      },
+      {
+        "op": "CC",
+        "bytes": "cc 00 22",
+        "offset": 343,
+        "text": "👤 인물 34 등장",
+        "significant": true
+      },
+      {
+        "op": "C8",
+        "bytes": "c8 00 1e",
+        "offset": 346,
+        "text": "💬 \"에스파니아해군이요.\n지금 얘긴 정말이요？\"",
+        "significant": true
+      },
+      {
+        "op": "C0",
+        "bytes": "c0 01",
+        "offset": 350,
+        "text": "📍 위치: 왼쪽",
+        "significant": true
+      },
+      {
+        "op": "CC",
+        "bytes": "cc 00 2d",
+        "offset": 352,
+        "text": "👤 인물 45 등장",
+        "significant": true
+      },
+      {
+        "op": "C8",
+        "bytes": "c8 00 1f",
+        "offset": 355,
+        "text": "💬 \"정말인지 아닌지 난 모르오.\n단지 여기 선원사이에선 꽤 퍼져있는 소문이오.\"",
+        "significant": true
+      },
+      {
+        "op": "C0",
+        "bytes": "c0 02",
+        "offset": 359,
+        "text": "📍 위치: 오른쪽",
+        "significant": true
+      },
+      {
+        "op": "CC",
+        "bytes": "cc 00 01",
+        "offset": 361,
+        "text": "👤 조안 등장",
+        "significant": true
+      },
+      {
+        "op": "C8",
+        "bytes": "c8 00 20",
+        "offset": 364,
+        "text": "💬 \"사누드중위. 사령관께 지금 얘길 하겠어요.\n그리고………\"",
+        "significant": true
+      },
+      {
+        "op": "C0",
+        "bytes": "c0 01",
+        "offset": 368,
+        "text": "📍 위치: 왼쪽",
+        "significant": true
+      },
+      {
+        "op": "CC",
+        "bytes": "cc 00 22",
+        "offset": 370,
+        "text": "👤 인물 34 등장",
+        "significant": true
+      },
+      {
+        "op": "C8",
+        "bytes": "c8 00 21",
+        "offset": 373,
+        "text": "💬 \"그리고？\"",
+        "significant": true
+      },
+      {
+        "op": "C0",
+        "bytes": "c0 02",
+        "offset": 377,
+        "text": "📍 위치: 오른쪽",
+        "significant": true
+      },
+      {
+        "op": "CC",
+        "bytes": "cc 00 01",
+        "offset": 379,
+        "text": "👤 조안 등장",
+        "significant": true
+      }
+    ],
+    "next_nodes": [
+      "node_017E"
+    ]
+  },
+  "node_017E": {
+    "id": "node_017E",
+    "offset": 382,
+    "commands": [
+      {
+        "op": "C8",
+        "bytes": "c8 00 22",
+        "offset": 382,
+        "text": "💬 \"페레로토벌을 청원하겠어.\"",
+        "significant": true
+      },
+      {
+        "op": "AD",
+        "bytes": "ad 04 01 e9",
+        "offset": 391,
+        "text": "➔ [조건부 점프] node_017E로 이동",
+        "significant": true
+      },
+      {
+        "op": "CA",
+        "bytes": "ca 10 c0 02 cc",
+        "offset": 395,
+        "text": "⚙️ 기타 동작 (CA)",
+        "significant": true
+      },
+      {
+        "op": "C8",
+        "bytes": "c8 00 23",
+        "offset": 402,
+        "text": "💬 \"사령관님, 저 드릴 말씀이.\"",
+        "significant": true
+      },
+      {
+        "op": "C0",
+        "bytes": "c0 01",
+        "offset": 406,
+        "text": "📍 위치: 왼쪽",
+        "significant": true
+      },
+      {
+        "op": "CC",
+        "bytes": "cc 00 19",
+        "offset": 408,
+        "text": "👤 인물 25 등장",
+        "significant": true
+      },
+      {
+        "op": "C8",
+        "bytes": "c8 00 24",
+        "offset": 411,
+        "text": "💬 \"뭔가, 중위.\"",
+        "significant": true
+      },
+      {
+        "op": "C0",
+        "bytes": "c0 02",
+        "offset": 415,
+        "text": "📍 위치: 오른쪽",
+        "significant": true
+      },
+      {
+        "op": "CC",
+        "bytes": "cc 00 01",
+        "offset": 417,
+        "text": "👤 조안 등장",
+        "significant": true
+      },
+      {
+        "op": "C8",
+        "bytes": "c8 00 25",
+        "offset": 420,
+        "text": "💬 \"오라버니함대를 기습한 자를 알았습니다.\"",
+        "significant": true
+      },
+      {
+        "op": "C0",
+        "bytes": "c0 01",
+        "offset": 424,
+        "text": "📍 위치: 왼쪽",
+        "significant": true
+      },
+      {
+        "op": "CC",
+        "bytes": "cc 00 19",
+        "offset": 426,
+        "text": "👤 인물 25 등장",
+        "significant": true
+      },
+      {
+        "op": "C8",
+        "bytes": "c8 00 26",
+        "offset": 429,
+        "text": "💬 \" \n흠………\"",
+        "significant": true
+      },
+      {
+        "op": "C0",
+        "bytes": "c0 02",
+        "offset": 433,
+        "text": "📍 위치: 오른쪽",
+        "significant": true
+      },
+      {
+        "op": "CC",
+        "bytes": "cc 00 01",
+        "offset": 435,
+        "text": "👤 조안 등장",
+        "significant": true
+      },
+      {
+        "op": "C8",
+        "bytes": "c8 00 27",
+        "offset": 438,
+        "text": "💬 \"포르투갈재상 페레로공작과 아들 조안이 배후입니다.\"",
+        "significant": true
+      },
+      {
+        "op": "C0",
+        "bytes": "c0 02",
+        "offset": 442,
+        "text": "📍 위치: 오른쪽",
+        "significant": true
+      },
+      {
+        "op": "CC",
+        "bytes": "cc 00 01",
+        "offset": 444,
+        "text": "👤 조안 등장",
+        "significant": true
+      },
+      {
+        "op": "C8",
+        "bytes": "c8 00 28",
+        "offset": 447,
+        "text": "💬 \"제게, 군함 한척과 병사를 빌려 주십시요.\n오빠와 에르난의 원수를 치고 싶습니다.\n간청합니다. 사령관님.\"",
+        "significant": true
+      },
+      {
+        "op": "C0",
+        "bytes": "c0 01",
+        "offset": 451,
+        "text": "📍 위치: 왼쪽",
+        "significant": true
+      },
+      {
+        "op": "CC",
+        "bytes": "cc 00 19",
+        "offset": 453,
+        "text": "👤 인물 25 등장",
+        "significant": true
+      },
+      {
+        "op": "C8",
+        "bytes": "c8 00 29",
+        "offset": 456,
+        "text": "💬 \"$s중위,\n자넨 자신이 뭘 말하고 있는지 아나？\"",
+        "significant": true
+      },
+      {
+        "op": "C0",
+        "bytes": "c0 02",
+        "offset": 460,
+        "text": "📍 위치: 오른쪽",
+        "significant": true
+      },
+      {
+        "op": "CC",
+        "bytes": "cc 00 01",
+        "offset": 462,
+        "text": "👤 조안 등장",
+        "significant": true
+      },
+      {
+        "op": "C8",
+        "bytes": "c8 00 2a",
+        "offset": 465,
+        "text": "💬 \"그, 그건.\"",
+        "significant": true
+      },
+      {
+        "op": "C0",
+        "bytes": "c0 01",
+        "offset": 469,
+        "text": "📍 위치: 왼쪽",
+        "significant": true
+      },
+      {
+        "op": "CC",
+        "bytes": "cc 00 19",
+        "offset": 471,
+        "text": "👤 인물 25 등장",
+        "significant": true
+      },
+      {
+        "op": "C8",
+        "bytes": "c8 00 2b",
+        "offset": 474,
+        "text": "💬 \"자네 논거가 어딨는진 몰라.\n하지만 이것만은 확실해.\"",
+        "significant": true
+      },
+      {
+        "op": "C0",
+        "bytes": "c0 01",
+        "offset": 478,
+        "text": "📍 위치: 왼쪽",
+        "significant": true
+      },
+      {
+        "op": "CC",
+        "bytes": "cc 00 19",
+        "offset": 480,
+        "text": "👤 인물 25 등장",
+        "significant": true
+      },
+      {
+        "op": "C8",
+        "bytes": "c8 00 2c",
+        "offset": 483,
+        "text": "💬 \"자네 제안은 에스파니아, 포르투갈의 전면대결을 낳아.\"",
+        "significant": true
+      },
+      {
+        "op": "C0",
+        "bytes": "c0 01",
+        "offset": 487,
+        "text": "📍 위치: 왼쪽",
+        "significant": true
+      }
+    ],
+    "next_nodes": [
+      "node_01E9"
+    ]
+  },
+  "node_01E9": {
+    "id": "node_01E9",
+    "offset": 489,
+    "commands": [
+      {
+        "op": "CC",
+        "bytes": "cc 00 19",
+        "offset": 489,
+        "text": "👤 인물 25 등장",
+        "significant": true
+      },
+      {
+        "op": "C8",
+        "bytes": "c8 00 2d",
+        "offset": 492,
+        "text": "💬 \"쓸데없는 생각말고 맡은일에 충실하게.\"",
+        "significant": true
+      },
+      {
+        "op": "AC",
+        "bytes": "ac 04 02 d2",
+        "offset": 497,
+        "text": "🔍 [조건 체크] node_01E9 확인",
+        "significant": true
+      },
+      {
+        "op": "AD",
+        "bytes": "ad 00 02 14",
+        "offset": 501,
+        "text": "➔ [조건부 점프] node_01E9로 이동",
+        "significant": true
+      },
+      {
+        "op": "C0",
+        "bytes": "c0 01",
+        "offset": 505,
+        "text": "📍 위치: 왼쪽",
+        "significant": true
+      },
+      {
+        "op": "CC",
+        "bytes": "cc 00 19",
+        "offset": 507,
+        "text": "👤 인물 25 등장",
+        "significant": true
+      },
+      {
+        "op": "C8",
+        "bytes": "c8 00 2e",
+        "offset": 510,
+        "text": "💬 \"$n, 낙심하지 말게나.\"",
+        "significant": true
+      },
+      {
+        "op": "AC",
+        "bytes": "ac 06 02 14",
+        "offset": 514,
+        "text": "🔍 [조건 체크] node_01E9 확인",
+        "significant": true
+      },
+      {
+        "op": "CA",
+        "bytes": "ca 15 c0 01 cc",
+        "offset": 518,
+        "text": "⚙️ 기타 동작 (CA)",
+        "significant": true
+      },
+      {
+        "op": "C8",
+        "bytes": "c8 00 2f",
+        "offset": 525,
+        "text": "💬 \"또, 이 사브르는 미카엘준장의 유물이네.\n받아들이게.\"",
+        "significant": true
+      },
+      {
+        "op": "DC",
+        "bytes": "dc 00 06 00",
+        "offset": 529,
+        "text": "🚀 [강제 이동] node_01E9로",
+        "significant": true
+      }
+    ],
+    "next_nodes": [
+      "node_0600"
+    ]
+  },
+  "node_0214": {
+    "id": "node_0214",
+    "offset": 532,
+    "commands": [
+      {
+        "op": "AC",
+        "bytes": "ac 00 02 d2",
+        "offset": 540,
+        "text": "🔍 [조건 체크] node_0214 확인",
+        "significant": true
+      },
+      {
+        "op": "C0",
+        "bytes": "c0 01",
+        "offset": 544,
+        "text": "📍 위치: 왼쪽",
+        "significant": true
+      },
+      {
+        "op": "CC",
+        "bytes": "cc 00 22",
+        "offset": 546,
+        "text": "👤 인물 34 등장",
+        "significant": true
+      },
+      {
+        "op": "C8",
+        "bytes": "c8 00 30",
+        "offset": 549,
+        "text": "💬 \"§사누드중위§\n$n, 찾고있었어.\n에제키엘 사령관이 찾아.\"",
+        "significant": true
+      },
+      {
+        "op": "C0",
+        "bytes": "c0 02",
+        "offset": 553,
+        "text": "📍 위치: 오른쪽",
+        "significant": true
+      },
+      {
+        "op": "CC",
+        "bytes": "cc 00 01",
+        "offset": 555,
+        "text": "👤 조안 등장",
+        "significant": true
+      },
+      {
+        "op": "C8",
+        "bytes": "c8 00 31",
+        "offset": 558,
+        "text": "💬 \"사령관？\n설마 행방불명된 오빠일……\"",
+        "significant": true
+      },
+      {
+        "op": "C0",
+        "bytes": "c0 01",
+        "offset": 562,
+        "text": "📍 위치: 왼쪽",
+        "significant": true
+      },
+      {
+        "op": "CC",
+        "bytes": "cc 00 22",
+        "offset": 564,
+        "text": "👤 인물 34 등장",
+        "significant": true
+      },
+      {
+        "op": "C8",
+        "bytes": "c8 00 32",
+        "offset": 567,
+        "text": "💬 \"그건………\n사령관께 직접 듣게나.\"",
+        "significant": true
+      },
+      {
+        "op": "C0",
+        "bytes": "c0 02",
+        "offset": 572,
+        "text": "📍 위치: 오른쪽",
+        "significant": true
+      },
+      {
+        "op": "CC",
+        "bytes": "cc 00 01",
+        "offset": 574,
+        "text": "👤 조안 등장",
+        "significant": true
+      },
+      {
+        "op": "C8",
+        "bytes": "c8 00 33",
+        "offset": 577,
+        "text": "💬 \"$s중위, 출두했습니다.\"",
+        "significant": true
+      },
+      {
+        "op": "C0",
+        "bytes": "c0 01",
+        "offset": 581,
+        "text": "📍 위치: 왼쪽",
+        "significant": true
+      },
+      {
+        "op": "CC",
+        "bytes": "cc 00 19",
+        "offset": 583,
+        "text": "👤 인물 25 등장",
+        "significant": true
+      },
+      {
+        "op": "C8",
+        "bytes": "c8 00 34",
+        "offset": 586,
+        "text": "💬 \"§에제키엘사령관§\n아, 중위\n앉게.\"",
+        "significant": true
+      },
+      {
+        "op": "C0",
+        "bytes": "c0 01",
+        "offset": 590,
+        "text": "📍 위치: 왼쪽",
+        "significant": true
+      },
+      {
+        "op": "CC",
+        "bytes": "cc 00 19",
+        "offset": 592,
+        "text": "👤 인물 25 등장",
+        "significant": true
+      },
+      {
+        "op": "C8",
+        "bytes": "c8 00 35",
+        "offset": 595,
+        "text": "💬 \"실은 자네오빠 미카엘일이네만.\"",
+        "significant": true
+      },
+      {
+        "op": "C0",
+        "bytes": "c0 01",
+        "offset": 599,
+        "text": "📍 위치: 왼쪽",
+        "significant": true
+      },
+      {
+        "op": "CC",
+        "bytes": "cc 00 19",
+        "offset": 601,
+        "text": "👤 인물 25 등장",
+        "significant": true
+      },
+      {
+        "op": "C8",
+        "bytes": "c8 00 36",
+        "offset": 604,
+        "text": "💬 \"그의 함대는 1522년4월10일.\n산토도밍고해에서 소식 두절되었다.\"",
+        "significant": true
+      },
+      {
+        "op": "CA",
+        "bytes": "ca 14 c0 02 cc",
+        "offset": 608,
+        "text": "⚙️ 기타 동작 (CA)",
+        "significant": true
+      },
+      {
+        "op": "C8",
+        "bytes": "c8 00 37",
+        "offset": 615,
+        "text": "💬 \"설마, 오빠가……\n해적따위한테 죽을 사람이 아닙니다.\"",
+        "significant": true
+      },
+      {
+        "op": "C0",
+        "bytes": "c0 02",
+        "offset": 619,
+        "text": "📍 위치: 오른쪽",
+        "significant": true
+      },
+      {
+        "op": "CC",
+        "bytes": "cc 00 01",
+        "offset": 621,
+        "text": "👤 조안 등장",
+        "significant": true
+      },
+      {
+        "op": "C8",
+        "bytes": "c8 00 38",
+        "offset": 624,
+        "text": "💬 \"게다가 오빠함대엔\n에르난이 있었습니다.\"",
+        "significant": true
+      }
+    ],
+    "next_nodes": [
+      "node_0271"
+    ]
+  },
+  "node_0271": {
+    "id": "node_0271",
+    "offset": 625,
+    "commands": [
+      {
+        "op": "C0",
+        "bytes": "c0 01",
+        "offset": 628,
+        "text": "📍 위치: 왼쪽",
+        "significant": true
+      },
+      {
+        "op": "CC",
+        "bytes": "cc 00 19",
+        "offset": 630,
+        "text": "👤 인물 25 등장",
+        "significant": true
+      },
+      {
+        "op": "C8",
+        "bytes": "c8 00 39",
+        "offset": 633,
+        "text": "💬 \"분명 미카엘은 유능했다. 또, 자네 친구였던 부관 에르난도 용감했다.\"",
+        "significant": true
+      },
+      {
+        "op": "C0",
+        "bytes": "c0 01",
+        "offset": 637,
+        "text": "📍 위치: 왼쪽",
+        "significant": true
+      },
+      {
+        "op": "CC",
+        "bytes": "cc 00 19",
+        "offset": 639,
+        "text": "👤 인물 25 등장",
+        "significant": true
+      },
+      {
+        "op": "C8",
+        "bytes": "c8 00 3a",
+        "offset": 642,
+        "text": "💬 \"그러나, 오늘아침 신대륙에 파견된 조사대에서 온 보고내용이다.\"",
+        "significant": true
+      },
+      {
+        "op": "C0",
+        "bytes": "c0 01",
+        "offset": 646,
+        "text": "📍 위치: 왼쪽",
+        "significant": true
+      },
+      {
+        "op": "CC",
+        "bytes": "cc 00 19",
+        "offset": 648,
+        "text": "👤 인물 25 등장",
+        "significant": true
+      },
+      {
+        "op": "C8",
+        "bytes": "c8 00 3b",
+        "offset": 651,
+        "text": "💬 \"카리브해에서 난파선을 찾았다고 한다.\n배엔 아무도 없고 선체는 크게 상해있었다. 아마 키도 안듣는 상태였겠지.\"",
+        "significant": true
+      },
+      {
+        "op": "C0",
+        "bytes": "c0 01",
+        "offset": 655,
+        "text": "📍 위치: 왼쪽",
+        "significant": true
+      },
+      {
+        "op": "CC",
+        "bytes": "cc 00 19",
+        "offset": 657,
+        "text": "👤 인물 25 등장",
+        "significant": true
+      },
+      {
+        "op": "C8",
+        "bytes": "c8 00 3c",
+        "offset": 660,
+        "text": "💬 \"조난원인은 몰라.\n폭풍우에 휩쓸렸는지, 어떤 공격을 당한건지.\"",
+        "significant": true
+      },
+      {
+        "op": "C0",
+        "bytes": "c0 01",
+        "offset": 664,
+        "text": "📍 위치: 왼쪽",
+        "significant": true
+      },
+      {
+        "op": "CC",
+        "bytes": "cc 00 19",
+        "offset": 666,
+        "text": "👤 인물 25 등장",
+        "significant": true
+      },
+      {
+        "op": "C8",
+        "bytes": "c8 00 3d",
+        "offset": 669,
+        "text": "💬 \"단, 현장에서 이 깃발이 발견됐다………\n미카엘거네.\"",
+        "significant": true
+      },
+      {
+        "op": "C0",
+        "bytes": "c0 01",
+        "offset": 673,
+        "text": "📍 위치: 왼쪽",
+        "significant": true
+      },
+      {
+        "op": "CC",
+        "bytes": "cc 00 19",
+        "offset": 675,
+        "text": "👤 인물 25 등장",
+        "significant": true
+      },
+      {
+        "op": "C8",
+        "bytes": "c8 00 3e",
+        "offset": 678,
+        "text": "💬 \"가혹한 말인지 모르나 그들은 죽었을 것이네.\"",
+        "significant": true
+      },
+      {
+        "op": "C0",
+        "bytes": "c0 02",
+        "offset": 682,
+        "text": "📍 위치: 오른쪽",
+        "significant": true
+      },
+      {
+        "op": "CC",
+        "bytes": "cc 00 01",
+        "offset": 684,
+        "text": "👤 조안 등장",
+        "significant": true
+      },
+      {
+        "op": "C8",
+        "bytes": "c8 00 3f",
+        "offset": 687,
+        "text": "💬 \" \n………\"",
+        "significant": true
+      },
+      {
+        "op": "C0",
+        "bytes": "c0 01",
+        "offset": 691,
+        "text": "📍 위치: 왼쪽",
+        "significant": true
+      },
+      {
+        "op": "CC",
+        "bytes": "cc 00 19",
+        "offset": 693,
+        "text": "👤 인물 25 등장",
+        "significant": true
+      }
+    ],
+    "next_nodes": [
+      "node_02B8"
+    ]
+  },
+  "node_02B8": {
+    "id": "node_02B8",
+    "offset": 696,
+    "commands": [
+      {
+        "op": "C8",
+        "bytes": "c8 00 40",
+        "offset": 696,
+        "text": "💬 \"자넨 그들 못잖게 우수해.\n지금은 힘들겠지만 꼭 다시 일어나리라 믿네.\"",
+        "significant": true
+      },
+      {
+        "op": "C0",
+        "bytes": "c0 01",
+        "offset": 700,
+        "text": "📍 위치: 왼쪽",
+        "significant": true
+      },
+      {
+        "op": "CC",
+        "bytes": "cc 00 19",
+        "offset": 702,
+        "text": "👤 인물 25 등장",
+        "significant": true
+      },
+      {
+        "op": "C8",
+        "bytes": "c8 00 41",
+        "offset": 705,
+        "text": "💬 \"사누드중위, 자넨 $s중위를 배웅하게.\"",
+        "significant": true
+      },
+      {
+        "op": "C0",
+        "bytes": "c0 02",
+        "offset": 709,
+        "text": "📍 위치: 오른쪽",
+        "significant": true
+      },
+      {
+        "op": "CC",
+        "bytes": "cc 00 22",
+        "offset": 711,
+        "text": "👤 인물 34 등장",
+        "significant": true
+      },
+      {
+        "op": "C8",
+        "bytes": "c8 00 42",
+        "offset": 714,
+        "text": "💬 \"네, 알았습니다.\"",
+        "significant": true
+      },
+      {
+        "op": "C0",
+        "bytes": "c0 02",
+        "offset": 718,
+        "text": "📍 위치: 오른쪽",
+        "significant": true
+      },
+      {
+        "op": "CC",
+        "bytes": "cc 00 22",
+        "offset": 720,
+        "text": "👤 인물 34 등장",
+        "significant": true
+      }
+    ],
+    "next_nodes": [
+      "node_02D2"
+    ]
+  },
+  "node_02D2": {
+    "id": "node_02D2",
+    "offset": 722,
+    "commands": [
+      {
+        "op": "C8",
+        "bytes": "c8 00 43",
+        "offset": 723,
+        "text": "💬 \"$n, 힘내라구,\n자네 오빠는 내 상관이었어. 꼭 조난원인을 밝혀내 주겠어.\"",
+        "significant": true
+      },
+      {
+        "op": "AC",
+        "bytes": "ac 04 03 47",
+        "offset": 732,
+        "text": "🔍 [조건 체크] node_02D2 확인",
+        "significant": true
+      }
+    ],
+    "next_nodes": [
+      "node_0347"
+    ]
+  },
+  "node_02DD": {
+    "id": "node_02DD",
+    "offset": 733,
+    "commands": [
+      {
+        "op": "AD",
+        "bytes": "ad 01 03 08",
+        "offset": 736,
+        "text": "➔ [조건부 점프] node_02DD로 이동",
+        "significant": true
+      },
+      {
+        "op": "AD",
+        "bytes": "ad 00 02 fe",
+        "offset": 740,
+        "text": "➔ [조건부 점프] node_02DD로 이동",
+        "significant": true
+      },
+      {
+        "op": "C0",
+        "bytes": "c0 00",
+        "offset": 744,
+        "text": "📍 위치: 중앙",
+        "significant": true
+      },
+      {
+        "op": "C8",
+        "bytes": "c8 00 44",
+        "offset": 746,
+        "text": "💬 \"어이, 에제키엘 사령관이 뭐라던가？\"",
+        "significant": true
+      },
+      {
+        "op": "C0",
+        "bytes": "c0 02",
+        "offset": 750,
+        "text": "📍 위치: 오른쪽",
+        "significant": true
+      },
+      {
+        "op": "CC",
+        "bytes": "cc 00 01",
+        "offset": 752,
+        "text": "👤 조안 등장",
+        "significant": true
+      },
+      {
+        "op": "C8",
+        "bytes": "c8 00 45",
+        "offset": 755,
+        "text": "💬 \" \n………\"",
+        "significant": true
+      },
+      {
+        "op": "C0",
+        "bytes": "c0 02",
+        "offset": 759,
+        "text": "📍 위치: 오른쪽",
+        "significant": true
+      },
+      {
+        "op": "CC",
+        "bytes": "cc 00 22",
+        "offset": 761,
+        "text": "👤 인물 34 등장",
+        "significant": true
+      },
+      {
+        "op": "C8",
+        "bytes": "c8 00 46",
+        "offset": 764,
+        "text": "💬 \"주인영감, 지금 미카엘준장일은 말하지 말아주시죠.\"",
+        "significant": true
+      }
+    ],
+    "next_nodes": [
+      "node_02FD"
+    ]
+  },
+  "node_02FD": {
+    "id": "node_02FD",
+    "offset": 765,
+    "commands": [],
+    "next_nodes": [
+      "node_02FE"
+    ]
+  },
+  "node_02FE": {
+    "id": "node_02FE",
+    "offset": 766,
+    "commands": [
+      {
+        "op": "C0",
+        "bytes": "c0 00",
+        "offset": 768,
+        "text": "📍 위치: 중앙",
+        "significant": true
+      }
+    ],
+    "next_nodes": [
+      "node_0301"
+    ]
+  },
+  "node_0301": {
+    "id": "node_0301",
+    "offset": 769,
+    "commands": [
+      {
+        "op": "C8",
+        "bytes": "c8 00 47",
+        "offset": 770,
+        "text": "💬 \"그런가………\n미안하네.\"",
+        "significant": true
+      },
+      {
+        "op": "AC",
+        "bytes": "ac 00 03 08",
+        "offset": 774,
+        "text": "🔍 [조건 체크] node_0301 확인",
+        "significant": true
+      }
+    ],
+    "next_nodes": [
+      "node_0308"
+    ]
+  },
+  "node_0308": {
+    "id": "node_0308",
+    "offset": 776,
+    "commands": [
+      {
+        "op": "C0",
+        "bytes": "c0 00",
+        "offset": 778,
+        "text": "📍 위치: 중앙",
+        "significant": true
+      },
+      {
+        "op": "C8",
+        "bytes": "c8 00 48",
+        "offset": 780,
+        "text": "💬 \"빨리 사령관실로 가는게 좋아. 성 오른쪽이야.\"",
+        "significant": true
+      },
+      {
+        "op": "AC",
+        "bytes": "ac 01 03 47",
+        "offset": 784,
+        "text": "🔍 [조건 체크] node_0308 확인",
+        "significant": true
+      },
+      {
+        "op": "AC",
+        "bytes": "ac 00 03 25",
+        "offset": 788,
+        "text": "🔍 [조건 체크] node_0308 확인",
+        "significant": true
+      },
+      {
+        "op": "C0",
+        "bytes": "c0 00",
+        "offset": 792,
+        "text": "📍 위치: 중앙",
+        "significant": true
+      },
+      {
+        "op": "C8",
+        "bytes": "c8 00 49",
+        "offset": 794,
+        "text": "💬 \"어이, $s중위\n행방불명된 오라버닌 어찌됐나.\"",
+        "significant": true
+      },
+      {
+        "op": "C0",
+        "bytes": "c0 00",
+        "offset": 798,
+        "text": "📍 위치: 중앙",
+        "significant": true
+      },
+      {
+        "op": "C8",
+        "bytes": "c8 00 4a",
+        "offset": 800,
+        "text": "💬 \"걱정말라니까.\n그 미카엘이 간단히 \n죽어버릴 인간인가.\"",
+        "significant": true
+      },
+      {
+        "op": "C0",
+        "bytes": "c0 00",
+        "offset": 804,
+        "text": "📍 위치: 중앙",
+        "significant": true
+      }
+    ],
+    "next_nodes": [
+      "node_0325"
+    ]
+  },
+  "node_0325": {
+    "id": "node_0325",
+    "offset": 805,
+    "commands": [
+      {
+        "op": "C8",
+        "bytes": "c8 00 4b",
+        "offset": 806,
+        "text": "💬 \"아, 아까 사누드가 와서 자넬 찾았어 \n사령실에 출두하래.\"",
+        "significant": true
+      },
+      {
+        "op": "C0",
+        "bytes": "c0 00",
+        "offset": 817,
+        "text": "📍 위치: 중앙",
+        "significant": true
+      },
+      {
+        "op": "C8",
+        "bytes": "c8 00 4c",
+        "offset": 819,
+        "text": "💬 \"어이, $s중위\n행방불명된 오라버닌 어찌됐나.\"",
+        "significant": true
+      },
+      {
+        "op": "C0",
+        "bytes": "c0 02",
+        "offset": 823,
+        "text": "📍 위치: 오른쪽",
+        "significant": true
+      },
+      {
+        "op": "CC",
+        "bytes": "cc 00 01",
+        "offset": 825,
+        "text": "👤 조안 등장",
+        "significant": true
+      },
+      {
+        "op": "C8",
+        "bytes": "c8 00 4d",
+        "offset": 828,
+        "text": "💬 \" \n………\"",
+        "significant": true
+      },
+      {
+        "op": "C0",
+        "bytes": "c0 02",
+        "offset": 832,
+        "text": "📍 위치: 오른쪽",
+        "significant": true
+      },
+      {
+        "op": "CC",
+        "bytes": "cc 00 22",
+        "offset": 834,
+        "text": "👤 인물 34 등장",
+        "significant": true
+      },
+      {
+        "op": "C8",
+        "bytes": "c8 00 4e",
+        "offset": 837,
+        "text": "💬 \"주인영감, 지금은 미카엘준장일은 말하지 말아주시죠.\"",
+        "significant": true
+      }
+    ],
+    "next_nodes": [
+      "node_0347"
+    ]
+  },
+  "node_0347": {
+    "id": "node_0347",
+    "offset": 839,
+    "commands": [],
+    "next_nodes": [
+      "node_0348"
+    ]
+  },
+  "node_0348": {
+    "id": "node_0348",
+    "offset": 840,
+    "commands": [
+      {
+        "op": "C0",
+        "bytes": "c0 00",
+        "offset": 841,
+        "text": "📍 위치: 중앙",
+        "significant": true
+      },
+      {
+        "op": "C8",
+        "bytes": "c8 00 4f",
+        "offset": 843,
+        "text": "💬 \"그런가………\n미안하네.\"",
+        "significant": true
+      },
+      {
+        "op": "AD",
+        "bytes": "ad 04 03 51",
+        "offset": 847,
+        "text": "➔ [조건부 점프] node_0348로 이동",
+        "significant": true
+      }
+    ],
+    "next_nodes": [
+      "node_0351"
+    ]
+  },
+  "node_0351": {
+    "id": "node_0351",
+    "offset": 849,
+    "commands": [
+      {
+        "op": "C0",
+        "bytes": "c0 00",
+        "offset": 851,
+        "text": "📍 위치: 중앙",
+        "significant": true
+      },
+      {
+        "op": "C8",
+        "bytes": "c8 00 50",
+        "offset": 853,
+        "text": "💬 \"아, $s중위\n안됐네만 오늘 휴업이야.\"",
+        "significant": true
+      },
+      {
+        "op": "AC",
+        "bytes": "ac 04 03 c5",
+        "offset": 859,
+        "text": "🔍 [조건 체크] node_0351 확인",
+        "significant": true
+      },
+      {
+        "op": "AD",
+        "bytes": "ad 02 03 8b",
+        "offset": 867,
+        "text": "➔ [조건부 점프] node_0351로 이동",
+        "significant": true
+      },
+      {
+        "op": "AD",
+        "bytes": "ad 00 03 81",
+        "offset": 871,
+        "text": "➔ [조건부 점프] node_0351로 이동",
+        "significant": true
+      },
+      {
+        "op": "C0",
+        "bytes": "c0 00",
+        "offset": 875,
+        "text": "📍 위치: 중앙",
+        "significant": true
+      },
+      {
+        "op": "C8",
+        "bytes": "c8 00 51",
+        "offset": 877,
+        "text": "💬 \"어이, $s중위\n에제키엘사령관하곤 만났나？\"",
+        "significant": true
+      },
+      {
+        "op": "C0",
+        "bytes": "c0 02",
+        "offset": 881,
+        "text": "📍 위치: 오른쪽",
+        "significant": true
+      },
+      {
+        "op": "CC",
+        "bytes": "cc 00 01",
+        "offset": 883,
+        "text": "👤 조안 등장",
+        "significant": true
+      },
+      {
+        "op": "C8",
+        "bytes": "c8 00 52",
+        "offset": 886,
+        "text": "💬 \" \n………\"",
+        "significant": true
+      },
+      {
+        "op": "C0",
+        "bytes": "c0 02",
+        "offset": 890,
+        "text": "📍 위치: 오른쪽",
+        "significant": true
+      },
+      {
+        "op": "CC",
+        "bytes": "cc 00 22",
+        "offset": 892,
+        "text": "👤 인물 34 등장",
+        "significant": true
+      },
+      {
+        "op": "C8",
+        "bytes": "c8 00 53",
+        "offset": 895,
+        "text": "💬 \"주인영감, 지금은 미카엘준장일은 말하지 말아주시죠.\"",
+        "significant": true
+      }
+    ],
+    "next_nodes": [
+      "node_0381"
+    ]
+  },
+  "node_0381": {
+    "id": "node_0381",
+    "offset": 897,
+    "commands": [
+      {
+        "op": "C0",
+        "bytes": "c0 00",
+        "offset": 899,
+        "text": "📍 위치: 중앙",
+        "significant": true
+      },
+      {
+        "op": "C8",
+        "bytes": "c8 00 54",
+        "offset": 901,
+        "text": "💬 \"그런가………\n미안하네.\"",
+        "significant": true
+      },
+      {
+        "op": "AC",
+        "bytes": "ac 00 03 8b",
+        "offset": 905,
+        "text": "🔍 [조건 체크] node_0381 확인",
+        "significant": true
+      }
+    ],
+    "next_nodes": [
+      "node_038B"
+    ]
+  },
+  "node_038B": {
+    "id": "node_038B",
+    "offset": 907,
+    "commands": [
+      {
+        "op": "C0",
+        "bytes": "c0 00",
+        "offset": 909,
+        "text": "📍 위치: 중앙",
+        "significant": true
+      },
+      {
+        "op": "C8",
+        "bytes": "c8 00 55",
+        "offset": 911,
+        "text": "💬 \"빨리 사령관실로 가는게 좋아. 성 오른쪽이야.\"",
+        "significant": true
+      },
+      {
+        "op": "AC",
+        "bytes": "ac 02 03 c4",
+        "offset": 915,
+        "text": "🔍 [조건 체크] node_038B 확인",
+        "significant": true
+      },
+      {
+        "op": "AC",
+        "bytes": "ac 00 03 a2",
+        "offset": 919,
+        "text": "🔍 [조건 체크] node_038B 확인",
+        "significant": true
+      },
+      {
+        "op": "C0",
+        "bytes": "c0 00",
+        "offset": 923,
+        "text": "📍 위치: 중앙",
+        "significant": true
+      },
+      {
+        "op": "C8",
+        "bytes": "c8 00 56",
+        "offset": 925,
+        "text": "💬 \"어이, $s중위,\n마침 잘 왔네.\n방금 신대륙에서 조사대가 왔어.\"",
+        "significant": true
+      },
+      {
+        "op": "C0",
+        "bytes": "c0 00",
+        "offset": 929,
+        "text": "📍 위치: 중앙",
+        "significant": true
+      }
+    ],
+    "next_nodes": [
+      "node_03A2"
+    ]
+  },
+  "node_03A2": {
+    "id": "node_03A2",
+    "offset": 930,
+    "commands": [
+      {
+        "op": "C8",
+        "bytes": "c8 00 57",
+        "offset": 931,
+        "text": "💬 \"그일로 사령관이 자네에게 할말이 있대.\n성 오른쪽 사령관실로 출두하래.\"",
+        "significant": true
+      },
+      {
+        "op": "C0",
+        "bytes": "c0 00",
+        "offset": 942,
+        "text": "📍 위치: 중앙",
+        "significant": true
+      },
+      {
+        "op": "C8",
+        "bytes": "c8 00 58",
+        "offset": 944,
+        "text": "💬 \"어이, $s중위\n아까 신대륙에서 조사함대가 돌아왔다잖아.\n자네 오라버닌 어찌됐나.\"",
+        "significant": true
+      },
+      {
+        "op": "C0",
+        "bytes": "c0 02",
+        "offset": 948,
+        "text": "📍 위치: 오른쪽",
+        "significant": true
+      },
+      {
+        "op": "CC",
+        "bytes": "cc 00 01",
+        "offset": 950,
+        "text": "👤 조안 등장",
+        "significant": true
+      },
+      {
+        "op": "C8",
+        "bytes": "c8 00 59",
+        "offset": 953,
+        "text": "💬 \" \n………\"",
+        "significant": true
+      },
+      {
+        "op": "C0",
+        "bytes": "c0 02",
+        "offset": 957,
+        "text": "📍 위치: 오른쪽",
+        "significant": true
+      },
+      {
+        "op": "CC",
+        "bytes": "cc 00 22",
+        "offset": 959,
+        "text": "👤 인물 34 등장",
+        "significant": true
+      },
+      {
+        "op": "C8",
+        "bytes": "c8 00 5a",
+        "offset": 962,
+        "text": "💬 \"주인영감, 지금은 미카엘준장일은 말하지 말아주시죠.\"",
+        "significant": true
+      }
+    ],
+    "next_nodes": [
+      "node_03C4"
+    ]
+  },
+  "node_03C4": {
+    "id": "node_03C4",
+    "offset": 964,
+    "commands": [],
+    "next_nodes": [
+      "node_03C5"
+    ]
+  },
+  "node_03C5": {
+    "id": "node_03C5",
+    "offset": 965,
+    "commands": [
+      {
+        "op": "C0",
+        "bytes": "c0 00",
+        "offset": 966,
+        "text": "📍 위치: 중앙",
+        "significant": true
+      },
+      {
+        "op": "C8",
+        "bytes": "c8 00 5b",
+        "offset": 968,
+        "text": "💬 \"그런가………\n미안하네.\"",
+        "significant": true
+      },
+      {
+        "op": "AD",
+        "bytes": "ad 04 03 da",
+        "offset": 973,
+        "text": "➔ [조건부 점프] node_03C5로 이동",
+        "significant": true
+      },
+      {
+        "op": "C0",
+        "bytes": "c0 00",
+        "offset": 981,
+        "text": "📍 위치: 중앙",
+        "significant": true
+      },
+      {
+        "op": "C8",
+        "bytes": "c8 00 5c",
+        "offset": 983,
+        "text": "💬 \"이봐, $s중위\n아까 이오니아항로의 상선대에서 들은 건데.\"",
+        "significant": true
+      }
+    ],
+    "next_nodes": [
+      "node_03DA"
+    ]
+  },
+  "node_03DA": {
+    "id": "node_03DA",
+    "offset": 986,
+    "commands": [
+      {
+        "op": "C0",
+        "bytes": "c0 00",
+        "offset": 987,
+        "text": "📍 위치: 중앙",
+        "significant": true
+      },
+      {
+        "op": "C8",
+        "bytes": "c8 00 5d",
+        "offset": 989,
+        "text": "💬 \"아무래도 에스파니아함대를 덮친건 포르투갈인인것 같아.\"",
+        "significant": true
+      },
+      {
+        "op": "AC",
+        "bytes": "ac 04 04 56",
+        "offset": 995,
+        "text": "🔍 [조건 체크] node_03DA 확인",
+        "significant": true
+      },
+      {
+        "op": "AC",
+        "bytes": "ac 00 04 1a",
+        "offset": 999,
+        "text": "🔍 [조건 체크] node_03DA 확인",
+        "significant": true
+      },
+      {
+        "op": "8C",
+        "bytes": "8c 00 00",
+        "offset": 1011,
+        "text": "⚙️ 기타 동작 (8C)",
+        "significant": true
+      },
+      {
+        "op": "C0",
+        "bytes": "c0 00",
+        "offset": 1016,
+        "text": "📍 위치: 중앙",
+        "significant": true
+      },
+      {
+        "op": "C8",
+        "bytes": "c8 00 5e",
+        "offset": 1018,
+        "text": "💬 \"어머, $s중위님\n어서 오십시요.\"",
+        "significant": true
+      },
+      {
+        "op": "C0",
+        "bytes": "c0 00",
+        "offset": 1022,
+        "text": "📍 위치: 중앙",
+        "significant": true
+      },
+      {
+        "op": "C8",
+        "bytes": "c8 00 5f",
+        "offset": 1024,
+        "text": "💬 \"아까 사누드중위가 오셔서 당신을 찾고 계셨는데요.\"",
+        "significant": true
+      },
+      {
+        "op": "C0",
+        "bytes": "c0 00",
+        "offset": 1028,
+        "text": "📍 위치: 중앙",
+        "significant": true
+      },
+      {
+        "op": "C8",
+        "bytes": "c8 00 60",
+        "offset": 1030,
+        "text": "💬 \"분명 성옆쪽에 있는 사령관실에 가셨겠지요.\"",
+        "significant": true
+      },
+      {
+        "op": "8C",
+        "bytes": "8c 00 01",
+        "offset": 1034,
+        "text": "⚙️ 기타 동작 (8C)",
+        "significant": true
+      },
+      {
+        "op": "C0",
+        "bytes": "c0 00",
+        "offset": 1039,
+        "text": "📍 위치: 중앙",
+        "significant": true
+      },
+      {
+        "op": "C8",
+        "bytes": "c8 00 61",
+        "offset": 1041,
+        "text": "💬 \"아, $s중위님\n오라버니 미카엘준장 소식은 들었습니까？\"",
+        "significant": true
+      },
+      {
+        "op": "C0",
+        "bytes": "c0 00",
+        "offset": 1045,
+        "text": "📍 위치: 중앙",
+        "significant": true
+      },
+      {
+        "op": "C8",
+        "bytes": "c8 00 62",
+        "offset": 1047,
+        "text": "💬 \"그리고 아까 사누드중위님이 오셔서 당신을 찾고 계셨는데요.\"",
+        "significant": true
+      }
+    ],
+    "next_nodes": [
+      "node_041A"
+    ]
+  },
+  "node_041A": {
+    "id": "node_041A",
+    "offset": 1050,
+    "commands": [
+      {
+        "op": "C0",
+        "bytes": "c0 00",
+        "offset": 1051,
+        "text": "📍 위치: 중앙",
+        "significant": true
+      },
+      {
+        "op": "C8",
+        "bytes": "c8 00 63",
+        "offset": 1053,
+        "text": "💬 \"분명 성옆쪽에 있는 사령관실에 가신게지요.\"",
+        "significant": true
+      },
+      {
+        "op": "AD",
+        "bytes": "ad 03 04 27",
+        "offset": 1058,
+        "text": "➔ [조건부 점프] node_041A로 이동",
+        "significant": true
+      },
+      {
+        "op": "C0",
+        "bytes": "c0 01",
+        "offset": 1062,
+        "text": "📍 위치: 왼쪽",
+        "significant": true
+      }
+    ],
+    "next_nodes": [
+      "node_0427"
+    ]
+  },
+  "node_0427": {
+    "id": "node_0427",
+    "offset": 1063,
+    "commands": [
+      {
+        "op": "CC",
+        "bytes": "cc 00 22",
+        "offset": 1064,
+        "text": "👤 인물 34 등장",
+        "significant": true
+      },
+      {
+        "op": "C8",
+        "bytes": "c8 00 64",
+        "offset": 1067,
+        "text": "💬 \"자, $n.\n술집에라도 가지 않겠나. 뭔가 정보를 얻을지도 몰라.\"",
+        "significant": true
+      },
+      {
+        "op": "AC",
+        "bytes": "ac 03 04 56",
+        "offset": 1071,
+        "text": "🔍 [조건 체크] node_0427 확인",
+        "significant": true
+      },
+      {
+        "op": "AD",
+        "bytes": "ad 00 04 56",
+        "offset": 1075,
+        "text": "➔ [조건부 점프] node_0427로 이동",
+        "significant": true
+      },
+      {
+        "op": "C0",
+        "bytes": "c0 01",
+        "offset": 1079,
+        "text": "📍 위치: 왼쪽",
+        "significant": true
+      },
+      {
+        "op": "CC",
+        "bytes": "cc 00 22",
+        "offset": 1081,
+        "text": "👤 인물 34 등장",
+        "significant": true
+      },
+      {
+        "op": "C8",
+        "bytes": "c8 00 65",
+        "offset": 1084,
+        "text": "💬 \"$n, 낙심하지 말게 \"",
+        "significant": true
+      },
+      {
+        "op": "C0",
+        "bytes": "c0 02",
+        "offset": 1088,
+        "text": "📍 위치: 오른쪽",
+        "significant": true
+      },
+      {
+        "op": "CC",
+        "bytes": "cc 00 01",
+        "offset": 1090,
+        "text": "👤 조안 등장",
+        "significant": true
+      },
+      {
+        "op": "C8",
+        "bytes": "c8 00 66",
+        "offset": 1093,
+        "text": "💬 \"낙심하고 있는게 아냐.\n단지 분할뿐이야.\"",
+        "significant": true
+      },
+      {
+        "op": "C0",
+        "bytes": "c0 02",
+        "offset": 1097,
+        "text": "📍 위치: 오른쪽",
+        "significant": true
+      },
+      {
+        "op": "CC",
+        "bytes": "cc 00 01",
+        "offset": 1099,
+        "text": "👤 조안 등장",
+        "significant": true
+      },
+      {
+        "op": "C8",
+        "bytes": "c8 00 67",
+        "offset": 1102,
+        "text": "💬 \"오빠가 죽을때 뭘 생각했을까 생각하면……\"",
+        "significant": true
+      },
+      {
+        "op": "C0",
+        "bytes": "c0 01",
+        "offset": 1106,
+        "text": "📍 위치: 왼쪽",
+        "significant": true
+      },
+      {
+        "op": "CC",
+        "bytes": "cc 00 22",
+        "offset": 1108,
+        "text": "👤 인물 34 등장",
+        "significant": true
+      }
+    ],
+    "next_nodes": [
+      "node_0456"
+    ]
+  },
+  "node_0456": {
+    "id": "node_0456",
+    "offset": 1110,
+    "commands": [
+      {
+        "op": "C8",
+        "bytes": "c8 00 68",
+        "offset": 1111,
+        "text": "💬 \"자, $n.\n주점에라도 가지 않겠나. 뭔가 정보를 얻을지도 몰라.\"",
+        "significant": true
+      },
+      {
+        "op": "8F",
+        "bytes": "8f ff ff ff ff",
+        "offset": 1150,
+        "text": "⚙️ 기타 동작 (8F)",
+        "significant": true
+      },
+      {
+        "op": "C0",
+        "bytes": "c0 00",
+        "offset": 1157,
+        "text": "📍 위치: 중앙",
+        "significant": true
+      },
+      {
+        "op": "C8",
+        "bytes": "c8 00 69",
+        "offset": 1159,
+        "text": "💬 \"아, $s중위\n안됐네만 오늘 영업은 끝났다네.\"",
+        "significant": true
+      },
+      {
+        "op": "AC",
+        "bytes": "ac 05 00 4d",
+        "offset": 1165,
+        "text": "🔍 [조건 체크] node_0456 확인",
+        "significant": true
+      },
+      {
+        "op": "C0",
+        "bytes": "c0 01",
+        "offset": 1169,
+        "text": "📍 위치: 왼쪽",
+        "significant": true
+      },
+      {
+        "op": "CC",
+        "bytes": "cc 00 22",
+        "offset": 1171,
+        "text": "👤 인물 34 등장",
+        "significant": true
+      },
+      {
+        "op": "C8",
+        "bytes": "c8 00 6a",
+        "offset": 1174,
+        "text": "💬 \"$n, 이 이상 어쩔도리가 없군.\"",
+        "significant": true
+      },
+      {
+        "op": "C0",
+        "bytes": "c0 02",
+        "offset": 1178,
+        "text": "📍 위치: 오른쪽",
+        "significant": true
+      },
+      {
+        "op": "CC",
+        "bytes": "cc 00 01",
+        "offset": 1180,
+        "text": "👤 조안 등장",
+        "significant": true
+      },
+      {
+        "op": "C8",
+        "bytes": "c8 00 6b",
+        "offset": 1183,
+        "text": "💬 \"아니, 난 포기안해.\"",
+        "significant": true
+      },
+      {
+        "op": "C0",
+        "bytes": "c0 01",
+        "offset": 1187,
+        "text": "📍 위치: 왼쪽",
+        "significant": true
+      },
+      {
+        "op": "CC",
+        "bytes": "cc 00 22",
+        "offset": 1189,
+        "text": "👤 인물 34 등장",
+        "significant": true
+      },
+      {
+        "op": "C8",
+        "bytes": "c8 00 6c",
+        "offset": 1192,
+        "text": "💬 \"진정해.\n그래. 술이라도 마시며 생각하지.\"",
+        "significant": true
+      },
+      {
+        "op": "AD",
+        "bytes": "ad 05 00 6d",
+        "offset": 1196,
+        "text": "➔ [조건부 점프] node_0456로 이동",
+        "significant": true
+      },
+      {
+        "op": "C0",
+        "bytes": "c0 01",
+        "offset": 1200,
+        "text": "📍 위치: 왼쪽",
+        "significant": true
+      },
+      {
+        "op": "CC",
+        "bytes": "cc 00 01",
+        "offset": 1202,
+        "text": "👤 조안 등장",
+        "significant": true
+      },
+      {
+        "op": "C8",
+        "bytes": "c8 00 6d",
+        "offset": 1205,
+        "text": "💬 \"사누드, 나는 배신할지도 몰라.\"",
+        "significant": true
+      },
+      {
+        "op": "C0",
+        "bytes": "c0 02",
+        "offset": 1209,
+        "text": "📍 위치: 오른쪽",
+        "significant": true
+      },
+      {
+        "op": "CC",
+        "bytes": "cc 00 22",
+        "offset": 1211,
+        "text": "👤 인물 34 등장",
+        "significant": true
+      },
+      {
+        "op": "C8",
+        "bytes": "c8 00 6e",
+        "offset": 1214,
+        "text": "💬 \"배신해？ 무얼？\"",
+        "significant": true
+      },
+      {
+        "op": "C0",
+        "bytes": "c0 01",
+        "offset": 1218,
+        "text": "📍 위치: 왼쪽",
+        "significant": true
+      },
+      {
+        "op": "CC",
+        "bytes": "cc 00 01",
+        "offset": 1220,
+        "text": "👤 조안 등장",
+        "significant": true
+      },
+      {
+        "op": "C8",
+        "bytes": "c8 00 6f",
+        "offset": 1223,
+        "text": "💬 \"아냐, 아무것도 아냐.\n항구로 빨리 가지.\"",
+        "significant": true
+      },
+      {
+        "op": "AC",
+        "bytes": "ac 05 01 04",
+        "offset": 1229,
+        "text": "🔍 [조건 체크] node_0456 확인",
+        "significant": true
+      },
+      {
+        "op": "CA",
+        "bytes": "ca 03 c0 02 cc",
+        "offset": 1233,
+        "text": "⚙️ 기타 동작 (CA)",
+        "significant": true
+      },
+      {
+        "op": "C8",
+        "bytes": "c8 00 70",
+        "offset": 1240,
+        "text": "💬 \"$n, 이제부터 어쩔셈이야.\"",
+        "significant": true
+      },
+      {
+        "op": "C0",
+        "bytes": "c0 01",
+        "offset": 1244,
+        "text": "📍 위치: 왼쪽",
+        "significant": true
+      },
+      {
+        "op": "CC",
+        "bytes": "cc 00 01",
+        "offset": 1246,
+        "text": "👤 조안 등장",
+        "significant": true
+      },
+      {
+        "op": "C8",
+        "bytes": "c8 00 71",
+        "offset": 1249,
+        "text": "💬 \"해군을 그만두려고 해.\"",
+        "significant": true
+      },
+      {
+        "op": "C0",
+        "bytes": "c0 02",
+        "offset": 1253,
+        "text": "📍 위치: 오른쪽",
+        "significant": true
+      },
+      {
+        "op": "CC",
+        "bytes": "cc 00 22",
+        "offset": 1255,
+        "text": "👤 인물 34 등장",
+        "significant": true
+      },
+      {
+        "op": "C8",
+        "bytes": "c8 00 72",
+        "offset": 1258,
+        "text": "💬 \"뭐라고！\"",
+        "significant": true
+      },
+      {
+        "op": "C0",
+        "bytes": "c0 01",
+        "offset": 1262,
+        "text": "📍 위치: 왼쪽",
+        "significant": true
+      },
+      {
+        "op": "CC",
+        "bytes": "cc 00 01",
+        "offset": 1264,
+        "text": "👤 조안 등장",
+        "significant": true
+      },
+      {
+        "op": "C8",
+        "bytes": "c8 00 73",
+        "offset": 1267,
+        "text": "💬 \"해군에 있으면 원수를 칠수없어.\"",
+        "significant": true
+      },
+      {
+        "op": "C0",
+        "bytes": "c0 02",
+        "offset": 1271,
+        "text": "📍 위치: 오른쪽",
+        "significant": true
+      },
+      {
+        "op": "CC",
+        "bytes": "cc 00 22",
+        "offset": 1273,
+        "text": "👤 인물 34 등장",
+        "significant": true
+      },
+      {
+        "op": "C8",
+        "bytes": "c8 00 74",
+        "offset": 1276,
+        "text": "💬 \"하지만 페레로공작가는 막강해.\n민간인힘으로 일국의재상을 치는건 불가능해.\"",
+        "significant": true
+      },
+      {
+        "op": "CA",
+        "bytes": "ca 13 c0 01 cc",
+        "offset": 1280,
+        "text": "⚙️ 기타 동작 (CA)",
+        "significant": true
+      },
+      {
+        "op": "C8",
+        "bytes": "c8 00 75",
+        "offset": 1287,
+        "text": "💬 \"흠, 지껄여대기는.\"",
+        "significant": true
+      },
+      {
+        "op": "C0",
+        "bytes": "c0 02",
+        "offset": 1291,
+        "text": "📍 위치: 오른쪽",
+        "significant": true
+      },
+      {
+        "op": "CC",
+        "bytes": "cc 00 22",
+        "offset": 1293,
+        "text": "👤 인물 34 등장",
+        "significant": true
+      },
+      {
+        "op": "C8",
+        "bytes": "c8 00 76",
+        "offset": 1296,
+        "text": "💬 \"뭐야, 넌.\"",
+        "significant": true
+      },
+      {
+        "op": "C0",
+        "bytes": "c0 01",
+        "offset": 1300,
+        "text": "📍 위치: 왼쪽",
+        "significant": true
+      },
+      {
+        "op": "CC",
+        "bytes": "cc 00 23",
+        "offset": 1302,
+        "text": "👤 인물 35 등장",
+        "significant": true
+      },
+      {
+        "op": "C8",
+        "bytes": "c8 00 77",
+        "offset": 1305,
+        "text": "💬 \"난, 그저 술꾼이요.\n다만 당신네들 주장이 맘에 안들어.\"",
+        "significant": true
+      },
+      {
+        "op": "C0",
+        "bytes": "c0 01",
+        "offset": 1309,
+        "text": "📍 위치: 왼쪽",
+        "significant": true
+      },
+      {
+        "op": "CC",
+        "bytes": "cc 00 23",
+        "offset": 1311,
+        "text": "👤 인물 35 등장",
+        "significant": true
+      },
+      {
+        "op": "C8",
+        "bytes": "c8 00 78",
+        "offset": 1314,
+        "text": "💬 \"노력도 않고 포기해？\n이길수 없으니 내빼？\n그게, 에스파니아해군사관이 할일인가.\"",
+        "significant": true
+      },
+      {
+        "op": "C0",
+        "bytes": "c0 02",
+        "offset": 1318,
+        "text": "📍 위치: 오른쪽",
+        "significant": true
+      },
+      {
+        "op": "CC",
+        "bytes": "cc 00 22",
+        "offset": 1320,
+        "text": "👤 인물 34 등장",
+        "significant": true
+      },
+      {
+        "op": "C8",
+        "bytes": "c8 00 79",
+        "offset": 1323,
+        "text": "💬 \"쳇, 사정도 모르면서.\n$n, 나가세.\"",
+        "significant": true
+      },
+      {
+        "op": "C0",
+        "bytes": "c0 01",
+        "offset": 1327,
+        "text": "📍 위치: 왼쪽",
+        "significant": true
+      },
+      {
+        "op": "CC",
+        "bytes": "cc 00 01",
+        "offset": 1329,
+        "text": "👤 조안 등장",
+        "significant": true
+      },
+      {
+        "op": "C8",
+        "bytes": "c8 00 7a",
+        "offset": 1332,
+        "text": "💬 \"기다려, 사누드.\n이제야 결심했어.\"",
+        "significant": true
+      },
+      {
+        "op": "C0",
+        "bytes": "c0 02",
+        "offset": 1336,
+        "text": "📍 위치: 오른쪽",
+        "significant": true
+      },
+      {
+        "op": "CC",
+        "bytes": "cc 00 22",
+        "offset": 1338,
+        "text": "👤 인물 34 등장",
+        "significant": true
+      },
+      {
+        "op": "C8",
+        "bytes": "c8 00 7b",
+        "offset": 1341,
+        "text": "💬 \"음, 뭐라고.\"",
+        "significant": true
+      },
+      {
+        "op": "C0",
+        "bytes": "c0 01",
+        "offset": 1345,
+        "text": "📍 위치: 왼쪽",
+        "significant": true
+      },
+      {
+        "op": "CC",
+        "bytes": "cc 00 01",
+        "offset": 1347,
+        "text": "👤 조안 등장",
+        "significant": true
+      },
+      {
+        "op": "C8",
+        "bytes": "c8 00 7c",
+        "offset": 1350,
+        "text": "💬 \"사누드, 부탁이야. 도와 줘.\"",
+        "significant": true
+      },
+      {
+        "op": "C0",
+        "bytes": "c0 02",
+        "offset": 1354,
+        "text": "📍 위치: 오른쪽",
+        "significant": true
+      },
+      {
+        "op": "CC",
+        "bytes": "cc 00 22",
+        "offset": 1356,
+        "text": "👤 인물 34 등장",
+        "significant": true
+      },
+      {
+        "op": "C8",
+        "bytes": "c8 00 7d",
+        "offset": 1359,
+        "text": "💬 \"응, 나로 족하다면.\"",
+        "significant": true
+      },
+      {
+        "op": "C0",
+        "bytes": "c0 01",
+        "offset": 1363,
+        "text": "📍 위치: 왼쪽",
+        "significant": true
+      },
+      {
+        "op": "CC",
+        "bytes": "cc 00 01",
+        "offset": 1365,
+        "text": "👤 조안 등장",
+        "significant": true
+      },
+      {
+        "op": "C8",
+        "bytes": "c8 00 7e",
+        "offset": 1368,
+        "text": "💬 \"자！ 항구로 빨리.\"",
+        "significant": true
+      },
+      {
+        "op": "AD",
+        "bytes": "ad 05 01 23",
+        "offset": 1379,
+        "text": "➔ [조건부 점프] node_0456로 이동",
+        "significant": true
+      },
+      {
+        "op": "C0",
+        "bytes": "c0 01",
+        "offset": 1383,
+        "text": "📍 위치: 왼쪽",
+        "significant": true
+      },
+      {
+        "op": "CC",
+        "bytes": "cc 00 01",
+        "offset": 1385,
+        "text": "👤 조안 등장",
+        "significant": true
+      },
+      {
+        "op": "C8",
+        "bytes": "c8 00 7f",
+        "offset": 1388,
+        "text": "💬 \"사누드, 부탁이야. 도와 줘.\"",
+        "significant": true
+      },
+      {
+        "op": "C0",
+        "bytes": "c0 02",
+        "offset": 1392,
+        "text": "📍 위치: 오른쪽",
+        "significant": true
+      },
+      {
+        "op": "CC",
+        "bytes": "cc 00 22",
+        "offset": 1394,
+        "text": "👤 인물 34 등장",
+        "significant": true
+      },
+      {
+        "op": "C8",
+        "bytes": "c8 00 80",
+        "offset": 1397,
+        "text": "💬 \"응, 나로 족하다면.\"",
+        "significant": true
+      },
+      {
+        "op": "C0",
+        "bytes": "c0 01",
+        "offset": 1401,
+        "text": "📍 위치: 왼쪽",
+        "significant": true
+      },
+      {
+        "op": "CC",
+        "bytes": "cc 00 01",
+        "offset": 1403,
+        "text": "👤 조안 등장",
+        "significant": true
+      },
+      {
+        "op": "C8",
+        "bytes": "c8 00 81",
+        "offset": 1406,
+        "text": "💬 \"자！ 항구로 빨리.\"",
+        "significant": true
+      },
+      {
+        "op": "AC",
+        "bytes": "ac 05 01 47",
+        "offset": 1411,
+        "text": "🔍 [조건 체크] node_0456 확인",
+        "significant": true
+      },
+      {
+        "op": "C0",
+        "bytes": "c0 01",
+        "offset": 1419,
+        "text": "📍 위치: 왼쪽",
+        "significant": true
+      },
+      {
+        "op": "CC",
+        "bytes": "cc 00 22",
+        "offset": 1421,
+        "text": "👤 인물 34 등장",
+        "significant": true
+      },
+      {
+        "op": "C8",
+        "bytes": "c8 00 82",
+        "offset": 1424,
+        "text": "💬 \"$n, 어쩔 작정이지.\"",
+        "significant": true
+      },
+      {
+        "op": "C0",
+        "bytes": "c0 02",
+        "offset": 1428,
+        "text": "📍 위치: 오른쪽",
+        "significant": true
+      },
+      {
+        "op": "CC",
+        "bytes": "cc 00 01",
+        "offset": 1430,
+        "text": "👤 조안 등장",
+        "significant": true
+      },
+      {
+        "op": "C8",
+        "bytes": "c8 00 83",
+        "offset": 1433,
+        "text": "💬 \"어떤배라도 좋아. 내게 배만 있다면………\"",
+        "significant": true
+      },
+      {
+        "op": "C0",
+        "bytes": "c0 01",
+        "offset": 1437,
+        "text": "📍 위치: 왼쪽",
+        "significant": true
+      },
+      {
+        "op": "CC",
+        "bytes": "cc 00 22",
+        "offset": 1439,
+        "text": "👤 인물 34 등장",
+        "significant": true
+      },
+      {
+        "op": "C8",
+        "bytes": "c8 00 84",
+        "offset": 1442,
+        "text": "💬 \"진정해. $n. 그래, 술이라도 마시며 생각하지.\"",
+        "significant": true
+      },
+      {
+        "op": "AD",
+        "bytes": "ad 05 02 71",
+        "offset": 1446,
+        "text": "➔ [조건부 점프] node_0456로 이동",
+        "significant": true
+      },
+      {
+        "op": "CA",
+        "bytes": "ca 10 c0 01 cc",
+        "offset": 1454,
+        "text": "⚙️ 기타 동작 (CA)",
+        "significant": true
+      },
+      {
+        "op": "C8",
+        "bytes": "c8 00 85",
+        "offset": 1461,
+        "text": "💬 \"도대체 뭘 할거지？\"",
+        "significant": true
+      },
+      {
+        "op": "C0",
+        "bytes": "c0 02",
+        "offset": 1465,
+        "text": "📍 위치: 오른쪽",
+        "significant": true
+      },
+      {
+        "op": "CC",
+        "bytes": "cc 00 01",
+        "offset": 1467,
+        "text": "👤 조안 등장",
+        "significant": true
+      },
+      {
+        "op": "C8",
+        "bytes": "c8 00 86",
+        "offset": 1470,
+        "text": "💬 \"배를 받아내겠어, 에스파니아 해군한테.\"",
+        "significant": true
+      },
+      {
+        "op": "C0",
+        "bytes": "c0 01",
+        "offset": 1474,
+        "text": "📍 위치: 왼쪽",
+        "significant": true
+      },
+      {
+        "op": "CC",
+        "bytes": "cc 00 22",
+        "offset": 1476,
+        "text": "👤 인물 34 등장",
+        "significant": true
+      },
+      {
+        "op": "C8",
+        "bytes": "c8 00 87",
+        "offset": 1479,
+        "text": "💬 \"$n 돌았나！\"",
+        "significant": true
+      },
+      {
+        "op": "C0",
+        "bytes": "c0 02",
+        "offset": 1483,
+        "text": "📍 위치: 오른쪽",
+        "significant": true
+      },
+      {
+        "op": "CC",
+        "bytes": "cc 00 01",
+        "offset": 1485,
+        "text": "👤 조안 등장",
+        "significant": true
+      },
+      {
+        "op": "C8",
+        "bytes": "c8 00 88",
+        "offset": 1488,
+        "text": "💬 \"음,\n아마 자네가 지휘하는 배가 있지！\n신대륙의 금수송선.\"",
+        "significant": true
+      },
+      {
+        "op": "C0",
+        "bytes": "c0 01",
+        "offset": 1492,
+        "text": "📍 위치: 왼쪽",
+        "significant": true
+      },
+      {
+        "op": "CC",
+        "bytes": "cc 00 22",
+        "offset": 1494,
+        "text": "👤 인물 34 등장",
+        "significant": true
+      },
+      {
+        "op": "C8",
+        "bytes": "c8 00 89",
+        "offset": 1497,
+        "text": "💬 \"반역죄야. 사령관이 가만있지 않을 걸.\"",
+        "significant": true
+      },
+      {
+        "op": "C0",
+        "bytes": "c0 02",
+        "offset": 1501,
+        "text": "📍 위치: 오른쪽",
+        "significant": true
+      },
+      {
+        "op": "CC",
+        "bytes": "cc 00 01",
+        "offset": 1503,
+        "text": "👤 조안 등장",
+        "significant": true
+      },
+      {
+        "op": "C8",
+        "bytes": "c8 00 8a",
+        "offset": 1506,
+        "text": "💬 \"무서워？ 그렇다면 좋아.\"",
+        "significant": true
+      },
+      {
+        "op": "C0",
+        "bytes": "c0 01",
+        "offset": 1511,
+        "text": "📍 위치: 왼쪽",
+        "significant": true
+      },
+      {
+        "op": "CC",
+        "bytes": "cc 00 22",
+        "offset": 1513,
+        "text": "👤 인물 34 등장",
+        "significant": true
+      },
+      {
+        "op": "C8",
+        "bytes": "c8 00 8b",
+        "offset": 1516,
+        "text": "💬 \"$n 뭘 하는거야！\"",
+        "significant": true
+      },
+      {
+        "op": "C0",
+        "bytes": "c0 02",
+        "offset": 1520,
+        "text": "📍 위치: 오른쪽",
+        "significant": true
+      },
+      {
+        "op": "CC",
+        "bytes": "cc 00 01",
+        "offset": 1522,
+        "text": "👤 조안 등장",
+        "significant": true
+      },
+      {
+        "op": "C8",
+        "bytes": "c8 00 8c",
+        "offset": 1525,
+        "text": "💬 \"움직이지마！ 아니면 정말 죽여야만 하게 되니까.\"",
+        "significant": true
+      },
+      {
+        "op": "C0",
+        "bytes": "c0 02",
+        "offset": 1529,
+        "text": "📍 위치: 오른쪽",
+        "significant": true
+      },
+      {
+        "op": "CC",
+        "bytes": "cc 00 01",
+        "offset": 1531,
+        "text": "👤 조안 등장",
+        "significant": true
+      },
+      {
+        "op": "C8",
+        "bytes": "c8 00 8d",
+        "offset": 1534,
+        "text": "💬 \"아무짓도 안해요.\n자네에겐 인질흉내만 시킬테니까.\"",
+        "significant": true
+      }
+    ],
+    "next_nodes": [
+      "node_0600"
+    ]
+  },
+  "node_0600": {
+    "id": "node_0600",
+    "offset": 1536,
+    "commands": [
+      {
+        "op": "C0",
+        "bytes": "c0 02",
+        "offset": 1538,
+        "text": "📍 위치: 오른쪽",
+        "significant": true
+      },
+      {
+        "op": "CC",
+        "bytes": "cc 00 01",
+        "offset": 1540,
+        "text": "👤 조안 등장",
+        "significant": true
+      },
+      {
+        "op": "C8",
+        "bytes": "c8 00 8e",
+        "offset": 1543,
+        "text": "💬 \"어디 중립국항구에 내려주지.\n그때까진 참아요.\"",
+        "significant": true
+      },
+      {
+        "op": "C0",
+        "bytes": "c0 02",
+        "offset": 1547,
+        "text": "📍 위치: 오른쪽",
+        "significant": true
+      },
+      {
+        "op": "CC",
+        "bytes": "cc 00 01",
+        "offset": 1549,
+        "text": "👤 조안 등장",
+        "significant": true
+      },
+      {
+        "op": "C8",
+        "bytes": "c8 00 8f",
+        "offset": 1552,
+        "text": "💬 \"사누드, 당신에겐 미안하게 생각해요.\n하지만………\"",
+        "significant": true
+      },
+      {
+        "op": "CA",
+        "bytes": "ca 0a c0 01 cc",
+        "offset": 1556,
+        "text": "⚙️ 기타 동작 (CA)",
+        "significant": true
+      },
+      {
+        "op": "C8",
+        "bytes": "c8 00 90",
+        "offset": 1563,
+        "text": "💬 \"알았네. $n.\"",
+        "significant": true
+      },
+      {
+        "op": "C0",
+        "bytes": "c0 02",
+        "offset": 1567,
+        "text": "📍 위치: 오른쪽",
+        "significant": true
+      },
+      {
+        "op": "CC",
+        "bytes": "cc 00 01",
+        "offset": 1569,
+        "text": "👤 조안 등장",
+        "significant": true
+      },
+      {
+        "op": "C8",
+        "bytes": "c8 00 91",
+        "offset": 1572,
+        "text": "💬 \"음！\"",
+        "significant": true
+      },
+      {
+        "op": "C0",
+        "bytes": "c0 01",
+        "offset": 1576,
+        "text": "📍 위치: 왼쪽",
+        "significant": true
+      },
+      {
+        "op": "CC",
+        "bytes": "cc 00 22",
+        "offset": 1578,
+        "text": "👤 인물 34 등장",
+        "significant": true
+      },
+      {
+        "op": "C8",
+        "bytes": "c8 00 92",
+        "offset": 1581,
+        "text": "💬 \"일당이 되겠어.\n다만, 이제부터 배지휘는 자네가 해.\"",
+        "significant": true
+      },
+      {
+        "op": "C0",
+        "bytes": "c0 01",
+        "offset": 1585,
+        "text": "📍 위치: 왼쪽",
+        "significant": true
+      },
+      {
+        "op": "CC",
+        "bytes": "cc 00 22",
+        "offset": 1587,
+        "text": "👤 인물 34 등장",
+        "significant": true
+      },
+      {
+        "op": "C8",
+        "bytes": "c8 00 93",
+        "offset": 1590,
+        "text": "💬 \"반역죄 주범은 교수형이지만, 공범은 징역형으로 끝날지도 모르지.\"",
+        "significant": true
+      },
+      {
+        "op": "C0",
+        "bytes": "c0 02",
+        "offset": 1594,
+        "text": "📍 위치: 오른쪽",
+        "significant": true
+      },
+      {
+        "op": "CC",
+        "bytes": "cc 00 01",
+        "offset": 1596,
+        "text": "👤 조안 등장",
+        "significant": true
+      },
+      {
+        "op": "C8",
+        "bytes": "c8 00 94",
+        "offset": 1599,
+        "text": "💬 \"고마워. 감사할뿐야.\"",
+        "significant": true
+      },
+      {
+        "op": "C0",
+        "bytes": "c0 01",
+        "offset": 1603,
+        "text": "📍 위치: 왼쪽",
+        "significant": true
+      },
+      {
+        "op": "CC",
+        "bytes": "cc 00 22",
+        "offset": 1605,
+        "text": "👤 인물 34 등장",
+        "significant": true
+      },
+      {
+        "op": "C8",
+        "bytes": "c8 00 95",
+        "offset": 1608,
+        "text": "💬 \"자, 자네가 제독이야.\n기함에다 새 이름을.\"",
+        "significant": true
+      },
+      {
+        "op": "C0",
+        "bytes": "c0 02",
+        "offset": 1612,
+        "text": "📍 위치: 오른쪽",
+        "significant": true
+      },
+      {
+        "op": "CC",
+        "bytes": "cc 00 01",
+        "offset": 1614,
+        "text": "👤 조안 등장",
+        "significant": true
+      },
+      {
+        "op": "C8",
+        "bytes": "c8 00 96",
+        "offset": 1617,
+        "text": "💬 \"글쎄, 이름은 리베리온\n이라는 건 어떨까.\"",
+        "significant": true
+      },
+      {
+        "op": "C0",
+        "bytes": "c0 01",
+        "offset": 1621,
+        "text": "📍 위치: 왼쪽",
+        "significant": true
+      },
+      {
+        "op": "CC",
+        "bytes": "cc 00 22",
+        "offset": 1623,
+        "text": "👤 인물 34 등장",
+        "significant": true
+      },
+      {
+        "op": "C8",
+        "bytes": "c8 00 97",
+        "offset": 1626,
+        "text": "💬 \"리베리온……\n반란이란 의미군. 여해적 기함에 어울려.\"",
+        "significant": true
+      },
+      {
+        "op": "DC",
+        "bytes": "dc 00 03 48",
+        "offset": 1632,
+        "text": "🚀 [강제 이동] node_0600로",
+        "significant": true
+      },
+      {
+        "op": "DC",
+        "bytes": "dc 00 07 00",
+        "offset": 1647,
+        "text": "🚀 [강제 이동] node_0600로",
+        "significant": true
+      },
+      {
+        "op": "DC",
+        "bytes": "dc 00 07 00",
+        "offset": 1656,
+        "text": "🚀 [강제 이동] node_0600로",
+        "significant": true
+      },
+      {
+        "op": "DC",
+        "bytes": "dc 00 07 00",
+        "offset": 1664,
+        "text": "🚀 [강제 이동] node_0600로",
+        "significant": true
+      },
+      {
+        "op": "DC",
+        "bytes": "dc 00 09 00",
+        "offset": 1687,
+        "text": "🚀 [강제 이동] node_0600로",
+        "significant": true
+      },
+      {
+        "op": "DC",
+        "bytes": "dc 00 09 00",
+        "offset": 1696,
+        "text": "🚀 [강제 이동] node_0600로",
+        "significant": true
+      },
+      {
+        "op": "DC",
+        "bytes": "dc 00 09 00",
+        "offset": 1705,
+        "text": "🚀 [강제 이동] node_0600로",
+        "significant": true
+      },
+      {
+        "op": "DC",
+        "bytes": "dc 00 09 00",
+        "offset": 1713,
+        "text": "🚀 [강제 이동] node_0600로",
+        "significant": true
+      },
+      {
+        "op": "DC",
+        "bytes": "dc 00 03 01",
+        "offset": 1722,
+        "text": "🚀 [강제 이동] node_0600로",
+        "significant": true
+      },
+      {
+        "op": "C0",
+        "bytes": "c0 01",
+        "offset": 1745,
+        "text": "📍 위치: 왼쪽",
+        "significant": true
+      },
+      {
+        "op": "CC",
+        "bytes": "cc 00 22",
+        "offset": 1747,
+        "text": "👤 인물 34 등장",
+        "significant": true
+      },
+      {
+        "op": "C8",
+        "bytes": "c8 00 99",
+        "offset": 1750,
+        "text": "💬 \"$n, 에제키엘사령관의 생각은 당연해.\"",
+        "significant": true
+      },
+      {
+        "op": "C0",
+        "bytes": "c0 02",
+        "offset": 1754,
+        "text": "📍 위치: 오른쪽",
+        "significant": true
+      },
+      {
+        "op": "CC",
+        "bytes": "cc 00 01",
+        "offset": 1756,
+        "text": "👤 조안 등장",
+        "significant": true
+      },
+      {
+        "op": "C8",
+        "bytes": "c8 00 9a",
+        "offset": 1759,
+        "text": "💬 \"그럼, 난 어떻게 하면 좋지.\"",
+        "significant": true
+      },
+      {
+        "op": "C0",
+        "bytes": "c0 01",
+        "offset": 1763,
+        "text": "📍 위치: 왼쪽",
+        "significant": true
+      },
+      {
+        "op": "CC",
+        "bytes": "cc 00 22",
+        "offset": 1765,
+        "text": "👤 인물 34 등장",
+        "significant": true
+      },
+      {
+        "op": "C8",
+        "bytes": "c8 00 9b",
+        "offset": 1768,
+        "text": "💬 \"모르겠어,\n하지만 난 포기하라고도 못해.\"",
+        "significant": true
+      },
+      {
+        "op": "AC",
+        "bytes": "ac 05 02 dd",
+        "offset": 1774,
+        "text": "🔍 [조건 체크] node_0600 확인",
+        "significant": true
+      },
+      {
+        "op": "AD",
+        "bytes": "ad 07 02 b8",
+        "offset": 1778,
+        "text": "➔ [조건부 점프] node_0600로 이동",
+        "significant": true
+      },
+      {
+        "op": "C0",
+        "bytes": "c0 01",
+        "offset": 1782,
+        "text": "📍 위치: 왼쪽",
+        "significant": true
+      },
+      {
+        "op": "CC",
+        "bytes": "cc 00 22",
+        "offset": 1784,
+        "text": "👤 인물 34 등장",
+        "significant": true
+      },
+      {
+        "op": "C8",
+        "bytes": "c8 00 9c",
+        "offset": 1787,
+        "text": "💬 \"$n, 이 이상 방법이 없어.\"",
+        "significant": true
+      },
+      {
+        "op": "C0",
+        "bytes": "c0 02",
+        "offset": 1791,
+        "text": "📍 위치: 오른쪽",
+        "significant": true
+      }
+    ],
+    "next_nodes": [
+      "node_0700"
+    ]
+  },
+  "node_0700": {
+    "id": "node_0700",
+    "offset": 1792,
+    "commands": [
+      {
+        "op": "CC",
+        "bytes": "cc 00 01",
+        "offset": 1793,
+        "text": "👤 조안 등장",
+        "significant": true
+      },
+      {
+        "op": "C8",
+        "bytes": "c8 00 9d",
+        "offset": 1796,
+        "text": "💬 \"아니, 난 포기안해.\"",
+        "significant": true
+      },
+      {
+        "op": "C0",
+        "bytes": "c0 01",
+        "offset": 1800,
+        "text": "📍 위치: 왼쪽",
+        "significant": true
+      },
+      {
+        "op": "CC",
+        "bytes": "cc 00 22",
+        "offset": 1802,
+        "text": "👤 인물 34 등장",
+        "significant": true
+      },
+      {
+        "op": "C8",
+        "bytes": "c8 00 9e",
+        "offset": 1805,
+        "text": "💬 \"진정해.\n그래, 술이라도 마시며 생각하지.\"",
+        "significant": true
+      },
+      {
+        "op": "AC",
+        "bytes": "ac 07 02 dd",
+        "offset": 1815,
+        "text": "🔍 [조건 체크] node_0700 확인",
+        "significant": true
+      },
+      {
+        "op": "C0",
+        "bytes": "c0 01",
+        "offset": 1819,
+        "text": "📍 위치: 왼쪽",
+        "significant": true
+      },
+      {
+        "op": "CC",
+        "bytes": "cc 00 22",
+        "offset": 1821,
+        "text": "👤 인물 34 등장",
+        "significant": true
+      },
+      {
+        "op": "C8",
+        "bytes": "c8 00 9f",
+        "offset": 1824,
+        "text": "💬 \"$n, 뭘 생각하고 있지？\"",
+        "significant": true
+      },
+      {
+        "op": "C0",
+        "bytes": "c0 02",
+        "offset": 1828,
+        "text": "📍 위치: 오른쪽",
+        "significant": true
+      },
+      {
+        "op": "CC",
+        "bytes": "cc 00 01",
+        "offset": 1830,
+        "text": "👤 조안 등장",
+        "significant": true
+      },
+      {
+        "op": "C8",
+        "bytes": "c8 00 a0",
+        "offset": 1833,
+        "text": "💬 \"힘이 필요해.\n페레로가에 대항할 힘.\"",
+        "significant": true
+      },
+      {
+        "op": "C0",
+        "bytes": "c0 01",
+        "offset": 1837,
+        "text": "📍 위치: 왼쪽",
+        "significant": true
+      },
+      {
+        "op": "CC",
+        "bytes": "cc 00 22",
+        "offset": 1839,
+        "text": "👤 인물 34 등장",
+        "significant": true
+      },
+      {
+        "op": "C8",
+        "bytes": "c8 00 a1",
+        "offset": 1842,
+        "text": "💬 \"힘이………\"",
+        "significant": true
+      },
+      {
+        "op": "AD",
+        "bytes": "ad 05 02 fd",
+        "offset": 1852,
+        "text": "➔ [조건부 점프] node_0700로 이동",
+        "significant": true
+      },
+      {
+        "op": "C0",
+        "bytes": "c0 01",
+        "offset": 1856,
+        "text": "📍 위치: 왼쪽",
+        "significant": true
+      },
+      {
+        "op": "CC",
+        "bytes": "cc 00 01",
+        "offset": 1858,
+        "text": "👤 조안 등장",
+        "significant": true
+      },
+      {
+        "op": "C8",
+        "bytes": "c8 00 a2",
+        "offset": 1861,
+        "text": "💬 \"사누드, 부탁이야. 도와줘.\"",
+        "significant": true
+      },
+      {
+        "op": "C0",
+        "bytes": "c0 02",
+        "offset": 1865,
+        "text": "📍 위치: 오른쪽",
+        "significant": true
+      },
+      {
+        "op": "CC",
+        "bytes": "cc 00 22",
+        "offset": 1867,
+        "text": "👤 인물 34 등장",
+        "significant": true
+      },
+      {
+        "op": "C8",
+        "bytes": "c8 00 a3",
+        "offset": 1870,
+        "text": "💬 \"응, 나로 족하다면.\"",
+        "significant": true
+      },
+      {
+        "op": "C0",
+        "bytes": "c0 01",
+        "offset": 1874,
+        "text": "📍 위치: 왼쪽",
+        "significant": true
+      },
+      {
+        "op": "CC",
+        "bytes": "cc 00 01",
+        "offset": 1876,
+        "text": "👤 조안 등장",
+        "significant": true
+      },
+      {
+        "op": "C8",
+        "bytes": "c8 00 a4",
+        "offset": 1879,
+        "text": "💬 \"자！ 항구로 빨리.\"",
+        "significant": true
+      },
+      {
+        "op": "A0",
+        "bytes": "a0 01 00",
+        "offset": 1885,
+        "text": "⚙️ 기타 동작 (A0)",
+        "significant": true
+      },
+      {
+        "op": "DC",
+        "bytes": "dc 00 01 01",
+        "offset": 1893,
+        "text": "🚀 [강제 이동] node_0700로",
+        "significant": true
+      }
+    ],
+    "next_nodes": []
+  }
+}

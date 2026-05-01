@@ -1,0 +1,4870 @@
+{
+  "node_0000": {
+    "id": "node_0000",
+    "offset": 0,
+    "commands": [
+      {
+        "op": "CC",
+        "bytes": "cc 00 0a",
+        "offset": 17,
+        "text": "👤 인물 10 등장",
+        "significant": true
+      },
+      {
+        "op": "A0",
+        "bytes": "a0 01 08",
+        "offset": 42,
+        "text": "⚙️ 기타 동작 (A0)",
+        "significant": true
+      }
+    ],
+    "next_nodes": [
+      "node_0032"
+    ]
+  },
+  "node_0032": {
+    "id": "node_0032",
+    "offset": 50,
+    "commands": [
+      {
+        "op": "AD",
+        "bytes": "ad 00 01 2a",
+        "offset": 50,
+        "text": "➔ [조건부 점프] node_0032로 이동",
+        "significant": true
+      },
+      {
+        "op": "AC",
+        "bytes": "ac 05 00 40",
+        "offset": 54,
+        "text": "🔍 [조건 체크] node_0032 확인",
+        "significant": true
+      },
+      {
+        "op": "C0",
+        "bytes": "c0 01",
+        "offset": 58,
+        "text": "📍 위치: 왼쪽",
+        "significant": true
+      },
+      {
+        "op": "CC",
+        "bytes": "cc 00 1f",
+        "offset": 60,
+        "text": "👤 로코 등장",
+        "significant": true
+      },
+      {
+        "op": "C8",
+        "bytes": "c8 04 94",
+        "offset": 63,
+        "text": "💬 \"[Binary Data: 83 0d]\"",
+        "significant": true
+      }
+    ],
+    "next_nodes": [
+      "node_0040"
+    ]
+  },
+  "node_0040": {
+    "id": "node_0040",
+    "offset": 64,
+    "commands": [
+      {
+        "op": "AD",
+        "bytes": "ad 05 01 2a",
+        "offset": 70,
+        "text": "➔ [조건부 점프] node_0040로 이동",
+        "significant": true
+      },
+      {
+        "op": "AC",
+        "bytes": "ac 01 01 08",
+        "offset": 74,
+        "text": "🔍 [조건 체크] node_0040 확인",
+        "significant": true
+      },
+      {
+        "op": "8E",
+        "bytes": "8e 01 42 00 f7",
+        "offset": 81,
+        "text": "⚙️ 기타 동작 (8E)",
+        "significant": true
+      },
+      {
+        "op": "C0",
+        "bytes": "c0 01",
+        "offset": 86,
+        "text": "📍 위치: 왼쪽",
+        "significant": true
+      },
+      {
+        "op": "CC",
+        "bytes": "cc 00 13",
+        "offset": 88,
+        "text": "👤 인물 19 등장",
+        "significant": true
+      },
+      {
+        "op": "C8",
+        "bytes": "c8 00 01",
+        "offset": 91,
+        "text": "💬 \"\"",
+        "significant": true
+      },
+      {
+        "op": "C0",
+        "bytes": "c0 02",
+        "offset": 95,
+        "text": "📍 위치: 오른쪽",
+        "significant": true
+      },
+      {
+        "op": "CC",
+        "bytes": "cc 00 00",
+        "offset": 97,
+        "text": "👤 주인공 등장",
+        "significant": true
+      },
+      {
+        "op": "C8",
+        "bytes": "c8 00 02",
+        "offset": 100,
+        "text": "💬 \"\u0012T\"",
+        "significant": true
+      },
+      {
+        "op": "C0",
+        "bytes": "c0 02",
+        "offset": 104,
+        "text": "📍 위치: 오른쪽",
+        "significant": true
+      },
+      {
+        "op": "CC",
+        "bytes": "cc 00 1f",
+        "offset": 106,
+        "text": "👤 로코 등장",
+        "significant": true
+      },
+      {
+        "op": "C8",
+        "bytes": "c8 00 03",
+        "offset": 109,
+        "text": "💬 \"\"",
+        "significant": true
+      },
+      {
+        "op": "C0",
+        "bytes": "c0 02",
+        "offset": 113,
+        "text": "📍 위치: 오른쪽",
+        "significant": true
+      },
+      {
+        "op": "CC",
+        "bytes": "cc 00 1f",
+        "offset": 115,
+        "text": "👤 로코 등장",
+        "significant": true
+      },
+      {
+        "op": "C8",
+        "bytes": "c8 00 04",
+        "offset": 118,
+        "text": "💬 \"[Binary Data: 12 a3]\"",
+        "significant": true
+      },
+      {
+        "op": "C0",
+        "bytes": "c0 01",
+        "offset": 122,
+        "text": "📍 위치: 왼쪽",
+        "significant": true
+      },
+      {
+        "op": "CC",
+        "bytes": "cc 00 13",
+        "offset": 124,
+        "text": "👤 인물 19 등장",
+        "significant": true
+      },
+      {
+        "op": "C8",
+        "bytes": "c8 00 05",
+        "offset": 127,
+        "text": "💬 \"\"",
+        "significant": true
+      },
+      {
+        "op": "C0",
+        "bytes": "c0 02",
+        "offset": 131,
+        "text": "📍 위치: 오른쪽",
+        "significant": true
+      },
+      {
+        "op": "CC",
+        "bytes": "cc 00 1f",
+        "offset": 133,
+        "text": "👤 로코 등장",
+        "significant": true
+      },
+      {
+        "op": "C8",
+        "bytes": "c8 00 06",
+        "offset": 136,
+        "text": "💬 \"\u0013\r\"",
+        "significant": true
+      },
+      {
+        "op": "C0",
+        "bytes": "c0 02",
+        "offset": 140,
+        "text": "📍 위치: 오른쪽",
+        "significant": true
+      },
+      {
+        "op": "CC",
+        "bytes": "cc 00 1f",
+        "offset": 142,
+        "text": "👤 로코 등장",
+        "significant": true
+      },
+      {
+        "op": "C8",
+        "bytes": "c8 00 07",
+        "offset": 145,
+        "text": "💬 \"\"",
+        "significant": true
+      },
+      {
+        "op": "C0",
+        "bytes": "c0 01",
+        "offset": 149,
+        "text": "📍 위치: 왼쪽",
+        "significant": true
+      },
+      {
+        "op": "CC",
+        "bytes": "cc 00 13",
+        "offset": 151,
+        "text": "👤 인물 19 등장",
+        "significant": true
+      },
+      {
+        "op": "C8",
+        "bytes": "c8 00 08",
+        "offset": 154,
+        "text": "💬 \"\u0013M\"",
+        "significant": true
+      },
+      {
+        "op": "C0",
+        "bytes": "c0 02",
+        "offset": 158,
+        "text": "📍 위치: 오른쪽",
+        "significant": true
+      },
+      {
+        "op": "CC",
+        "bytes": "cc 00 1f",
+        "offset": 160,
+        "text": "👤 로코 등장",
+        "significant": true
+      },
+      {
+        "op": "C8",
+        "bytes": "c8 00 09",
+        "offset": 163,
+        "text": "💬 \"\"",
+        "significant": true
+      },
+      {
+        "op": "C0",
+        "bytes": "c0 02",
+        "offset": 167,
+        "text": "📍 위치: 오른쪽",
+        "significant": true
+      },
+      {
+        "op": "CC",
+        "bytes": "cc 00 1f",
+        "offset": 169,
+        "text": "👤 로코 등장",
+        "significant": true
+      },
+      {
+        "op": "C8",
+        "bytes": "c8 00 0a",
+        "offset": 172,
+        "text": "💬 \"\u0013k\"",
+        "significant": true
+      },
+      {
+        "op": "C0",
+        "bytes": "c0 02",
+        "offset": 176,
+        "text": "📍 위치: 오른쪽",
+        "significant": true
+      },
+      {
+        "op": "CC",
+        "bytes": "cc 00 1f",
+        "offset": 178,
+        "text": "👤 로코 등장",
+        "significant": true
+      },
+      {
+        "op": "C8",
+        "bytes": "c8 00 0b",
+        "offset": 181,
+        "text": "💬 \"\"",
+        "significant": true
+      },
+      {
+        "op": "C0",
+        "bytes": "c0 01",
+        "offset": 185,
+        "text": "📍 위치: 왼쪽",
+        "significant": true
+      },
+      {
+        "op": "CC",
+        "bytes": "cc 00 13",
+        "offset": 187,
+        "text": "👤 인물 19 등장",
+        "significant": true
+      },
+      {
+        "op": "C8",
+        "bytes": "c8 00 0c",
+        "offset": 190,
+        "text": "💬 \"[Binary Data: 13 b4]\"",
+        "significant": true
+      },
+      {
+        "op": "C0",
+        "bytes": "c0 01",
+        "offset": 194,
+        "text": "📍 위치: 왼쪽",
+        "significant": true
+      },
+      {
+        "op": "CC",
+        "bytes": "cc 00 13",
+        "offset": 196,
+        "text": "👤 인물 19 등장",
+        "significant": true
+      },
+      {
+        "op": "C8",
+        "bytes": "c8 00 0d",
+        "offset": 199,
+        "text": "💬 \"\"",
+        "significant": true
+      },
+      {
+        "op": "C0",
+        "bytes": "c0 01",
+        "offset": 203,
+        "text": "📍 위치: 왼쪽",
+        "significant": true
+      },
+      {
+        "op": "CC",
+        "bytes": "cc 00 13",
+        "offset": 205,
+        "text": "👤 인물 19 등장",
+        "significant": true
+      },
+      {
+        "op": "C8",
+        "bytes": "c8 00 0e",
+        "offset": 208,
+        "text": "💬 \"[Binary Data: 13 f0]\"",
+        "significant": true
+      },
+      {
+        "op": "C0",
+        "bytes": "c0 01",
+        "offset": 212,
+        "text": "📍 위치: 왼쪽",
+        "significant": true
+      },
+      {
+        "op": "CC",
+        "bytes": "cc 00 13",
+        "offset": 214,
+        "text": "👤 인물 19 등장",
+        "significant": true
+      },
+      {
+        "op": "C8",
+        "bytes": "c8 00 0f",
+        "offset": 217,
+        "text": "💬 \"\"",
+        "significant": true
+      },
+      {
+        "op": "C0",
+        "bytes": "c0 01",
+        "offset": 221,
+        "text": "📍 위치: 왼쪽",
+        "significant": true
+      },
+      {
+        "op": "CC",
+        "bytes": "cc 00 13",
+        "offset": 223,
+        "text": "👤 인물 19 등장",
+        "significant": true
+      },
+      {
+        "op": "C8",
+        "bytes": "c8 00 10",
+        "offset": 226,
+        "text": "💬 \"\u00143\"",
+        "significant": true
+      },
+      {
+        "op": "C0",
+        "bytes": "c0 01",
+        "offset": 230,
+        "text": "📍 위치: 왼쪽",
+        "significant": true
+      },
+      {
+        "op": "CC",
+        "bytes": "cc 00 13",
+        "offset": 232,
+        "text": "👤 인물 19 등장",
+        "significant": true
+      },
+      {
+        "op": "C8",
+        "bytes": "c8 00 11",
+        "offset": 235,
+        "text": "💬 \"\"",
+        "significant": true
+      },
+      {
+        "op": "DC",
+        "bytes": "dc 00 06 00",
+        "offset": 239,
+        "text": "🚀 [강제 이동] node_0040로",
+        "significant": true
+      },
+      {
+        "op": "8F",
+        "bytes": "8f 01 41 01 08",
+        "offset": 253,
+        "text": "⚙️ 기타 동작 (8F)",
+        "significant": true
+      },
+      {
+        "op": "C0",
+        "bytes": "c0 01",
+        "offset": 258,
+        "text": "📍 위치: 왼쪽",
+        "significant": true
+      },
+      {
+        "op": "CC",
+        "bytes": "cc 00 06",
+        "offset": 260,
+        "text": "👤 마르코(집사) 등장",
+        "significant": true
+      },
+      {
+        "op": "C8",
+        "bytes": "c8 00 12",
+        "offset": 263,
+        "text": "💬 \"\u0014l\"",
+        "significant": true
+      }
+    ],
+    "next_nodes": [
+      "node_0108"
+    ]
+  },
+  "node_0108": {
+    "id": "node_0108",
+    "offset": 264,
+    "commands": [
+      {
+        "op": "AD",
+        "bytes": "ad 01 01 2a",
+        "offset": 270,
+        "text": "➔ [조건부 점프] node_0108로 이동",
+        "significant": true
+      },
+      {
+        "op": "C0",
+        "bytes": "c0 01",
+        "offset": 274,
+        "text": "📍 위치: 왼쪽",
+        "significant": true
+      },
+      {
+        "op": "CC",
+        "bytes": "cc 00 06",
+        "offset": 276,
+        "text": "👤 마르코(집사) 등장",
+        "significant": true
+      },
+      {
+        "op": "C8",
+        "bytes": "c8 00 13",
+        "offset": 279,
+        "text": "💬 \"\"",
+        "significant": true
+      },
+      {
+        "op": "C0",
+        "bytes": "c0 02",
+        "offset": 283,
+        "text": "📍 위치: 오른쪽",
+        "significant": true
+      },
+      {
+        "op": "CC",
+        "bytes": "cc 00 00",
+        "offset": 285,
+        "text": "👤 주인공 등장",
+        "significant": true
+      },
+      {
+        "op": "C8",
+        "bytes": "c8 00 14",
+        "offset": 288,
+        "text": "💬 \"[Binary Data: 14 a3]\"",
+        "significant": true
+      },
+      {
+        "op": "C0",
+        "bytes": "c0 01",
+        "offset": 292,
+        "text": "📍 위치: 왼쪽",
+        "significant": true
+      },
+      {
+        "op": "CC",
+        "bytes": "cc 00 06",
+        "offset": 294,
+        "text": "👤 마르코(집사) 등장",
+        "significant": true
+      },
+      {
+        "op": "C8",
+        "bytes": "c8 00 15",
+        "offset": 297,
+        "text": "💬 \"\"",
+        "significant": true
+      }
+    ],
+    "next_nodes": [
+      "node_012A"
+    ]
+  },
+  "node_012A": {
+    "id": "node_012A",
+    "offset": 298,
+    "commands": [
+      {
+        "op": "AC",
+        "bytes": "ac 00 02 62",
+        "offset": 304,
+        "text": "🔍 [조건 체크] node_012A 확인",
+        "significant": true
+      },
+      {
+        "op": "C0",
+        "bytes": "c0 02",
+        "offset": 308,
+        "text": "📍 위치: 오른쪽",
+        "significant": true
+      },
+      {
+        "op": "CC",
+        "bytes": "cc 00 00",
+        "offset": 310,
+        "text": "👤 주인공 등장",
+        "significant": true
+      },
+      {
+        "op": "C8",
+        "bytes": "c8 00 16",
+        "offset": 313,
+        "text": "💬 \"[Binary Data: 14 db]\"",
+        "significant": true
+      },
+      {
+        "op": "C0",
+        "bytes": "c0 01",
+        "offset": 317,
+        "text": "📍 위치: 왼쪽",
+        "significant": true
+      },
+      {
+        "op": "CC",
+        "bytes": "cc 00 12",
+        "offset": 319,
+        "text": "👤 인물 18 등장",
+        "significant": true
+      },
+      {
+        "op": "C8",
+        "bytes": "c8 00 17",
+        "offset": 322,
+        "text": "💬 \"\"",
+        "significant": true
+      },
+      {
+        "op": "C0",
+        "bytes": "c0 02",
+        "offset": 326,
+        "text": "📍 위치: 오른쪽",
+        "significant": true
+      },
+      {
+        "op": "CC",
+        "bytes": "cc 00 00",
+        "offset": 328,
+        "text": "👤 주인공 등장",
+        "significant": true
+      },
+      {
+        "op": "C8",
+        "bytes": "c8 00 18",
+        "offset": 331,
+        "text": "💬 \"\u0015\u000f\"",
+        "significant": true
+      },
+      {
+        "op": "C0",
+        "bytes": "c0 01",
+        "offset": 335,
+        "text": "📍 위치: 왼쪽",
+        "significant": true
+      },
+      {
+        "op": "CC",
+        "bytes": "cc 00 12",
+        "offset": 337,
+        "text": "👤 인물 18 등장",
+        "significant": true
+      },
+      {
+        "op": "C8",
+        "bytes": "c8 00 19",
+        "offset": 340,
+        "text": "💬 \"\"",
+        "significant": true
+      },
+      {
+        "op": "C0",
+        "bytes": "c0 02",
+        "offset": 344,
+        "text": "📍 위치: 오른쪽",
+        "significant": true
+      },
+      {
+        "op": "CC",
+        "bytes": "cc 00 00",
+        "offset": 346,
+        "text": "👤 주인공 등장",
+        "significant": true
+      },
+      {
+        "op": "C8",
+        "bytes": "c8 00 1a",
+        "offset": 349,
+        "text": "💬 \"\u0015A\"",
+        "significant": true
+      },
+      {
+        "op": "C0",
+        "bytes": "c0 01",
+        "offset": 353,
+        "text": "📍 위치: 왼쪽",
+        "significant": true
+      },
+      {
+        "op": "CC",
+        "bytes": "cc 00 12",
+        "offset": 355,
+        "text": "👤 인물 18 등장",
+        "significant": true
+      },
+      {
+        "op": "C8",
+        "bytes": "c8 00 1b",
+        "offset": 358,
+        "text": "💬 \"\"",
+        "significant": true
+      },
+      {
+        "op": "C0",
+        "bytes": "c0 02",
+        "offset": 362,
+        "text": "📍 위치: 오른쪽",
+        "significant": true
+      },
+      {
+        "op": "CC",
+        "bytes": "cc 00 00",
+        "offset": 364,
+        "text": "👤 주인공 등장",
+        "significant": true
+      },
+      {
+        "op": "C8",
+        "bytes": "c8 00 1c",
+        "offset": 367,
+        "text": "💬 \"\u0015f\"",
+        "significant": true
+      },
+      {
+        "op": "C0",
+        "bytes": "c0 01",
+        "offset": 371,
+        "text": "📍 위치: 왼쪽",
+        "significant": true
+      },
+      {
+        "op": "CC",
+        "bytes": "cc 00 12",
+        "offset": 373,
+        "text": "👤 인물 18 등장",
+        "significant": true
+      },
+      {
+        "op": "C8",
+        "bytes": "c8 00 1d",
+        "offset": 376,
+        "text": "💬 \"\"",
+        "significant": true
+      },
+      {
+        "op": "C0",
+        "bytes": "c0 02",
+        "offset": 380,
+        "text": "📍 위치: 오른쪽",
+        "significant": true
+      },
+      {
+        "op": "CC",
+        "bytes": "cc 00 00",
+        "offset": 382,
+        "text": "👤 주인공 등장",
+        "significant": true
+      },
+      {
+        "op": "C8",
+        "bytes": "c8 00 1e",
+        "offset": 385,
+        "text": "💬 \"[Binary Data: 15 ac]\"",
+        "significant": true
+      },
+      {
+        "op": "C0",
+        "bytes": "c0 01",
+        "offset": 389,
+        "text": "📍 위치: 왼쪽",
+        "significant": true
+      },
+      {
+        "op": "CC",
+        "bytes": "cc 00 12",
+        "offset": 391,
+        "text": "👤 인물 18 등장",
+        "significant": true
+      },
+      {
+        "op": "C8",
+        "bytes": "c8 00 1f",
+        "offset": 394,
+        "text": "💬 \"\"",
+        "significant": true
+      },
+      {
+        "op": "C0",
+        "bytes": "c0 02",
+        "offset": 398,
+        "text": "📍 위치: 오른쪽",
+        "significant": true
+      },
+      {
+        "op": "CC",
+        "bytes": "cc 00 00",
+        "offset": 400,
+        "text": "👤 주인공 등장",
+        "significant": true
+      },
+      {
+        "op": "C8",
+        "bytes": "c8 00 20",
+        "offset": 403,
+        "text": "💬 \"[Binary Data: 15 e9]\"",
+        "significant": true
+      },
+      {
+        "op": "C0",
+        "bytes": "c0 01",
+        "offset": 407,
+        "text": "📍 위치: 왼쪽",
+        "significant": true
+      },
+      {
+        "op": "CC",
+        "bytes": "cc 00 12",
+        "offset": 409,
+        "text": "👤 인물 18 등장",
+        "significant": true
+      },
+      {
+        "op": "C8",
+        "bytes": "c8 00 21",
+        "offset": 412,
+        "text": "💬 \"\"",
+        "significant": true
+      },
+      {
+        "op": "C0",
+        "bytes": "c0 02",
+        "offset": 416,
+        "text": "📍 위치: 오른쪽",
+        "significant": true
+      },
+      {
+        "op": "CC",
+        "bytes": "cc 00 00",
+        "offset": 418,
+        "text": "👤 주인공 등장",
+        "significant": true
+      },
+      {
+        "op": "C8",
+        "bytes": "c8 00 22",
+        "offset": 421,
+        "text": "💬 \"\u0016\u001f\"",
+        "significant": true
+      },
+      {
+        "op": "C0",
+        "bytes": "c0 01",
+        "offset": 425,
+        "text": "📍 위치: 왼쪽",
+        "significant": true
+      },
+      {
+        "op": "CC",
+        "bytes": "cc 00 12",
+        "offset": 427,
+        "text": "👤 인물 18 등장",
+        "significant": true
+      },
+      {
+        "op": "C8",
+        "bytes": "c8 00 23",
+        "offset": 430,
+        "text": "💬 \"\"",
+        "significant": true
+      },
+      {
+        "op": "C0",
+        "bytes": "c0 01",
+        "offset": 434,
+        "text": "📍 위치: 왼쪽",
+        "significant": true
+      },
+      {
+        "op": "CC",
+        "bytes": "cc 00 12",
+        "offset": 436,
+        "text": "👤 인물 18 등장",
+        "significant": true
+      },
+      {
+        "op": "C8",
+        "bytes": "c8 00 24",
+        "offset": 439,
+        "text": "💬 \"\u0016P\"",
+        "significant": true
+      },
+      {
+        "op": "C0",
+        "bytes": "c0 02",
+        "offset": 443,
+        "text": "📍 위치: 오른쪽",
+        "significant": true
+      },
+      {
+        "op": "CC",
+        "bytes": "cc 00 00",
+        "offset": 445,
+        "text": "👤 주인공 등장",
+        "significant": true
+      },
+      {
+        "op": "C8",
+        "bytes": "c8 00 25",
+        "offset": 448,
+        "text": "💬 \"\"",
+        "significant": true
+      },
+      {
+        "op": "C0",
+        "bytes": "c0 01",
+        "offset": 452,
+        "text": "📍 위치: 왼쪽",
+        "significant": true
+      },
+      {
+        "op": "CC",
+        "bytes": "cc 00 12",
+        "offset": 454,
+        "text": "👤 인물 18 등장",
+        "significant": true
+      },
+      {
+        "op": "C8",
+        "bytes": "c8 00 26",
+        "offset": 457,
+        "text": "💬 \"\u0016~\"",
+        "significant": true
+      },
+      {
+        "op": "C0",
+        "bytes": "c0 02",
+        "offset": 461,
+        "text": "📍 위치: 오른쪽",
+        "significant": true
+      },
+      {
+        "op": "CC",
+        "bytes": "cc 00 00",
+        "offset": 463,
+        "text": "👤 주인공 등장",
+        "significant": true
+      },
+      {
+        "op": "C8",
+        "bytes": "c8 00 27",
+        "offset": 466,
+        "text": "💬 \"\"",
+        "significant": true
+      },
+      {
+        "op": "C0",
+        "bytes": "c0 01",
+        "offset": 470,
+        "text": "📍 위치: 왼쪽",
+        "significant": true
+      },
+      {
+        "op": "CC",
+        "bytes": "cc 00 12",
+        "offset": 472,
+        "text": "👤 인물 18 등장",
+        "significant": true
+      },
+      {
+        "op": "C8",
+        "bytes": "c8 00 28",
+        "offset": 475,
+        "text": "💬 \"[Binary Data: 16 cd]\"",
+        "significant": true
+      },
+      {
+        "op": "C0",
+        "bytes": "c0 02",
+        "offset": 479,
+        "text": "📍 위치: 오른쪽",
+        "significant": true
+      },
+      {
+        "op": "CC",
+        "bytes": "cc 00 00",
+        "offset": 481,
+        "text": "👤 주인공 등장",
+        "significant": true
+      },
+      {
+        "op": "C8",
+        "bytes": "c8 00 29",
+        "offset": 484,
+        "text": "💬 \"\"",
+        "significant": true
+      },
+      {
+        "op": "C0",
+        "bytes": "c0 01",
+        "offset": 488,
+        "text": "📍 위치: 왼쪽",
+        "significant": true
+      },
+      {
+        "op": "CC",
+        "bytes": "cc 00 12",
+        "offset": 490,
+        "text": "👤 인물 18 등장",
+        "significant": true
+      },
+      {
+        "op": "C8",
+        "bytes": "c8 00 2a",
+        "offset": 493,
+        "text": "💬 \"\u0017\u001c\"",
+        "significant": true
+      },
+      {
+        "op": "C0",
+        "bytes": "c0 01",
+        "offset": 497,
+        "text": "📍 위치: 왼쪽",
+        "significant": true
+      },
+      {
+        "op": "CC",
+        "bytes": "cc 00 12",
+        "offset": 499,
+        "text": "👤 인물 18 등장",
+        "significant": true
+      },
+      {
+        "op": "C8",
+        "bytes": "c8 00 2b",
+        "offset": 502,
+        "text": "💬 \"\"",
+        "significant": true
+      },
+      {
+        "op": "C0",
+        "bytes": "c0 01",
+        "offset": 506,
+        "text": "📍 위치: 왼쪽",
+        "significant": true
+      },
+      {
+        "op": "CC",
+        "bytes": "cc 00 12",
+        "offset": 508,
+        "text": "👤 인물 18 등장",
+        "significant": true
+      },
+      {
+        "op": "C8",
+        "bytes": "c8 00 2c",
+        "offset": 511,
+        "text": "💬 \"\u0017N\"",
+        "significant": true
+      },
+      {
+        "op": "C0",
+        "bytes": "c0 01",
+        "offset": 515,
+        "text": "📍 위치: 왼쪽",
+        "significant": true
+      },
+      {
+        "op": "CC",
+        "bytes": "cc 00 12",
+        "offset": 517,
+        "text": "👤 인물 18 등장",
+        "significant": true
+      },
+      {
+        "op": "C8",
+        "bytes": "c8 00 2d",
+        "offset": 520,
+        "text": "💬 \"\"",
+        "significant": true
+      },
+      {
+        "op": "C0",
+        "bytes": "c0 02",
+        "offset": 524,
+        "text": "📍 위치: 오른쪽",
+        "significant": true
+      },
+      {
+        "op": "CC",
+        "bytes": "cc 00 00",
+        "offset": 526,
+        "text": "👤 주인공 등장",
+        "significant": true
+      },
+      {
+        "op": "C8",
+        "bytes": "c8 00 2e",
+        "offset": 529,
+        "text": "💬 \"[Binary Data: 17 9e]\"",
+        "significant": true
+      },
+      {
+        "op": "C0",
+        "bytes": "c0 01",
+        "offset": 533,
+        "text": "📍 위치: 왼쪽",
+        "significant": true
+      },
+      {
+        "op": "CC",
+        "bytes": "cc 00 12",
+        "offset": 535,
+        "text": "👤 인물 18 등장",
+        "significant": true
+      },
+      {
+        "op": "C8",
+        "bytes": "c8 00 2f",
+        "offset": 538,
+        "text": "💬 \"\"",
+        "significant": true
+      },
+      {
+        "op": "C0",
+        "bytes": "c0 01",
+        "offset": 542,
+        "text": "📍 위치: 왼쪽",
+        "significant": true
+      },
+      {
+        "op": "CC",
+        "bytes": "cc 00 12",
+        "offset": 544,
+        "text": "👤 인물 18 등장",
+        "significant": true
+      },
+      {
+        "op": "C8",
+        "bytes": "c8 00 30",
+        "offset": 547,
+        "text": "💬 \"[Binary Data: 17 ba]\"",
+        "significant": true
+      },
+      {
+        "op": "C0",
+        "bytes": "c0 01",
+        "offset": 551,
+        "text": "📍 위치: 왼쪽",
+        "significant": true
+      },
+      {
+        "op": "CC",
+        "bytes": "cc 00 12",
+        "offset": 553,
+        "text": "👤 인물 18 등장",
+        "significant": true
+      },
+      {
+        "op": "C8",
+        "bytes": "c8 00 31",
+        "offset": 556,
+        "text": "💬 \"\"",
+        "significant": true
+      },
+      {
+        "op": "C0",
+        "bytes": "c0 01",
+        "offset": 563,
+        "text": "📍 위치: 왼쪽",
+        "significant": true
+      },
+      {
+        "op": "CC",
+        "bytes": "cc 00 12",
+        "offset": 565,
+        "text": "👤 인물 18 등장",
+        "significant": true
+      },
+      {
+        "op": "C8",
+        "bytes": "c8 00 32",
+        "offset": 568,
+        "text": "💬 \"[Binary Data: 17 f1]\"",
+        "significant": true
+      },
+      {
+        "op": "C0",
+        "bytes": "c0 02",
+        "offset": 572,
+        "text": "📍 위치: 오른쪽",
+        "significant": true
+      },
+      {
+        "op": "CC",
+        "bytes": "cc 00 1f",
+        "offset": 574,
+        "text": "👤 로코 등장",
+        "significant": true
+      },
+      {
+        "op": "C8",
+        "bytes": "c8 00 33",
+        "offset": 577,
+        "text": "💬 \"\"",
+        "significant": true
+      },
+      {
+        "op": "C0",
+        "bytes": "c0 01",
+        "offset": 581,
+        "text": "📍 위치: 왼쪽",
+        "significant": true
+      },
+      {
+        "op": "CC",
+        "bytes": "cc 00 12",
+        "offset": 583,
+        "text": "👤 인물 18 등장",
+        "significant": true
+      },
+      {
+        "op": "C8",
+        "bytes": "c8 00 34",
+        "offset": 586,
+        "text": "💬 \"\u0018O\"",
+        "significant": true
+      },
+      {
+        "op": "C0",
+        "bytes": "c0 02",
+        "offset": 590,
+        "text": "📍 위치: 오른쪽",
+        "significant": true
+      },
+      {
+        "op": "CC",
+        "bytes": "cc 00 1f",
+        "offset": 592,
+        "text": "👤 로코 등장",
+        "significant": true
+      },
+      {
+        "op": "C8",
+        "bytes": "c8 00 35",
+        "offset": 595,
+        "text": "💬 \"\"",
+        "significant": true
+      },
+      {
+        "op": "C0",
+        "bytes": "c0 01",
+        "offset": 599,
+        "text": "📍 위치: 왼쪽",
+        "significant": true
+      },
+      {
+        "op": "CC",
+        "bytes": "cc 00 12",
+        "offset": 601,
+        "text": "👤 인물 18 등장",
+        "significant": true
+      },
+      {
+        "op": "C8",
+        "bytes": "c8 00 36",
+        "offset": 604,
+        "text": "💬 \"\u0018j\"",
+        "significant": true
+      }
+    ],
+    "next_nodes": [
+      "node_0262"
+    ]
+  },
+  "node_0262": {
+    "id": "node_0262",
+    "offset": 610,
+    "commands": [
+      {
+        "op": "AC",
+        "bytes": "ac 00 02 bf",
+        "offset": 618,
+        "text": "🔍 [조건 체크] node_0262 확인",
+        "significant": true
+      },
+      {
+        "op": "AD",
+        "bytes": "ad 04 02 75",
+        "offset": 622,
+        "text": "➔ [조건부 점프] node_0262로 이동",
+        "significant": true
+      },
+      {
+        "op": "C0",
+        "bytes": "c0 01",
+        "offset": 626,
+        "text": "📍 위치: 왼쪽",
+        "significant": true
+      },
+      {
+        "op": "CC",
+        "bytes": "cc 00 61",
+        "offset": 628,
+        "text": "👤 인물 97 등장",
+        "significant": true
+      }
+    ],
+    "next_nodes": [
+      "node_0275"
+    ]
+  },
+  "node_0275": {
+    "id": "node_0275",
+    "offset": 629,
+    "commands": [
+      {
+        "op": "C8",
+        "bytes": "c8 00 37",
+        "offset": 631,
+        "text": "💬 \"\"",
+        "significant": true
+      },
+      {
+        "op": "AC",
+        "bytes": "ac 04 02 be",
+        "offset": 635,
+        "text": "🔍 [조건 체크] node_0275 확인",
+        "significant": true
+      },
+      {
+        "op": "C0",
+        "bytes": "c0 01",
+        "offset": 639,
+        "text": "📍 위치: 왼쪽",
+        "significant": true
+      },
+      {
+        "op": "CC",
+        "bytes": "cc 00 61",
+        "offset": 641,
+        "text": "👤 인물 97 등장",
+        "significant": true
+      },
+      {
+        "op": "C8",
+        "bytes": "c8 00 38",
+        "offset": 644,
+        "text": "💬 \"[Binary Data: 18 bf]\"",
+        "significant": true
+      },
+      {
+        "op": "C0",
+        "bytes": "c0 01",
+        "offset": 648,
+        "text": "📍 위치: 왼쪽",
+        "significant": true
+      },
+      {
+        "op": "CC",
+        "bytes": "cc 00 62",
+        "offset": 650,
+        "text": "👤 인물 98 등장",
+        "significant": true
+      },
+      {
+        "op": "C8",
+        "bytes": "c8 00 39",
+        "offset": 653,
+        "text": "💬 \"\"",
+        "significant": true
+      },
+      {
+        "op": "C0",
+        "bytes": "c0 01",
+        "offset": 657,
+        "text": "📍 위치: 왼쪽",
+        "significant": true
+      },
+      {
+        "op": "CC",
+        "bytes": "cc 00 61",
+        "offset": 659,
+        "text": "👤 인물 97 등장",
+        "significant": true
+      },
+      {
+        "op": "C8",
+        "bytes": "c8 00 3a",
+        "offset": 662,
+        "text": "💬 \"[Binary Data: 18 e2]\"",
+        "significant": true
+      },
+      {
+        "op": "C0",
+        "bytes": "c0 02",
+        "offset": 666,
+        "text": "📍 위치: 오른쪽",
+        "significant": true
+      },
+      {
+        "op": "CC",
+        "bytes": "cc 00 00",
+        "offset": 668,
+        "text": "👤 주인공 등장",
+        "significant": true
+      },
+      {
+        "op": "C8",
+        "bytes": "c8 00 3b",
+        "offset": 671,
+        "text": "💬 \"\"",
+        "significant": true
+      },
+      {
+        "op": "CA",
+        "bytes": "ca 04 c0 01 cc",
+        "offset": 676,
+        "text": "⚙️ 기타 동작 (CA)",
+        "significant": true
+      },
+      {
+        "op": "C8",
+        "bytes": "c8 00 3c",
+        "offset": 683,
+        "text": "💬 \"\u0019/\"",
+        "significant": true
+      },
+      {
+        "op": "C0",
+        "bytes": "c0 02",
+        "offset": 687,
+        "text": "📍 위치: 오른쪽",
+        "significant": true
+      },
+      {
+        "op": "CC",
+        "bytes": "cc 00 00",
+        "offset": 689,
+        "text": "👤 주인공 등장",
+        "significant": true
+      },
+      {
+        "op": "C8",
+        "bytes": "c8 00 3d",
+        "offset": 692,
+        "text": "💬 \"\"",
+        "significant": true
+      },
+      {
+        "op": "C0",
+        "bytes": "c0 01",
+        "offset": 696,
+        "text": "📍 위치: 왼쪽",
+        "significant": true
+      },
+      {
+        "op": "CC",
+        "bytes": "cc 00 62",
+        "offset": 698,
+        "text": "👤 인물 98 등장",
+        "significant": true
+      },
+      {
+        "op": "C8",
+        "bytes": "c8 00 3e",
+        "offset": 701,
+        "text": "💬 \"[Binary Data: 19 92]\"",
+        "significant": true
+      }
+    ],
+    "next_nodes": [
+      "node_02BE"
+    ]
+  },
+  "node_02BE": {
+    "id": "node_02BE",
+    "offset": 702,
+    "commands": [],
+    "next_nodes": [
+      "node_02BF"
+    ]
+  },
+  "node_02BF": {
+    "id": "node_02BF",
+    "offset": 703,
+    "commands": [
+      {
+        "op": "CB",
+        "bytes": "cb ad 05 02 d9",
+        "offset": 712,
+        "text": "⚙️ 기타 동작 (CB)",
+        "significant": true
+      },
+      {
+        "op": "AC",
+        "bytes": "ac 01 02 d9",
+        "offset": 717,
+        "text": "🔍 [조건 체크] node_02BF 확인",
+        "significant": true
+      },
+      {
+        "op": "C0",
+        "bytes": "c0 01",
+        "offset": 725,
+        "text": "📍 위치: 왼쪽",
+        "significant": true
+      },
+      {
+        "op": "CC",
+        "bytes": "cc 00 62",
+        "offset": 727,
+        "text": "👤 인물 98 등장",
+        "significant": true
+      }
+    ],
+    "next_nodes": [
+      "node_02D9"
+    ]
+  },
+  "node_02D9": {
+    "id": "node_02D9",
+    "offset": 729,
+    "commands": [
+      {
+        "op": "C8",
+        "bytes": "c8 00 3f",
+        "offset": 730,
+        "text": "💬 \"\"",
+        "significant": true
+      },
+      {
+        "op": "AC",
+        "bytes": "ac 05 03 cb",
+        "offset": 735,
+        "text": "🔍 [조건 체크] node_02D9 확인",
+        "significant": true
+      },
+      {
+        "op": "C0",
+        "bytes": "c0 01",
+        "offset": 743,
+        "text": "📍 위치: 왼쪽",
+        "significant": true
+      },
+      {
+        "op": "CC",
+        "bytes": "cc 00 61",
+        "offset": 745,
+        "text": "👤 인물 97 등장",
+        "significant": true
+      },
+      {
+        "op": "C8",
+        "bytes": "c8 00 40",
+        "offset": 748,
+        "text": "💬 \"[Binary Data: 19 a3]\"",
+        "significant": true
+      },
+      {
+        "op": "C0",
+        "bytes": "c0 01",
+        "offset": 752,
+        "text": "📍 위치: 왼쪽",
+        "significant": true
+      },
+      {
+        "op": "CC",
+        "bytes": "cc 00 62",
+        "offset": 754,
+        "text": "👤 인물 98 등장",
+        "significant": true
+      },
+      {
+        "op": "C8",
+        "bytes": "c8 00 41",
+        "offset": 757,
+        "text": "💬 \"\"",
+        "significant": true
+      },
+      {
+        "op": "C0",
+        "bytes": "c0 02",
+        "offset": 761,
+        "text": "📍 위치: 오른쪽",
+        "significant": true
+      },
+      {
+        "op": "CC",
+        "bytes": "cc 00 00",
+        "offset": 763,
+        "text": "👤 주인공 등장",
+        "significant": true
+      },
+      {
+        "op": "C8",
+        "bytes": "c8 00 42",
+        "offset": 766,
+        "text": "💬 \"[Binary Data: 19 c9]\"",
+        "significant": true
+      }
+    ],
+    "next_nodes": [
+      "node_0300"
+    ]
+  },
+  "node_0300": {
+    "id": "node_0300",
+    "offset": 768,
+    "commands": [
+      {
+        "op": "C0",
+        "bytes": "c0 02",
+        "offset": 770,
+        "text": "📍 위치: 오른쪽",
+        "significant": true
+      },
+      {
+        "op": "CC",
+        "bytes": "cc 00 00",
+        "offset": 772,
+        "text": "👤 주인공 등장",
+        "significant": true
+      },
+      {
+        "op": "C8",
+        "bytes": "c8 00 43",
+        "offset": 775,
+        "text": "💬 \"\"",
+        "significant": true
+      },
+      {
+        "op": "C0",
+        "bytes": "c0 01",
+        "offset": 779,
+        "text": "📍 위치: 왼쪽",
+        "significant": true
+      },
+      {
+        "op": "CC",
+        "bytes": "cc 00 62",
+        "offset": 781,
+        "text": "👤 인물 98 등장",
+        "significant": true
+      },
+      {
+        "op": "C8",
+        "bytes": "c8 00 44",
+        "offset": 784,
+        "text": "💬 \"\u001a\u000b\"",
+        "significant": true
+      },
+      {
+        "op": "C0",
+        "bytes": "c0 01",
+        "offset": 788,
+        "text": "📍 위치: 왼쪽",
+        "significant": true
+      },
+      {
+        "op": "CC",
+        "bytes": "cc 00 61",
+        "offset": 790,
+        "text": "👤 인물 97 등장",
+        "significant": true
+      },
+      {
+        "op": "C8",
+        "bytes": "c8 00 45",
+        "offset": 793,
+        "text": "💬 \"\"",
+        "significant": true
+      },
+      {
+        "op": "C0",
+        "bytes": "c0 01",
+        "offset": 797,
+        "text": "📍 위치: 왼쪽",
+        "significant": true
+      },
+      {
+        "op": "CC",
+        "bytes": "cc 00 61",
+        "offset": 799,
+        "text": "👤 인물 97 등장",
+        "significant": true
+      },
+      {
+        "op": "C8",
+        "bytes": "c8 00 46",
+        "offset": 802,
+        "text": "💬 \"\u001a@\"",
+        "significant": true
+      },
+      {
+        "op": "C0",
+        "bytes": "c0 01",
+        "offset": 806,
+        "text": "📍 위치: 왼쪽",
+        "significant": true
+      },
+      {
+        "op": "CC",
+        "bytes": "cc 00 1f",
+        "offset": 808,
+        "text": "👤 로코 등장",
+        "significant": true
+      },
+      {
+        "op": "C8",
+        "bytes": "c8 00 47",
+        "offset": 811,
+        "text": "💬 \"\"",
+        "significant": true
+      },
+      {
+        "op": "C0",
+        "bytes": "c0 01",
+        "offset": 815,
+        "text": "📍 위치: 왼쪽",
+        "significant": true
+      },
+      {
+        "op": "CC",
+        "bytes": "cc 00 61",
+        "offset": 817,
+        "text": "👤 인물 97 등장",
+        "significant": true
+      },
+      {
+        "op": "C8",
+        "bytes": "c8 00 48",
+        "offset": 820,
+        "text": "💬 \"\u001aL\"",
+        "significant": true
+      },
+      {
+        "op": "C0",
+        "bytes": "c0 01",
+        "offset": 824,
+        "text": "📍 위치: 왼쪽",
+        "significant": true
+      },
+      {
+        "op": "CC",
+        "bytes": "cc 00 61",
+        "offset": 826,
+        "text": "👤 인물 97 등장",
+        "significant": true
+      },
+      {
+        "op": "C8",
+        "bytes": "c8 00 49",
+        "offset": 829,
+        "text": "💬 \"\"",
+        "significant": true
+      },
+      {
+        "op": "C0",
+        "bytes": "c0 02",
+        "offset": 833,
+        "text": "📍 위치: 오른쪽",
+        "significant": true
+      },
+      {
+        "op": "CC",
+        "bytes": "cc 00 00",
+        "offset": 835,
+        "text": "👤 주인공 등장",
+        "significant": true
+      }
+    ],
+    "next_nodes": [
+      "node_0345"
+    ]
+  },
+  "node_0345": {
+    "id": "node_0345",
+    "offset": 837,
+    "commands": [],
+    "next_nodes": [
+      "node_0346"
+    ]
+  },
+  "node_0346": {
+    "id": "node_0346",
+    "offset": 838,
+    "commands": [
+      {
+        "op": "C8",
+        "bytes": "c8 00 4a",
+        "offset": 838,
+        "text": "💬 \"\u001au\"",
+        "significant": true
+      },
+      {
+        "op": "C0",
+        "bytes": "c0 01",
+        "offset": 842,
+        "text": "📍 위치: 왼쪽",
+        "significant": true
+      },
+      {
+        "op": "CC",
+        "bytes": "cc 00 61",
+        "offset": 844,
+        "text": "👤 인물 97 등장",
+        "significant": true
+      },
+      {
+        "op": "C8",
+        "bytes": "c8 00 4b",
+        "offset": 847,
+        "text": "💬 \"\"",
+        "significant": true
+      },
+      {
+        "op": "C0",
+        "bytes": "c0 01",
+        "offset": 851,
+        "text": "📍 위치: 왼쪽",
+        "significant": true
+      },
+      {
+        "op": "CC",
+        "bytes": "cc 00 61",
+        "offset": 853,
+        "text": "👤 인물 97 등장",
+        "significant": true
+      },
+      {
+        "op": "C8",
+        "bytes": "c8 00 4c",
+        "offset": 856,
+        "text": "💬 \"\u001a~\"",
+        "significant": true
+      },
+      {
+        "op": "C0",
+        "bytes": "c0 02",
+        "offset": 860,
+        "text": "📍 위치: 오른쪽",
+        "significant": true
+      },
+      {
+        "op": "CC",
+        "bytes": "cc 00 00",
+        "offset": 862,
+        "text": "👤 주인공 등장",
+        "significant": true
+      },
+      {
+        "op": "C8",
+        "bytes": "c8 00 4d",
+        "offset": 865,
+        "text": "💬 \"\"",
+        "significant": true
+      },
+      {
+        "op": "C0",
+        "bytes": "c0 01",
+        "offset": 875,
+        "text": "📍 위치: 왼쪽",
+        "significant": true
+      },
+      {
+        "op": "CC",
+        "bytes": "cc 00 1f",
+        "offset": 877,
+        "text": "👤 로코 등장",
+        "significant": true
+      },
+      {
+        "op": "C8",
+        "bytes": "c8 00 4e",
+        "offset": 880,
+        "text": "💬 \"[Binary Data: 1a 83]\"",
+        "significant": true
+      },
+      {
+        "op": "C0",
+        "bytes": "c0 01",
+        "offset": 884,
+        "text": "📍 위치: 왼쪽",
+        "significant": true
+      },
+      {
+        "op": "CC",
+        "bytes": "cc 00 1f",
+        "offset": 886,
+        "text": "👤 로코 등장",
+        "significant": true
+      },
+      {
+        "op": "C8",
+        "bytes": "c8 00 4f",
+        "offset": 889,
+        "text": "💬 \"\"",
+        "significant": true
+      },
+      {
+        "op": "C0",
+        "bytes": "c0 02",
+        "offset": 893,
+        "text": "📍 위치: 오른쪽",
+        "significant": true
+      },
+      {
+        "op": "CC",
+        "bytes": "cc 00 00",
+        "offset": 895,
+        "text": "👤 주인공 등장",
+        "significant": true
+      },
+      {
+        "op": "C8",
+        "bytes": "c8 00 50",
+        "offset": 898,
+        "text": "💬 \"[Binary Data: 1a a1]\"",
+        "significant": true
+      },
+      {
+        "op": "C0",
+        "bytes": "c0 01",
+        "offset": 902,
+        "text": "📍 위치: 왼쪽",
+        "significant": true
+      },
+      {
+        "op": "CC",
+        "bytes": "cc 00 62",
+        "offset": 904,
+        "text": "👤 인물 98 등장",
+        "significant": true
+      },
+      {
+        "op": "C8",
+        "bytes": "c8 00 51",
+        "offset": 907,
+        "text": "💬 \"\"",
+        "significant": true
+      },
+      {
+        "op": "C0",
+        "bytes": "c0 02",
+        "offset": 911,
+        "text": "📍 위치: 오른쪽",
+        "significant": true
+      },
+      {
+        "op": "CC",
+        "bytes": "cc 00 00",
+        "offset": 913,
+        "text": "👤 주인공 등장",
+        "significant": true
+      },
+      {
+        "op": "C8",
+        "bytes": "c8 00 52",
+        "offset": 916,
+        "text": "💬 \"[Binary Data: 1a ae]\"",
+        "significant": true
+      },
+      {
+        "op": "C0",
+        "bytes": "c0 01",
+        "offset": 921,
+        "text": "📍 위치: 왼쪽",
+        "significant": true
+      },
+      {
+        "op": "CC",
+        "bytes": "cc 00 62",
+        "offset": 923,
+        "text": "👤 인물 98 등장",
+        "significant": true
+      },
+      {
+        "op": "C8",
+        "bytes": "c8 00 53",
+        "offset": 926,
+        "text": "💬 \"\"",
+        "significant": true
+      },
+      {
+        "op": "C0",
+        "bytes": "c0 01",
+        "offset": 930,
+        "text": "📍 위치: 왼쪽",
+        "significant": true
+      },
+      {
+        "op": "CC",
+        "bytes": "cc 00 1f",
+        "offset": 932,
+        "text": "👤 로코 등장",
+        "significant": true
+      },
+      {
+        "op": "C8",
+        "bytes": "c8 00 54",
+        "offset": 935,
+        "text": "💬 \"[Binary Data: 1a f0]\"",
+        "significant": true
+      },
+      {
+        "op": "C0",
+        "bytes": "c0 01",
+        "offset": 939,
+        "text": "📍 위치: 왼쪽",
+        "significant": true
+      },
+      {
+        "op": "CC",
+        "bytes": "cc 00 62",
+        "offset": 941,
+        "text": "👤 인물 98 등장",
+        "significant": true
+      },
+      {
+        "op": "C8",
+        "bytes": "c8 00 55",
+        "offset": 944,
+        "text": "💬 \"\"",
+        "significant": true
+      },
+      {
+        "op": "C0",
+        "bytes": "c0 02",
+        "offset": 948,
+        "text": "📍 위치: 오른쪽",
+        "significant": true
+      },
+      {
+        "op": "CC",
+        "bytes": "cc 00 00",
+        "offset": 950,
+        "text": "👤 주인공 등장",
+        "significant": true
+      },
+      {
+        "op": "C8",
+        "bytes": "c8 00 56",
+        "offset": 953,
+        "text": "💬 \"\u001b\u0003\"",
+        "significant": true
+      },
+      {
+        "op": "DC",
+        "bytes": "dc 00 05 00",
+        "offset": 957,
+        "text": "🚀 [강제 이동] node_0346로",
+        "significant": true
+      },
+      {
+        "op": "DC",
+        "bytes": "dc 00 05 01",
+        "offset": 965,
+        "text": "🚀 [강제 이동] node_0346로",
+        "significant": true
+      }
+    ],
+    "next_nodes": [
+      "node_03CB"
+    ]
+  },
+  "node_03CB": {
+    "id": "node_03CB",
+    "offset": 971,
+    "commands": [
+      {
+        "op": "AC",
+        "bytes": "ac 00 03 d6",
+        "offset": 978,
+        "text": "🔍 [조건 체크] node_03CB 확인",
+        "significant": true
+      }
+    ],
+    "next_nodes": [
+      "node_03D6"
+    ]
+  },
+  "node_03D6": {
+    "id": "node_03D6",
+    "offset": 982,
+    "commands": [
+      {
+        "op": "C0",
+        "bytes": "c0 00",
+        "offset": 982,
+        "text": "📍 위치: 중앙",
+        "significant": true
+      },
+      {
+        "op": "C8",
+        "bytes": "c8 00 57",
+        "offset": 984,
+        "text": "💬 \"\"",
+        "significant": true
+      },
+      {
+        "op": "AD",
+        "bytes": "ad 00 03 e0",
+        "offset": 988,
+        "text": "➔ [조건부 점프] node_03D6로 이동",
+        "significant": true
+      }
+    ],
+    "next_nodes": [
+      "node_03E0"
+    ]
+  },
+  "node_03E0": {
+    "id": "node_03E0",
+    "offset": 992,
+    "commands": [
+      {
+        "op": "C0",
+        "bytes": "c0 00",
+        "offset": 992,
+        "text": "📍 위치: 중앙",
+        "significant": true
+      },
+      {
+        "op": "C8",
+        "bytes": "c8 00 58",
+        "offset": 994,
+        "text": "💬 \"\u001bb\"",
+        "significant": true
+      },
+      {
+        "op": "AC",
+        "bytes": "ac 00 04 20",
+        "offset": 1004,
+        "text": "🔍 [조건 체크] node_03E0 확인",
+        "significant": true
+      },
+      {
+        "op": "AD",
+        "bytes": "ad 07 03 f4",
+        "offset": 1008,
+        "text": "➔ [조건부 점프] node_03E0로 이동",
+        "significant": true
+      }
+    ],
+    "next_nodes": [
+      "node_03F4"
+    ]
+  },
+  "node_03F4": {
+    "id": "node_03F4",
+    "offset": 1012,
+    "commands": [
+      {
+        "op": "C0",
+        "bytes": "c0 00",
+        "offset": 1012,
+        "text": "📍 위치: 중앙",
+        "significant": true
+      },
+      {
+        "op": "C8",
+        "bytes": "c8 00 59",
+        "offset": 1014,
+        "text": "💬 \"\"",
+        "significant": true
+      },
+      {
+        "op": "AC",
+        "bytes": "ac 07 04 1f",
+        "offset": 1018,
+        "text": "🔍 [조건 체크] node_03F4 확인",
+        "significant": true
+      },
+      {
+        "op": "C0",
+        "bytes": "c0 00",
+        "offset": 1022,
+        "text": "📍 위치: 중앙",
+        "significant": true
+      },
+      {
+        "op": "C8",
+        "bytes": "c8 00 5a",
+        "offset": 1024,
+        "text": "💬 \"[Binary Data: 1b 9b]\"",
+        "significant": true
+      },
+      {
+        "op": "C0",
+        "bytes": "c0 02",
+        "offset": 1028,
+        "text": "📍 위치: 오른쪽",
+        "significant": true
+      },
+      {
+        "op": "CC",
+        "bytes": "cc 00 00",
+        "offset": 1030,
+        "text": "👤 주인공 등장",
+        "significant": true
+      },
+      {
+        "op": "C8",
+        "bytes": "c8 00 5b",
+        "offset": 1033,
+        "text": "💬 \"\"",
+        "significant": true
+      },
+      {
+        "op": "C0",
+        "bytes": "c0 00",
+        "offset": 1037,
+        "text": "📍 위치: 중앙",
+        "significant": true
+      },
+      {
+        "op": "C8",
+        "bytes": "c8 00 5c",
+        "offset": 1039,
+        "text": "💬 \"[Binary Data: 1b ca]\"",
+        "significant": true
+      },
+      {
+        "op": "C0",
+        "bytes": "c0 00",
+        "offset": 1043,
+        "text": "📍 위치: 중앙",
+        "significant": true
+      },
+      {
+        "op": "C8",
+        "bytes": "c8 00 5d",
+        "offset": 1045,
+        "text": "💬 \"\"",
+        "significant": true
+      },
+      {
+        "op": "C0",
+        "bytes": "c0 02",
+        "offset": 1049,
+        "text": "📍 위치: 오른쪽",
+        "significant": true
+      },
+      {
+        "op": "CC",
+        "bytes": "cc 00 00",
+        "offset": 1051,
+        "text": "👤 주인공 등장",
+        "significant": true
+      },
+      {
+        "op": "C8",
+        "bytes": "c8 00 5e",
+        "offset": 1054,
+        "text": "💬 \"\u001c\u001a\"",
+        "significant": true
+      }
+    ],
+    "next_nodes": [
+      "node_041F"
+    ]
+  },
+  "node_041F": {
+    "id": "node_041F",
+    "offset": 1055,
+    "commands": [],
+    "next_nodes": [
+      "node_0420"
+    ]
+  },
+  "node_0420": {
+    "id": "node_0420",
+    "offset": 1056,
+    "commands": [
+      {
+        "op": "AD",
+        "bytes": "ad 02 04 8f",
+        "offset": 1066,
+        "text": "➔ [조건부 점프] node_0420로 이동",
+        "significant": true
+      },
+      {
+        "op": "C0",
+        "bytes": "c0 00",
+        "offset": 1070,
+        "text": "📍 위치: 중앙",
+        "significant": true
+      },
+      {
+        "op": "C8",
+        "bytes": "c8 00 5f",
+        "offset": 1072,
+        "text": "💬 \"\"",
+        "significant": true
+      },
+      {
+        "op": "AC",
+        "bytes": "ac 08 04 8f",
+        "offset": 1076,
+        "text": "🔍 [조건 체크] node_0420 확인",
+        "significant": true
+      },
+      {
+        "op": "C8",
+        "bytes": "c8 00 60",
+        "offset": 1085,
+        "text": "💬 \"\u001c\u001f\"",
+        "significant": true
+      },
+      {
+        "op": "8C",
+        "bytes": "8c 01 00",
+        "offset": 1093,
+        "text": "⚙️ 기타 동작 (8C)",
+        "significant": true
+      },
+      {
+        "op": "C0",
+        "bytes": "c0 02",
+        "offset": 1098,
+        "text": "📍 위치: 오른쪽",
+        "significant": true
+      },
+      {
+        "op": "CC",
+        "bytes": "cc 00 00",
+        "offset": 1100,
+        "text": "👤 주인공 등장",
+        "significant": true
+      },
+      {
+        "op": "C8",
+        "bytes": "c8 00 62",
+        "offset": 1103,
+        "text": "💬 \"[Binary Data: 1c 88]\"",
+        "significant": true
+      },
+      {
+        "op": "8C",
+        "bytes": "8c 01 01",
+        "offset": 1113,
+        "text": "⚙️ 기타 동작 (8C)",
+        "significant": true
+      },
+      {
+        "op": "C0",
+        "bytes": "c0 02",
+        "offset": 1118,
+        "text": "📍 위치: 오른쪽",
+        "significant": true
+      },
+      {
+        "op": "CC",
+        "bytes": "cc 00 00",
+        "offset": 1120,
+        "text": "👤 주인공 등장",
+        "significant": true
+      },
+      {
+        "op": "C8",
+        "bytes": "c8 00 63",
+        "offset": 1123,
+        "text": "💬 \"\"",
+        "significant": true
+      },
+      {
+        "op": "C0",
+        "bytes": "c0 02",
+        "offset": 1127,
+        "text": "📍 위치: 오른쪽",
+        "significant": true
+      },
+      {
+        "op": "CC",
+        "bytes": "cc 00 00",
+        "offset": 1129,
+        "text": "👤 주인공 등장",
+        "significant": true
+      },
+      {
+        "op": "C8",
+        "bytes": "c8 00 64",
+        "offset": 1132,
+        "text": "💬 \"[Binary Data: 1c d3]\"",
+        "significant": true
+      },
+      {
+        "op": "C0",
+        "bytes": "c0 00",
+        "offset": 1136,
+        "text": "📍 위치: 중앙",
+        "significant": true
+      },
+      {
+        "op": "C8",
+        "bytes": "c8 00 65",
+        "offset": 1138,
+        "text": "💬 \"\"",
+        "significant": true
+      },
+      {
+        "op": "DC",
+        "bytes": "dc 00 03 00",
+        "offset": 1142,
+        "text": "🚀 [강제 이동] node_0420로",
+        "significant": true
+      },
+      {
+        "op": "8C",
+        "bytes": "8c 01 02",
+        "offset": 1153,
+        "text": "⚙️ 기타 동작 (8C)",
+        "significant": true
+      },
+      {
+        "op": "8F",
+        "bytes": "8f c0 02 cc 00",
+        "offset": 1157,
+        "text": "⚙️ 기타 동작 (8F)",
+        "significant": true
+      },
+      {
+        "op": "C8",
+        "bytes": "c8 00 66",
+        "offset": 1163,
+        "text": "💬 \"\u001d\u001a\"",
+        "significant": true
+      }
+    ],
+    "next_nodes": [
+      "node_048F"
+    ]
+  },
+  "node_048F": {
+    "id": "node_048F",
+    "offset": 1167,
+    "commands": [
+      {
+        "op": "C0",
+        "bytes": "c0 00",
+        "offset": 1167,
+        "text": "📍 위치: 중앙",
+        "significant": true
+      },
+      {
+        "op": "C8",
+        "bytes": "c8 00 67",
+        "offset": 1169,
+        "text": "💬 \"\"",
+        "significant": true
+      },
+      {
+        "op": "AC",
+        "bytes": "ac 02 05 5e",
+        "offset": 1173,
+        "text": "🔍 [조건 체크] node_048F 확인",
+        "significant": true
+      },
+      {
+        "op": "C0",
+        "bytes": "c0 00",
+        "offset": 1177,
+        "text": "📍 위치: 중앙",
+        "significant": true
+      },
+      {
+        "op": "C8",
+        "bytes": "c8 00 68",
+        "offset": 1179,
+        "text": "💬 \"\u001d4\"",
+        "significant": true
+      },
+      {
+        "op": "AC",
+        "bytes": "ac 07 04 ac",
+        "offset": 1183,
+        "text": "🔍 [조건 체크] node_048F 확인",
+        "significant": true
+      },
+      {
+        "op": "C0",
+        "bytes": "c0 02",
+        "offset": 1187,
+        "text": "📍 위치: 오른쪽",
+        "significant": true
+      },
+      {
+        "op": "CC",
+        "bytes": "cc 00 00",
+        "offset": 1189,
+        "text": "👤 주인공 등장",
+        "significant": true
+      },
+      {
+        "op": "C8",
+        "bytes": "c8 00 69",
+        "offset": 1192,
+        "text": "💬 \"\"",
+        "significant": true
+      }
+    ],
+    "next_nodes": [
+      "node_04AC"
+    ]
+  },
+  "node_04AC": {
+    "id": "node_04AC",
+    "offset": 1196,
+    "commands": [
+      {
+        "op": "C0",
+        "bytes": "c0 00",
+        "offset": 1196,
+        "text": "📍 위치: 중앙",
+        "significant": true
+      },
+      {
+        "op": "C8",
+        "bytes": "c8 00 6a",
+        "offset": 1198,
+        "text": "💬 \"\u001d^\"",
+        "significant": true
+      },
+      {
+        "op": "AD",
+        "bytes": "ad 07 04 cb",
+        "offset": 1202,
+        "text": "➔ [조건부 점프] node_04AC로 이동",
+        "significant": true
+      },
+      {
+        "op": "C0",
+        "bytes": "c0 02",
+        "offset": 1206,
+        "text": "📍 위치: 오른쪽",
+        "significant": true
+      },
+      {
+        "op": "CC",
+        "bytes": "cc 00 00",
+        "offset": 1208,
+        "text": "👤 주인공 등장",
+        "significant": true
+      },
+      {
+        "op": "C8",
+        "bytes": "c8 00 6b",
+        "offset": 1211,
+        "text": "💬 \"\"",
+        "significant": true
+      },
+      {
+        "op": "C0",
+        "bytes": "c0 00",
+        "offset": 1215,
+        "text": "📍 위치: 중앙",
+        "significant": true
+      },
+      {
+        "op": "C8",
+        "bytes": "c8 00 6c",
+        "offset": 1217,
+        "text": "💬 \"[Binary Data: 1d a9]\"",
+        "significant": true
+      },
+      {
+        "op": "C0",
+        "bytes": "c0 00",
+        "offset": 1221,
+        "text": "📍 위치: 중앙",
+        "significant": true
+      },
+      {
+        "op": "C8",
+        "bytes": "c8 00 6d",
+        "offset": 1223,
+        "text": "💬 \"\"",
+        "significant": true
+      }
+    ],
+    "next_nodes": [
+      "node_04CB"
+    ]
+  },
+  "node_04CB": {
+    "id": "node_04CB",
+    "offset": 1227,
+    "commands": [
+      {
+        "op": "C0",
+        "bytes": "c0 00",
+        "offset": 1227,
+        "text": "📍 위치: 중앙",
+        "significant": true
+      },
+      {
+        "op": "C8",
+        "bytes": "c8 00 6e",
+        "offset": 1229,
+        "text": "💬 \"[Binary Data: 1d d1]\"",
+        "significant": true
+      },
+      {
+        "op": "C0",
+        "bytes": "c0 00",
+        "offset": 1233,
+        "text": "📍 위치: 중앙",
+        "significant": true
+      },
+      {
+        "op": "C8",
+        "bytes": "c8 00 6f",
+        "offset": 1235,
+        "text": "💬 \"\"",
+        "significant": true
+      },
+      {
+        "op": "C0",
+        "bytes": "c0 02",
+        "offset": 1239,
+        "text": "📍 위치: 오른쪽",
+        "significant": true
+      },
+      {
+        "op": "CC",
+        "bytes": "cc 00 20",
+        "offset": 1241,
+        "text": "👤 인물 32 등장",
+        "significant": true
+      },
+      {
+        "op": "C8",
+        "bytes": "c8 00 70",
+        "offset": 1244,
+        "text": "💬 \"\u001e\u0001\"",
+        "significant": true
+      },
+      {
+        "op": "C0",
+        "bytes": "c0 00",
+        "offset": 1248,
+        "text": "📍 위치: 중앙",
+        "significant": true
+      },
+      {
+        "op": "C8",
+        "bytes": "c8 00 71",
+        "offset": 1250,
+        "text": "💬 \"\"",
+        "significant": true
+      },
+      {
+        "op": "C0",
+        "bytes": "c0 00",
+        "offset": 1254,
+        "text": "📍 위치: 중앙",
+        "significant": true
+      },
+      {
+        "op": "C8",
+        "bytes": "c8 00 72",
+        "offset": 1256,
+        "text": "💬 \"\u001e/\"",
+        "significant": true
+      },
+      {
+        "op": "C0",
+        "bytes": "c0 00",
+        "offset": 1260,
+        "text": "📍 위치: 중앙",
+        "significant": true
+      },
+      {
+        "op": "C8",
+        "bytes": "c8 00 73",
+        "offset": 1262,
+        "text": "💬 \"\"",
+        "significant": true
+      },
+      {
+        "op": "C0",
+        "bytes": "c0 02",
+        "offset": 1266,
+        "text": "📍 위치: 오른쪽",
+        "significant": true
+      },
+      {
+        "op": "CC",
+        "bytes": "cc 00 00",
+        "offset": 1268,
+        "text": "👤 주인공 등장",
+        "significant": true
+      },
+      {
+        "op": "C8",
+        "bytes": "c8 00 74",
+        "offset": 1271,
+        "text": "💬 \"\u001ed\"",
+        "significant": true
+      },
+      {
+        "op": "C0",
+        "bytes": "c0 02",
+        "offset": 1275,
+        "text": "📍 위치: 오른쪽",
+        "significant": true
+      },
+      {
+        "op": "CC",
+        "bytes": "cc 00 00",
+        "offset": 1277,
+        "text": "👤 주인공 등장",
+        "significant": true
+      }
+    ],
+    "next_nodes": [
+      "node_0500"
+    ]
+  },
+  "node_0500": {
+    "id": "node_0500",
+    "offset": 1280,
+    "commands": [
+      {
+        "op": "C8",
+        "bytes": "c8 00 75",
+        "offset": 1280,
+        "text": "💬 \"\"",
+        "significant": true
+      }
+    ],
+    "next_nodes": [
+      "node_0501"
+    ]
+  },
+  "node_0501": {
+    "id": "node_0501",
+    "offset": 1281,
+    "commands": [
+      {
+        "op": "C0",
+        "bytes": "c0 02",
+        "offset": 1284,
+        "text": "📍 위치: 오른쪽",
+        "significant": true
+      },
+      {
+        "op": "CC",
+        "bytes": "cc 00 20",
+        "offset": 1286,
+        "text": "👤 인물 32 등장",
+        "significant": true
+      },
+      {
+        "op": "C8",
+        "bytes": "c8 00 76",
+        "offset": 1289,
+        "text": "💬 \"[Binary Data: 1e a0]\"",
+        "significant": true
+      },
+      {
+        "op": "C0",
+        "bytes": "c0 02",
+        "offset": 1293,
+        "text": "📍 위치: 오른쪽",
+        "significant": true
+      },
+      {
+        "op": "CC",
+        "bytes": "cc 00 20",
+        "offset": 1295,
+        "text": "👤 인물 32 등장",
+        "significant": true
+      },
+      {
+        "op": "C8",
+        "bytes": "c8 00 77",
+        "offset": 1298,
+        "text": "💬 \"\"",
+        "significant": true
+      },
+      {
+        "op": "C0",
+        "bytes": "c0 02",
+        "offset": 1302,
+        "text": "📍 위치: 오른쪽",
+        "significant": true
+      },
+      {
+        "op": "CC",
+        "bytes": "cc 00 20",
+        "offset": 1304,
+        "text": "👤 인물 32 등장",
+        "significant": true
+      },
+      {
+        "op": "C8",
+        "bytes": "c8 00 78",
+        "offset": 1307,
+        "text": "💬 \"[Binary Data: 1e c9]\"",
+        "significant": true
+      },
+      {
+        "op": "C0",
+        "bytes": "c0 02",
+        "offset": 1311,
+        "text": "📍 위치: 오른쪽",
+        "significant": true
+      },
+      {
+        "op": "CC",
+        "bytes": "cc 00 00",
+        "offset": 1313,
+        "text": "👤 주인공 등장",
+        "significant": true
+      },
+      {
+        "op": "C8",
+        "bytes": "c8 00 79",
+        "offset": 1316,
+        "text": "💬 \"\"",
+        "significant": true
+      },
+      {
+        "op": "C0",
+        "bytes": "c0 02",
+        "offset": 1322,
+        "text": "📍 위치: 오른쪽",
+        "significant": true
+      },
+      {
+        "op": "CC",
+        "bytes": "cc 00 1f",
+        "offset": 1324,
+        "text": "👤 로코 등장",
+        "significant": true
+      },
+      {
+        "op": "C8",
+        "bytes": "c8 00 7a",
+        "offset": 1327,
+        "text": "💬 \"[Binary Data: 1e f6]\"",
+        "significant": true
+      },
+      {
+        "op": "C0",
+        "bytes": "c0 02",
+        "offset": 1331,
+        "text": "📍 위치: 오른쪽",
+        "significant": true
+      },
+      {
+        "op": "CC",
+        "bytes": "cc 00 00",
+        "offset": 1333,
+        "text": "👤 주인공 등장",
+        "significant": true
+      },
+      {
+        "op": "C8",
+        "bytes": "c8 00 7b",
+        "offset": 1336,
+        "text": "💬 \"\"",
+        "significant": true
+      },
+      {
+        "op": "C0",
+        "bytes": "c0 02",
+        "offset": 1340,
+        "text": "📍 위치: 오른쪽",
+        "significant": true
+      },
+      {
+        "op": "CC",
+        "bytes": "cc 00 1f",
+        "offset": 1342,
+        "text": "👤 로코 등장",
+        "significant": true
+      },
+      {
+        "op": "C8",
+        "bytes": "c8 00 7c",
+        "offset": 1345,
+        "text": "💬 \"\u001f?\"",
+        "significant": true
+      },
+      {
+        "op": "DC",
+        "bytes": "dc 00 0c 62",
+        "offset": 1349,
+        "text": "🚀 [강제 이동] node_0501로",
+        "significant": true
+      }
+    ],
+    "next_nodes": [
+      "node_055E"
+    ]
+  },
+  "node_055E": {
+    "id": "node_055E",
+    "offset": 1374,
+    "commands": [
+      {
+        "op": "AC",
+        "bytes": "ac 03 05 a3",
+        "offset": 1381,
+        "text": "🔍 [조건 체크] node_055E 확인",
+        "significant": true
+      },
+      {
+        "op": "AC",
+        "bytes": "ac 00 05 7c",
+        "offset": 1385,
+        "text": "🔍 [조건 체크] node_055E 확인",
+        "significant": true
+      },
+      {
+        "op": "C0",
+        "bytes": "c0 00",
+        "offset": 1389,
+        "text": "📍 위치: 중앙",
+        "significant": true
+      },
+      {
+        "op": "C8",
+        "bytes": "c8 00 7d",
+        "offset": 1391,
+        "text": "💬 \"\"",
+        "significant": true
+      },
+      {
+        "op": "C0",
+        "bytes": "c0 02",
+        "offset": 1395,
+        "text": "📍 위치: 오른쪽",
+        "significant": true
+      },
+      {
+        "op": "CC",
+        "bytes": "cc 00 00",
+        "offset": 1397,
+        "text": "👤 주인공 등장",
+        "significant": true
+      },
+      {
+        "op": "C8",
+        "bytes": "c8 00 7e",
+        "offset": 1400,
+        "text": "💬 \"\u001fn\"",
+        "significant": true
+      }
+    ],
+    "next_nodes": [
+      "node_057C"
+    ]
+  },
+  "node_057C": {
+    "id": "node_057C",
+    "offset": 1404,
+    "commands": [
+      {
+        "op": "C0",
+        "bytes": "c0 00",
+        "offset": 1404,
+        "text": "📍 위치: 중앙",
+        "significant": true
+      },
+      {
+        "op": "C8",
+        "bytes": "c8 00 7f",
+        "offset": 1406,
+        "text": "💬 \"\"",
+        "significant": true
+      },
+      {
+        "op": "AD",
+        "bytes": "ad 00 05 a2",
+        "offset": 1410,
+        "text": "➔ [조건부 점프] node_057C로 이동",
+        "significant": true
+      },
+      {
+        "op": "C0",
+        "bytes": "c0 02",
+        "offset": 1414,
+        "text": "📍 위치: 오른쪽",
+        "significant": true
+      },
+      {
+        "op": "CC",
+        "bytes": "cc 00 1f",
+        "offset": 1416,
+        "text": "👤 로코 등장",
+        "significant": true
+      },
+      {
+        "op": "C8",
+        "bytes": "c8 00 80",
+        "offset": 1419,
+        "text": "💬 \"[Binary Data: 1f 8a]\"",
+        "significant": true
+      },
+      {
+        "op": "C0",
+        "bytes": "c0 00",
+        "offset": 1423,
+        "text": "📍 위치: 중앙",
+        "significant": true
+      },
+      {
+        "op": "C8",
+        "bytes": "c8 00 81",
+        "offset": 1425,
+        "text": "💬 \"\"",
+        "significant": true
+      },
+      {
+        "op": "C0",
+        "bytes": "c0 00",
+        "offset": 1429,
+        "text": "📍 위치: 중앙",
+        "significant": true
+      },
+      {
+        "op": "C8",
+        "bytes": "c8 00 82",
+        "offset": 1431,
+        "text": "💬 \"[Binary Data: 1f cb]\"",
+        "significant": true
+      },
+      {
+        "op": "C0",
+        "bytes": "c0 00",
+        "offset": 1435,
+        "text": "📍 위치: 중앙",
+        "significant": true
+      },
+      {
+        "op": "C8",
+        "bytes": "c8 00 83",
+        "offset": 1437,
+        "text": "💬 \"\"",
+        "significant": true
+      }
+    ],
+    "next_nodes": [
+      "node_05A2"
+    ]
+  },
+  "node_05A2": {
+    "id": "node_05A2",
+    "offset": 1442,
+    "commands": [],
+    "next_nodes": [
+      "node_05A3"
+    ]
+  },
+  "node_05A3": {
+    "id": "node_05A3",
+    "offset": 1443,
+    "commands": [
+      {
+        "op": "AC",
+        "bytes": "ac 00 05 b8",
+        "offset": 1450,
+        "text": "🔍 [조건 체크] node_05A3 확인",
+        "significant": true
+      },
+      {
+        "op": "C0",
+        "bytes": "c0 00",
+        "offset": 1458,
+        "text": "📍 위치: 중앙",
+        "significant": true
+      },
+      {
+        "op": "C8",
+        "bytes": "c8 00 85",
+        "offset": 1460,
+        "text": "💬 \"\"",
+        "significant": true
+      }
+    ],
+    "next_nodes": [
+      "node_05B8"
+    ]
+  },
+  "node_05B8": {
+    "id": "node_05B8",
+    "offset": 1464,
+    "commands": [
+      {
+        "op": "C0",
+        "bytes": "c0 00",
+        "offset": 1464,
+        "text": "📍 위치: 중앙",
+        "significant": true
+      },
+      {
+        "op": "C8",
+        "bytes": "c8 00 86",
+        "offset": 1466,
+        "text": "💬 \" (\"",
+        "significant": true
+      },
+      {
+        "op": "AD",
+        "bytes": "ad 00 07 48",
+        "offset": 1470,
+        "text": "➔ [조건부 점프] node_05B8로 이동",
+        "significant": true
+      },
+      {
+        "op": "AC",
+        "bytes": "ac 03 05 cc",
+        "offset": 1474,
+        "text": "🔍 [조건 체크] node_05B8 확인",
+        "significant": true
+      },
+      {
+        "op": "C0",
+        "bytes": "c0 01",
+        "offset": 1478,
+        "text": "📍 위치: 왼쪽",
+        "significant": true
+      },
+      {
+        "op": "CC",
+        "bytes": "cc 00 1f",
+        "offset": 1480,
+        "text": "👤 로코 등장",
+        "significant": true
+      },
+      {
+        "op": "C8",
+        "bytes": "c8 00 87",
+        "offset": 1483,
+        "text": "💬 \"\"",
+        "significant": true
+      }
+    ],
+    "next_nodes": [
+      "node_05CC"
+    ]
+  },
+  "node_05CC": {
+    "id": "node_05CC",
+    "offset": 1484,
+    "commands": [
+      {
+        "op": "AC",
+        "bytes": "ac 02 05 f4",
+        "offset": 1490,
+        "text": "🔍 [조건 체크] node_05CC 확인",
+        "significant": true
+      },
+      {
+        "op": "C0",
+        "bytes": "c0 00",
+        "offset": 1494,
+        "text": "📍 위치: 중앙",
+        "significant": true
+      },
+      {
+        "op": "C8",
+        "bytes": "c8 00 88",
+        "offset": 1496,
+        "text": "💬 \" U\"",
+        "significant": true
+      },
+      {
+        "op": "AC",
+        "bytes": "ac 07 05 e3",
+        "offset": 1500,
+        "text": "🔍 [조건 체크] node_05CC 확인",
+        "significant": true
+      },
+      {
+        "op": "C0",
+        "bytes": "c0 02",
+        "offset": 1504,
+        "text": "📍 위치: 오른쪽",
+        "significant": true
+      },
+      {
+        "op": "CC",
+        "bytes": "cc 00 00",
+        "offset": 1506,
+        "text": "👤 주인공 등장",
+        "significant": true
+      }
+    ],
+    "next_nodes": [
+      "node_05E3"
+    ]
+  },
+  "node_05E3": {
+    "id": "node_05E3",
+    "offset": 1507,
+    "commands": [
+      {
+        "op": "C8",
+        "bytes": "c8 00 89",
+        "offset": 1509,
+        "text": "💬 \"\"",
+        "significant": true
+      },
+      {
+        "op": "AD",
+        "bytes": "ad 07 05 f0",
+        "offset": 1513,
+        "text": "➔ [조건부 점프] node_05E3로 이동",
+        "significant": true
+      },
+      {
+        "op": "C0",
+        "bytes": "c0 02",
+        "offset": 1517,
+        "text": "📍 위치: 오른쪽",
+        "significant": true
+      },
+      {
+        "op": "CC",
+        "bytes": "cc 00 00",
+        "offset": 1519,
+        "text": "👤 주인공 등장",
+        "significant": true
+      }
+    ],
+    "next_nodes": [
+      "node_05F0"
+    ]
+  },
+  "node_05F0": {
+    "id": "node_05F0",
+    "offset": 1520,
+    "commands": [
+      {
+        "op": "C8",
+        "bytes": "c8 00 8a",
+        "offset": 1522,
+        "text": "💬 \" v\"",
+        "significant": true
+      }
+    ],
+    "next_nodes": [
+      "node_05F4"
+    ]
+  },
+  "node_05F4": {
+    "id": "node_05F4",
+    "offset": 1524,
+    "commands": [
+      {
+        "op": "AC",
+        "bytes": "ac 01 06 26",
+        "offset": 1530,
+        "text": "🔍 [조건 체크] node_05F4 확인",
+        "significant": true
+      },
+      {
+        "op": "AC",
+        "bytes": "ac 05 06 16",
+        "offset": 1534,
+        "text": "🔍 [조건 체크] node_05F4 확인",
+        "significant": true
+      }
+    ],
+    "next_nodes": [
+      "node_0616"
+    ]
+  },
+  "node_0600": {
+    "id": "node_0600",
+    "offset": 1536,
+    "commands": [
+      {
+        "op": "AC",
+        "bytes": "ac 08 06 09",
+        "offset": 1538,
+        "text": "🔍 [조건 체크] node_0600 확인",
+        "significant": true
+      },
+      {
+        "op": "C0",
+        "bytes": "c0 01",
+        "offset": 1542,
+        "text": "📍 위치: 왼쪽",
+        "significant": true
+      },
+      {
+        "op": "CC",
+        "bytes": "cc 00 1f",
+        "offset": 1544,
+        "text": "👤 로코 등장",
+        "significant": true
+      }
+    ],
+    "next_nodes": [
+      "node_0609"
+    ]
+  },
+  "node_0609": {
+    "id": "node_0609",
+    "offset": 1545,
+    "commands": [
+      {
+        "op": "C8",
+        "bytes": "c8 00 8b",
+        "offset": 1547,
+        "text": "💬 \"\"",
+        "significant": true
+      },
+      {
+        "op": "AD",
+        "bytes": "ad 08 06 16",
+        "offset": 1551,
+        "text": "➔ [조건부 점프] node_0609로 이동",
+        "significant": true
+      },
+      {
+        "op": "C0",
+        "bytes": "c0 01",
+        "offset": 1555,
+        "text": "📍 위치: 왼쪽",
+        "significant": true
+      },
+      {
+        "op": "CC",
+        "bytes": "cc 00 1f",
+        "offset": 1557,
+        "text": "👤 로코 등장",
+        "significant": true
+      }
+    ],
+    "next_nodes": [
+      "node_0616"
+    ]
+  },
+  "node_0616": {
+    "id": "node_0616",
+    "offset": 1558,
+    "commands": [
+      {
+        "op": "C8",
+        "bytes": "c8 00 8c",
+        "offset": 1560,
+        "text": "💬 \"[Binary Data: 20 bb]\"",
+        "significant": true
+      },
+      {
+        "op": "AD",
+        "bytes": "ad 05 06 23",
+        "offset": 1564,
+        "text": "➔ [조건부 점프] node_0616로 이동",
+        "significant": true
+      },
+      {
+        "op": "C0",
+        "bytes": "c0 01",
+        "offset": 1568,
+        "text": "📍 위치: 왼쪽",
+        "significant": true
+      },
+      {
+        "op": "CC",
+        "bytes": "cc 00 1f",
+        "offset": 1570,
+        "text": "👤 로코 등장",
+        "significant": true
+      }
+    ],
+    "next_nodes": [
+      "node_0623"
+    ]
+  },
+  "node_0623": {
+    "id": "node_0623",
+    "offset": 1571,
+    "commands": [
+      {
+        "op": "C8",
+        "bytes": "c8 00 8d",
+        "offset": 1573,
+        "text": "💬 \"\"",
+        "significant": true
+      }
+    ],
+    "next_nodes": [
+      "node_0626"
+    ]
+  },
+  "node_0626": {
+    "id": "node_0626",
+    "offset": 1574,
+    "commands": [
+      {
+        "op": "AC",
+        "bytes": "ac 0a 07 48",
+        "offset": 1580,
+        "text": "🔍 [조건 체크] node_0626 확인",
+        "significant": true
+      },
+      {
+        "op": "C0",
+        "bytes": "c0 01",
+        "offset": 1584,
+        "text": "📍 위치: 왼쪽",
+        "significant": true
+      },
+      {
+        "op": "CC",
+        "bytes": "cc 00 1f",
+        "offset": 1586,
+        "text": "👤 로코 등장",
+        "significant": true
+      },
+      {
+        "op": "C8",
+        "bytes": "c8 00 8e",
+        "offset": 1589,
+        "text": "💬 \"[Binary Data: 20 e7]\"",
+        "significant": true
+      },
+      {
+        "op": "C0",
+        "bytes": "c0 02",
+        "offset": 1593,
+        "text": "📍 위치: 오른쪽",
+        "significant": true
+      },
+      {
+        "op": "CC",
+        "bytes": "cc 00 00",
+        "offset": 1595,
+        "text": "👤 주인공 등장",
+        "significant": true
+      },
+      {
+        "op": "C8",
+        "bytes": "c8 00 8f",
+        "offset": 1598,
+        "text": "💬 \"\"",
+        "significant": true
+      },
+      {
+        "op": "C0",
+        "bytes": "c0 01",
+        "offset": 1602,
+        "text": "📍 위치: 왼쪽",
+        "significant": true
+      },
+      {
+        "op": "CC",
+        "bytes": "cc 00 1f",
+        "offset": 1604,
+        "text": "👤 로코 등장",
+        "significant": true
+      },
+      {
+        "op": "C8",
+        "bytes": "c8 00 90",
+        "offset": 1607,
+        "text": "💬 \"!%\"",
+        "significant": true
+      },
+      {
+        "op": "C0",
+        "bytes": "c0 02",
+        "offset": 1611,
+        "text": "📍 위치: 오른쪽",
+        "significant": true
+      },
+      {
+        "op": "CC",
+        "bytes": "cc 00 00",
+        "offset": 1613,
+        "text": "👤 주인공 등장",
+        "significant": true
+      },
+      {
+        "op": "C8",
+        "bytes": "c8 00 91",
+        "offset": 1616,
+        "text": "💬 \"\"",
+        "significant": true
+      },
+      {
+        "op": "C0",
+        "bytes": "c0 01",
+        "offset": 1620,
+        "text": "📍 위치: 왼쪽",
+        "significant": true
+      },
+      {
+        "op": "CC",
+        "bytes": "cc 00 1f",
+        "offset": 1622,
+        "text": "👤 로코 등장",
+        "significant": true
+      },
+      {
+        "op": "C8",
+        "bytes": "c8 00 92",
+        "offset": 1625,
+        "text": "💬 \"!f\"",
+        "significant": true
+      },
+      {
+        "op": "C0",
+        "bytes": "c0 01",
+        "offset": 1629,
+        "text": "📍 위치: 왼쪽",
+        "significant": true
+      },
+      {
+        "op": "CC",
+        "bytes": "cc 00 1f",
+        "offset": 1631,
+        "text": "👤 로코 등장",
+        "significant": true
+      },
+      {
+        "op": "C8",
+        "bytes": "c8 00 93",
+        "offset": 1634,
+        "text": "💬 \"\"",
+        "significant": true
+      },
+      {
+        "op": "C0",
+        "bytes": "c0 02",
+        "offset": 1638,
+        "text": "📍 위치: 오른쪽",
+        "significant": true
+      },
+      {
+        "op": "CC",
+        "bytes": "cc 00 00",
+        "offset": 1640,
+        "text": "👤 주인공 등장",
+        "significant": true
+      },
+      {
+        "op": "C8",
+        "bytes": "c8 00 94",
+        "offset": 1643,
+        "text": "💬 \"[Binary Data: 21 8e]\"",
+        "significant": true
+      },
+      {
+        "op": "C0",
+        "bytes": "c0 01",
+        "offset": 1647,
+        "text": "📍 위치: 왼쪽",
+        "significant": true
+      },
+      {
+        "op": "CC",
+        "bytes": "cc 00 1f",
+        "offset": 1649,
+        "text": "👤 로코 등장",
+        "significant": true
+      },
+      {
+        "op": "C8",
+        "bytes": "c8 00 95",
+        "offset": 1652,
+        "text": "💬 \"\"",
+        "significant": true
+      },
+      {
+        "op": "C0",
+        "bytes": "c0 01",
+        "offset": 1656,
+        "text": "📍 위치: 왼쪽",
+        "significant": true
+      },
+      {
+        "op": "CC",
+        "bytes": "cc 00 1f",
+        "offset": 1658,
+        "text": "👤 로코 등장",
+        "significant": true
+      },
+      {
+        "op": "C8",
+        "bytes": "c8 00 96",
+        "offset": 1661,
+        "text": "💬 \"[Binary Data: 21 a6]\"",
+        "significant": true
+      },
+      {
+        "op": "C0",
+        "bytes": "c0 01",
+        "offset": 1665,
+        "text": "📍 위치: 왼쪽",
+        "significant": true
+      },
+      {
+        "op": "CC",
+        "bytes": "cc 00 20",
+        "offset": 1667,
+        "text": "👤 인물 32 등장",
+        "significant": true
+      },
+      {
+        "op": "C8",
+        "bytes": "c8 00 97",
+        "offset": 1670,
+        "text": "💬 \"\"",
+        "significant": true
+      },
+      {
+        "op": "C0",
+        "bytes": "c0 01",
+        "offset": 1674,
+        "text": "📍 위치: 왼쪽",
+        "significant": true
+      },
+      {
+        "op": "CC",
+        "bytes": "cc 00 1f",
+        "offset": 1676,
+        "text": "👤 로코 등장",
+        "significant": true
+      },
+      {
+        "op": "C8",
+        "bytes": "c8 00 98",
+        "offset": 1679,
+        "text": "💬 \"[Binary Data: 21 e8]\"",
+        "significant": true
+      },
+      {
+        "op": "C0",
+        "bytes": "c0 02",
+        "offset": 1683,
+        "text": "📍 위치: 오른쪽",
+        "significant": true
+      },
+      {
+        "op": "CC",
+        "bytes": "cc 00 00",
+        "offset": 1685,
+        "text": "👤 주인공 등장",
+        "significant": true
+      },
+      {
+        "op": "C8",
+        "bytes": "c8 00 99",
+        "offset": 1688,
+        "text": "💬 \"\"",
+        "significant": true
+      },
+      {
+        "op": "C0",
+        "bytes": "c0 01",
+        "offset": 1692,
+        "text": "📍 위치: 왼쪽",
+        "significant": true
+      },
+      {
+        "op": "CC",
+        "bytes": "cc 00 20",
+        "offset": 1694,
+        "text": "👤 인물 32 등장",
+        "significant": true
+      },
+      {
+        "op": "C8",
+        "bytes": "c8 00 9a",
+        "offset": 1697,
+        "text": "💬 \"\";\"",
+        "significant": true
+      },
+      {
+        "op": "C0",
+        "bytes": "c0 02",
+        "offset": 1701,
+        "text": "📍 위치: 오른쪽",
+        "significant": true
+      },
+      {
+        "op": "CC",
+        "bytes": "cc 00 00",
+        "offset": 1703,
+        "text": "👤 주인공 등장",
+        "significant": true
+      },
+      {
+        "op": "C8",
+        "bytes": "c8 00 9b",
+        "offset": 1706,
+        "text": "💬 \"\"",
+        "significant": true
+      },
+      {
+        "op": "C0",
+        "bytes": "c0 01",
+        "offset": 1710,
+        "text": "📍 위치: 왼쪽",
+        "significant": true
+      },
+      {
+        "op": "CC",
+        "bytes": "cc 00 20",
+        "offset": 1712,
+        "text": "👤 인물 32 등장",
+        "significant": true
+      },
+      {
+        "op": "C8",
+        "bytes": "c8 00 9c",
+        "offset": 1715,
+        "text": "💬 \"\"Y\"",
+        "significant": true
+      },
+      {
+        "op": "C0",
+        "bytes": "c0 01",
+        "offset": 1719,
+        "text": "📍 위치: 왼쪽",
+        "significant": true
+      },
+      {
+        "op": "CC",
+        "bytes": "cc 00 20",
+        "offset": 1721,
+        "text": "👤 인물 32 등장",
+        "significant": true
+      },
+      {
+        "op": "C8",
+        "bytes": "c8 00 9d",
+        "offset": 1724,
+        "text": "💬 \"\"",
+        "significant": true
+      },
+      {
+        "op": "DC",
+        "bytes": "dc 0b 03 46",
+        "offset": 1728,
+        "text": "🚀 [강제 이동] node_0626로",
+        "significant": true
+      },
+      {
+        "op": "C0",
+        "bytes": "c0 01",
+        "offset": 1741,
+        "text": "📍 위치: 왼쪽",
+        "significant": true
+      },
+      {
+        "op": "CC",
+        "bytes": "cc 00 1f",
+        "offset": 1743,
+        "text": "👤 로코 등장",
+        "significant": true
+      },
+      {
+        "op": "C8",
+        "bytes": "c8 00 9e",
+        "offset": 1746,
+        "text": "💬 \"\"h\"",
+        "significant": true
+      },
+      {
+        "op": "E9",
+        "bytes": "e9 0b",
+        "offset": 1750,
+        "text": "⚙️ 기타 동작 (E9)",
+        "significant": true
+      },
+      {
+        "op": "AD",
+        "bytes": "ad 0b 07 17",
+        "offset": 1752,
+        "text": "➔ [조건부 점프] node_0626로 이동",
+        "significant": true
+      },
+      {
+        "op": "C0",
+        "bytes": "c0 02",
+        "offset": 1756,
+        "text": "📍 위치: 오른쪽",
+        "significant": true
+      },
+      {
+        "op": "CC",
+        "bytes": "cc 00 00",
+        "offset": 1758,
+        "text": "👤 주인공 등장",
+        "significant": true
+      },
+      {
+        "op": "C8",
+        "bytes": "c8 00 9f",
+        "offset": 1761,
+        "text": "💬 \"\"",
+        "significant": true
+      },
+      {
+        "op": "DC",
+        "bytes": "dc 00 03 46",
+        "offset": 1765,
+        "text": "🚀 [강제 이동] node_0626로",
+        "significant": true
+      },
+      {
+        "op": "DC",
+        "bytes": "dc 0b 03 45",
+        "offset": 1773,
+        "text": "🚀 [강제 이동] node_0626로",
+        "significant": true
+      },
+      {
+        "op": "C0",
+        "bytes": "c0 02",
+        "offset": 1786,
+        "text": "📍 위치: 오른쪽",
+        "significant": true
+      },
+      {
+        "op": "CC",
+        "bytes": "cc 00 00",
+        "offset": 1788,
+        "text": "👤 주인공 등장",
+        "significant": true
+      },
+      {
+        "op": "C8",
+        "bytes": "c8 00 a0",
+        "offset": 1791,
+        "text": "💬 \"[Binary Data: 22 98]\"",
+        "significant": true
+      },
+      {
+        "op": "DC",
+        "bytes": "dc 00 03 45",
+        "offset": 1795,
+        "text": "🚀 [강제 이동] node_0626로",
+        "significant": true
+      },
+      {
+        "op": "C0",
+        "bytes": "c0 01",
+        "offset": 1803,
+        "text": "📍 위치: 왼쪽",
+        "significant": true
+      },
+      {
+        "op": "CC",
+        "bytes": "cc 00 20",
+        "offset": 1805,
+        "text": "👤 인물 32 등장",
+        "significant": true
+      },
+      {
+        "op": "C8",
+        "bytes": "c8 00 a1",
+        "offset": 1808,
+        "text": "💬 \"\"",
+        "significant": true
+      },
+      {
+        "op": "C0",
+        "bytes": "c0 01",
+        "offset": 1812,
+        "text": "📍 위치: 왼쪽",
+        "significant": true
+      },
+      {
+        "op": "CC",
+        "bytes": "cc 00 20",
+        "offset": 1814,
+        "text": "👤 인물 32 등장",
+        "significant": true
+      }
+    ],
+    "next_nodes": [
+      "node_0717"
+    ]
+  },
+  "node_0717": {
+    "id": "node_0717",
+    "offset": 1815,
+    "commands": [
+      {
+        "op": "C8",
+        "bytes": "c8 00 a2",
+        "offset": 1817,
+        "text": "💬 \"[Binary Data: 22 c5]\"",
+        "significant": true
+      },
+      {
+        "op": "AC",
+        "bytes": "ac 0b 07 36",
+        "offset": 1821,
+        "text": "🔍 [조건 체크] node_0717 확인",
+        "significant": true
+      },
+      {
+        "op": "C0",
+        "bytes": "c0 02",
+        "offset": 1825,
+        "text": "📍 위치: 오른쪽",
+        "significant": true
+      },
+      {
+        "op": "CC",
+        "bytes": "cc 00 00",
+        "offset": 1827,
+        "text": "👤 주인공 등장",
+        "significant": true
+      },
+      {
+        "op": "C8",
+        "bytes": "c8 00 a3",
+        "offset": 1830,
+        "text": "💬 \"\"",
+        "significant": true
+      },
+      {
+        "op": "C0",
+        "bytes": "c0 01",
+        "offset": 1834,
+        "text": "📍 위치: 왼쪽",
+        "significant": true
+      },
+      {
+        "op": "CC",
+        "bytes": "cc 00 20",
+        "offset": 1836,
+        "text": "👤 인물 32 등장",
+        "significant": true
+      },
+      {
+        "op": "C8",
+        "bytes": "c8 00 a4",
+        "offset": 1839,
+        "text": "💬 \"#\b\"",
+        "significant": true
+      },
+      {
+        "op": "C0",
+        "bytes": "c0 02",
+        "offset": 1843,
+        "text": "📍 위치: 오른쪽",
+        "significant": true
+      },
+      {
+        "op": "CC",
+        "bytes": "cc 00 00",
+        "offset": 1845,
+        "text": "👤 주인공 등장",
+        "significant": true
+      }
+    ],
+    "next_nodes": [
+      "node_0736"
+    ]
+  },
+  "node_0736": {
+    "id": "node_0736",
+    "offset": 1846,
+    "commands": [
+      {
+        "op": "C8",
+        "bytes": "c8 00 a5",
+        "offset": 1848,
+        "text": "💬 \"\"",
+        "significant": true
+      },
+      {
+        "op": "C0",
+        "bytes": "c0 01",
+        "offset": 1858,
+        "text": "📍 위치: 왼쪽",
+        "significant": true
+      },
+      {
+        "op": "CC",
+        "bytes": "cc 00 1f",
+        "offset": 1860,
+        "text": "👤 로코 등장",
+        "significant": true
+      },
+      {
+        "op": "C8",
+        "bytes": "c8 00 a6",
+        "offset": 1863,
+        "text": "💬 \"#)\"",
+        "significant": true
+      }
+    ],
+    "next_nodes": [
+      "node_0748"
+    ]
+  },
+  "node_0748": {
+    "id": "node_0748",
+    "offset": 1864,
+    "commands": [
+      {
+        "op": "C0",
+        "bytes": "c0 00",
+        "offset": 1875,
+        "text": "📍 위치: 중앙",
+        "significant": true
+      },
+      {
+        "op": "C8",
+        "bytes": "c8 00 a7",
+        "offset": 1877,
+        "text": "💬 \"\"",
+        "significant": true
+      },
+      {
+        "op": "C0",
+        "bytes": "c0 00",
+        "offset": 1881,
+        "text": "📍 위치: 중앙",
+        "significant": true
+      },
+      {
+        "op": "C8",
+        "bytes": "c8 00 a8",
+        "offset": 1883,
+        "text": "💬 \"#5\"",
+        "significant": true
+      },
+      {
+        "op": "C0",
+        "bytes": "c0 00",
+        "offset": 1887,
+        "text": "📍 위치: 중앙",
+        "significant": true
+      },
+      {
+        "op": "C8",
+        "bytes": "c8 00 a9",
+        "offset": 1889,
+        "text": "💬 \"\"",
+        "significant": true
+      },
+      {
+        "op": "C0",
+        "bytes": "c0 00",
+        "offset": 1893,
+        "text": "📍 위치: 중앙",
+        "significant": true
+      },
+      {
+        "op": "C8",
+        "bytes": "c8 00 aa",
+        "offset": 1895,
+        "text": "💬 \"#B\"",
+        "significant": true
+      },
+      {
+        "op": "AD",
+        "bytes": "ad 00 07 7b",
+        "offset": 1900,
+        "text": "➔ [조건부 점프] node_0748로 이동",
+        "significant": true
+      },
+      {
+        "op": "AC",
+        "bytes": "ac 03 07 7b",
+        "offset": 1904,
+        "text": "🔍 [조건 체크] node_0748 확인",
+        "significant": true
+      },
+      {
+        "op": "C0",
+        "bytes": "c0 00",
+        "offset": 1908,
+        "text": "📍 위치: 중앙",
+        "significant": true
+      },
+      {
+        "op": "C8",
+        "bytes": "c8 00 ab",
+        "offset": 1910,
+        "text": "💬 \"\"",
+        "significant": true
+      },
+      {
+        "op": "C0",
+        "bytes": "c0 00",
+        "offset": 1914,
+        "text": "📍 위치: 중앙",
+        "significant": true
+      }
+    ],
+    "next_nodes": [
+      "node_077B"
+    ]
+  },
+  "node_077B": {
+    "id": "node_077B",
+    "offset": 1915,
+    "commands": [
+      {
+        "op": "C8",
+        "bytes": "c8 00 ac",
+        "offset": 1916,
+        "text": "💬 \"#V\"",
+        "significant": true
+      },
+      {
+        "op": "AC",
+        "bytes": "ac 00 07 8b",
+        "offset": 1926,
+        "text": "🔍 [조건 체크] node_077B 확인",
+        "significant": true
+      },
+      {
+        "op": "C0",
+        "bytes": "c0 00",
+        "offset": 1930,
+        "text": "📍 위치: 중앙",
+        "significant": true
+      }
+    ],
+    "next_nodes": [
+      "node_078B"
+    ]
+  },
+  "node_078B": {
+    "id": "node_078B",
+    "offset": 1931,
+    "commands": [
+      {
+        "op": "C8",
+        "bytes": "c8 00 ad",
+        "offset": 1932,
+        "text": "💬 \"\"",
+        "significant": true
+      },
+      {
+        "op": "AD",
+        "bytes": "ad 00 07 c6",
+        "offset": 1937,
+        "text": "➔ [조건부 점프] node_078B로 이동",
+        "significant": true
+      },
+      {
+        "op": "AC",
+        "bytes": "ac 09 07 bc",
+        "offset": 1941,
+        "text": "🔍 [조건 체크] node_078B 확인",
+        "significant": true
+      },
+      {
+        "op": "C0",
+        "bytes": "c0 00",
+        "offset": 1945,
+        "text": "📍 위치: 중앙",
+        "significant": true
+      },
+      {
+        "op": "C8",
+        "bytes": "c8 00 ae",
+        "offset": 1947,
+        "text": "💬 \"[Binary Data: 23 91]\"",
+        "significant": true
+      },
+      {
+        "op": "C0",
+        "bytes": "c0 02",
+        "offset": 1951,
+        "text": "📍 위치: 오른쪽",
+        "significant": true
+      },
+      {
+        "op": "CC",
+        "bytes": "cc 00 00",
+        "offset": 1953,
+        "text": "👤 주인공 등장",
+        "significant": true
+      },
+      {
+        "op": "C8",
+        "bytes": "c8 00 af",
+        "offset": 1956,
+        "text": "💬 \"\"",
+        "significant": true
+      },
+      {
+        "op": "C0",
+        "bytes": "c0 00",
+        "offset": 1960,
+        "text": "📍 위치: 중앙",
+        "significant": true
+      },
+      {
+        "op": "C8",
+        "bytes": "c8 00 b0",
+        "offset": 1962,
+        "text": "💬 \"[Binary Data: 23 a1]\"",
+        "significant": true
+      },
+      {
+        "op": "C0",
+        "bytes": "c0 00",
+        "offset": 1966,
+        "text": "📍 위치: 중앙",
+        "significant": true
+      },
+      {
+        "op": "C8",
+        "bytes": "c8 00 b1",
+        "offset": 1968,
+        "text": "💬 \"\"",
+        "significant": true
+      },
+      {
+        "op": "DC",
+        "bytes": "dc 00 06 00",
+        "offset": 1972,
+        "text": "🚀 [강제 이동] node_078B로",
+        "significant": true
+      }
+    ],
+    "next_nodes": [
+      "node_07BC"
+    ]
+  },
+  "node_07BC": {
+    "id": "node_07BC",
+    "offset": 1980,
+    "commands": [],
+    "next_nodes": [
+      "node_07C6"
+    ]
+  },
+  "node_07C6": {
+    "id": "node_07C6",
+    "offset": 1990,
+    "commands": [
+      {
+        "op": "C0",
+        "bytes": "c0 00",
+        "offset": 1990,
+        "text": "📍 위치: 중앙",
+        "significant": true
+      },
+      {
+        "op": "C8",
+        "bytes": "c8 00 b2",
+        "offset": 1992,
+        "text": "💬 \"[Binary Data: 23 c8]\"",
+        "significant": true
+      },
+      {
+        "op": "AC",
+        "bytes": "ac 00 08 07",
+        "offset": 2001,
+        "text": "🔍 [조건 체크] node_07C6 확인",
+        "significant": true
+      },
+      {
+        "op": "8C",
+        "bytes": "8c 00 00",
+        "offset": 2009,
+        "text": "⚙️ 기타 동작 (8C)",
+        "significant": true
+      },
+      {
+        "op": "C0",
+        "bytes": "c0 00",
+        "offset": 2014,
+        "text": "📍 위치: 중앙",
+        "significant": true
+      },
+      {
+        "op": "C8",
+        "bytes": "c8 00 b3",
+        "offset": 2016,
+        "text": "💬 \"\"",
+        "significant": true
+      },
+      {
+        "op": "C0",
+        "bytes": "c0 00",
+        "offset": 2020,
+        "text": "📍 위치: 중앙",
+        "significant": true
+      },
+      {
+        "op": "C8",
+        "bytes": "c8 00 b4",
+        "offset": 2022,
+        "text": "💬 \"$0\"",
+        "significant": true
+      },
+      {
+        "op": "8C",
+        "bytes": "8c 00 01",
+        "offset": 2026,
+        "text": "⚙️ 기타 동작 (8C)",
+        "significant": true
+      },
+      {
+        "op": "C0",
+        "bytes": "c0 00",
+        "offset": 2031,
+        "text": "📍 위치: 중앙",
+        "significant": true
+      },
+      {
+        "op": "C8",
+        "bytes": "c8 00 b5",
+        "offset": 2033,
+        "text": "💬 \"\"",
+        "significant": true
+      },
+      {
+        "op": "C0",
+        "bytes": "c0 00",
+        "offset": 2037,
+        "text": "📍 위치: 중앙",
+        "significant": true
+      },
+      {
+        "op": "C8",
+        "bytes": "c8 00 b6",
+        "offset": 2039,
+        "text": "💬 \"$L\"",
+        "significant": true
+      },
+      {
+        "op": "8C",
+        "bytes": "8c 00 02",
+        "offset": 2043,
+        "text": "⚙️ 기타 동작 (8C)",
+        "significant": true
+      },
+      {
+        "op": "C0",
+        "bytes": "c0 00",
+        "offset": 2048,
+        "text": "📍 위치: 중앙",
+        "significant": true
+      },
+      {
+        "op": "C8",
+        "bytes": "c8 00 b7",
+        "offset": 2050,
+        "text": "💬 \"\"",
+        "significant": true
+      },
+      {
+        "op": "C0",
+        "bytes": "c0 00",
+        "offset": 2054,
+        "text": "📍 위치: 중앙",
+        "significant": true
+      }
+    ],
+    "next_nodes": [
+      "node_0807"
+    ]
+  },
+  "node_0807": {
+    "id": "node_0807",
+    "offset": 2055,
+    "commands": [
+      {
+        "op": "C8",
+        "bytes": "c8 00 b8",
+        "offset": 2056,
+        "text": "💬 \"[Binary Data: 24 90]\"",
+        "significant": true
+      },
+      {
+        "op": "AD",
+        "bytes": "ad 00 08 39",
+        "offset": 2061,
+        "text": "➔ [조건부 점프] node_0807로 이동",
+        "significant": true
+      },
+      {
+        "op": "8C",
+        "bytes": "8c 00 00",
+        "offset": 2069,
+        "text": "⚙️ 기타 동작 (8C)",
+        "significant": true
+      },
+      {
+        "op": "C0",
+        "bytes": "c0 00",
+        "offset": 2074,
+        "text": "📍 위치: 중앙",
+        "significant": true
+      },
+      {
+        "op": "C8",
+        "bytes": "c8 00 b9",
+        "offset": 2076,
+        "text": "💬 \"\"",
+        "significant": true
+      },
+      {
+        "op": "C0",
+        "bytes": "c0 02",
+        "offset": 2080,
+        "text": "📍 위치: 오른쪽",
+        "significant": true
+      },
+      {
+        "op": "CC",
+        "bytes": "cc 00 00",
+        "offset": 2082,
+        "text": "👤 주인공 등장",
+        "significant": true
+      },
+      {
+        "op": "C8",
+        "bytes": "c8 00 ba",
+        "offset": 2085,
+        "text": "💬 \"[Binary Data: 24 cb]\"",
+        "significant": true
+      },
+      {
+        "op": "8C",
+        "bytes": "8c 00 01",
+        "offset": 2089,
+        "text": "⚙️ 기타 동작 (8C)",
+        "significant": true
+      },
+      {
+        "op": "C0",
+        "bytes": "c0 00",
+        "offset": 2094,
+        "text": "📍 위치: 중앙",
+        "significant": true
+      },
+      {
+        "op": "C8",
+        "bytes": "c8 00 bb",
+        "offset": 2096,
+        "text": "💬 \"\"",
+        "significant": true
+      },
+      {
+        "op": "8C",
+        "bytes": "8c 00 02",
+        "offset": 2100,
+        "text": "⚙️ 기타 동작 (8C)",
+        "significant": true
+      }
+    ],
+    "next_nodes": [
+      "node_0839"
+    ]
+  },
+  "node_0839": {
+    "id": "node_0839",
+    "offset": 2105,
+    "commands": [
+      {
+        "op": "C0",
+        "bytes": "c0 00",
+        "offset": 2105,
+        "text": "📍 위치: 중앙",
+        "significant": true
+      },
+      {
+        "op": "C8",
+        "bytes": "c8 00 bc",
+        "offset": 2107,
+        "text": "💬 \"[Binary Data: 24 fe]\"",
+        "significant": true
+      },
+      {
+        "op": "A0",
+        "bytes": "a0 03 00",
+        "offset": 2114,
+        "text": "⚙️ 기타 동작 (A0)",
+        "significant": true
+      },
+      {
+        "op": "C0",
+        "bytes": "c0 02",
+        "offset": 2126,
+        "text": "📍 위치: 오른쪽",
+        "significant": true
+      },
+      {
+        "op": "CC",
+        "bytes": "cc 00 1f",
+        "offset": 2128,
+        "text": "👤 로코 등장",
+        "significant": true
+      },
+      {
+        "op": "C8",
+        "bytes": "c8 00 bd",
+        "offset": 2131,
+        "text": "💬 \"\"",
+        "significant": true
+      },
+      {
+        "op": "C0",
+        "bytes": "c0 01",
+        "offset": 2135,
+        "text": "📍 위치: 왼쪽",
+        "significant": true
+      },
+      {
+        "op": "CC",
+        "bytes": "cc 00 00",
+        "offset": 2137,
+        "text": "👤 주인공 등장",
+        "significant": true
+      },
+      {
+        "op": "C8",
+        "bytes": "c8 00 be",
+        "offset": 2140,
+        "text": "💬 \"%8\"",
+        "significant": true
+      },
+      {
+        "op": "C0",
+        "bytes": "c0 02",
+        "offset": 2144,
+        "text": "📍 위치: 오른쪽",
+        "significant": true
+      },
+      {
+        "op": "CC",
+        "bytes": "cc 00 1f",
+        "offset": 2146,
+        "text": "👤 로코 등장",
+        "significant": true
+      },
+      {
+        "op": "C8",
+        "bytes": "c8 00 bf",
+        "offset": 2149,
+        "text": "💬 \"\"",
+        "significant": true
+      },
+      {
+        "op": "C0",
+        "bytes": "c0 02",
+        "offset": 2153,
+        "text": "📍 위치: 오른쪽",
+        "significant": true
+      },
+      {
+        "op": "CC",
+        "bytes": "cc 00 21",
+        "offset": 2155,
+        "text": "👤 인물 33 등장",
+        "significant": true
+      },
+      {
+        "op": "C8",
+        "bytes": "c8 00 c0",
+        "offset": 2158,
+        "text": "💬 \"%g\"",
+        "significant": true
+      },
+      {
+        "op": "C0",
+        "bytes": "c0 02",
+        "offset": 2162,
+        "text": "📍 위치: 오른쪽",
+        "significant": true
+      },
+      {
+        "op": "CC",
+        "bytes": "cc 00 1f",
+        "offset": 2164,
+        "text": "👤 로코 등장",
+        "significant": true
+      },
+      {
+        "op": "C8",
+        "bytes": "c8 00 c1",
+        "offset": 2167,
+        "text": "💬 \"\"",
+        "significant": true
+      },
+      {
+        "op": "C0",
+        "bytes": "c0 01",
+        "offset": 2171,
+        "text": "📍 위치: 왼쪽",
+        "significant": true
+      },
+      {
+        "op": "CC",
+        "bytes": "cc 00 00",
+        "offset": 2173,
+        "text": "👤 주인공 등장",
+        "significant": true
+      },
+      {
+        "op": "C8",
+        "bytes": "c8 00 c2",
+        "offset": 2176,
+        "text": "💬 \"[Binary Data: 25 98]\"",
+        "significant": true
+      },
+      {
+        "op": "C0",
+        "bytes": "c0 02",
+        "offset": 2180,
+        "text": "📍 위치: 오른쪽",
+        "significant": true
+      },
+      {
+        "op": "CC",
+        "bytes": "cc 00 21",
+        "offset": 2182,
+        "text": "👤 인물 33 등장",
+        "significant": true
+      },
+      {
+        "op": "C8",
+        "bytes": "c8 00 c3",
+        "offset": 2185,
+        "text": "💬 \"\"",
+        "significant": true
+      },
+      {
+        "op": "C0",
+        "bytes": "c0 01",
+        "offset": 2189,
+        "text": "📍 위치: 왼쪽",
+        "significant": true
+      },
+      {
+        "op": "CC",
+        "bytes": "cc 00 00",
+        "offset": 2191,
+        "text": "👤 주인공 등장",
+        "significant": true
+      },
+      {
+        "op": "C8",
+        "bytes": "c8 00 c4",
+        "offset": 2194,
+        "text": "💬 \"[Binary Data: 25 bf]\"",
+        "significant": true
+      },
+      {
+        "op": "C0",
+        "bytes": "c0 02",
+        "offset": 2198,
+        "text": "📍 위치: 오른쪽",
+        "significant": true
+      },
+      {
+        "op": "CC",
+        "bytes": "cc 00 21",
+        "offset": 2200,
+        "text": "👤 인물 33 등장",
+        "significant": true
+      },
+      {
+        "op": "C8",
+        "bytes": "c8 00 c5",
+        "offset": 2203,
+        "text": "💬 \"\"",
+        "significant": true
+      },
+      {
+        "op": "C0",
+        "bytes": "c0 01",
+        "offset": 2207,
+        "text": "📍 위치: 왼쪽",
+        "significant": true
+      },
+      {
+        "op": "CC",
+        "bytes": "cc 00 00",
+        "offset": 2209,
+        "text": "👤 주인공 등장",
+        "significant": true
+      },
+      {
+        "op": "C8",
+        "bytes": "c8 00 c6",
+        "offset": 2212,
+        "text": "💬 \"[Binary Data: 25 d8]\"",
+        "significant": true
+      },
+      {
+        "op": "C0",
+        "bytes": "c0 02",
+        "offset": 2216,
+        "text": "📍 위치: 오른쪽",
+        "significant": true
+      },
+      {
+        "op": "CC",
+        "bytes": "cc 00 1f",
+        "offset": 2218,
+        "text": "👤 로코 등장",
+        "significant": true
+      },
+      {
+        "op": "C8",
+        "bytes": "c8 00 c7",
+        "offset": 2221,
+        "text": "💬 \"\"",
+        "significant": true
+      },
+      {
+        "op": "C0",
+        "bytes": "c0 01",
+        "offset": 2225,
+        "text": "📍 위치: 왼쪽",
+        "significant": true
+      },
+      {
+        "op": "CC",
+        "bytes": "cc 00 00",
+        "offset": 2227,
+        "text": "👤 주인공 등장",
+        "significant": true
+      },
+      {
+        "op": "C8",
+        "bytes": "c8 00 c8",
+        "offset": 2230,
+        "text": "💬 \"[Binary Data: 25 ff]\"",
+        "significant": true
+      },
+      {
+        "op": "C0",
+        "bytes": "c0 02",
+        "offset": 2234,
+        "text": "📍 위치: 오른쪽",
+        "significant": true
+      },
+      {
+        "op": "CC",
+        "bytes": "cc 00 20",
+        "offset": 2236,
+        "text": "👤 인물 32 등장",
+        "significant": true
+      },
+      {
+        "op": "C8",
+        "bytes": "c8 00 c9",
+        "offset": 2239,
+        "text": "💬 \"\"",
+        "significant": true
+      },
+      {
+        "op": "C0",
+        "bytes": "c0 02",
+        "offset": 2243,
+        "text": "📍 위치: 오른쪽",
+        "significant": true
+      },
+      {
+        "op": "CC",
+        "bytes": "cc 00 1f",
+        "offset": 2245,
+        "text": "👤 로코 등장",
+        "significant": true
+      },
+      {
+        "op": "C8",
+        "bytes": "c8 00 ca",
+        "offset": 2248,
+        "text": "💬 \"&4\"",
+        "significant": true
+      },
+      {
+        "op": "C0",
+        "bytes": "c0 02",
+        "offset": 2254,
+        "text": "📍 위치: 오른쪽",
+        "significant": true
+      },
+      {
+        "op": "CC",
+        "bytes": "cc 00 21",
+        "offset": 2256,
+        "text": "👤 인물 33 등장",
+        "significant": true
+      },
+      {
+        "op": "C8",
+        "bytes": "c8 00 cb",
+        "offset": 2259,
+        "text": "💬 \"\"",
+        "significant": true
+      },
+      {
+        "op": "C0",
+        "bytes": "c0 01",
+        "offset": 2263,
+        "text": "📍 위치: 왼쪽",
+        "significant": true
+      },
+      {
+        "op": "CC",
+        "bytes": "cc 00 00",
+        "offset": 2265,
+        "text": "👤 주인공 등장",
+        "significant": true
+      },
+      {
+        "op": "C8",
+        "bytes": "c8 00 cc",
+        "offset": 2268,
+        "text": "💬 \"&T\"",
+        "significant": true
+      },
+      {
+        "op": "C0",
+        "bytes": "c0 02",
+        "offset": 2272,
+        "text": "📍 위치: 오른쪽",
+        "significant": true
+      },
+      {
+        "op": "CC",
+        "bytes": "cc 00 21",
+        "offset": 2274,
+        "text": "👤 인물 33 등장",
+        "significant": true
+      },
+      {
+        "op": "C8",
+        "bytes": "c8 00 cd",
+        "offset": 2277,
+        "text": "💬 \"\"",
+        "significant": true
+      },
+      {
+        "op": "C0",
+        "bytes": "c0 01",
+        "offset": 2283,
+        "text": "📍 위치: 왼쪽",
+        "significant": true
+      },
+      {
+        "op": "CC",
+        "bytes": "cc 00 06",
+        "offset": 2285,
+        "text": "👤 마르코(집사) 등장",
+        "significant": true
+      },
+      {
+        "op": "C8",
+        "bytes": "c8 00 ce",
+        "offset": 2288,
+        "text": "💬 \"[Binary Data: 26 a2]\"",
+        "significant": true
+      }
+    ],
+    "next_nodes": []
+  }
+}

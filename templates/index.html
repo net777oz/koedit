@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Koedit - Uncharted Waters 2 Editor</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/style.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.5.13/cropper.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.5.13/cropper.min.js"></script>
+</head>
+<body>
+    <div class="background-decor">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+    </div>
+
+    <div class="container glass-panel">
+        <header>
+            <div class="header-content">
+                <h1>Koedit <span>Studio</span></h1>
+                <p>Uncharted Waters 2 Modding Suite</p>
+            </div>
+            <nav class="tabs">
+                <button class="tab-btn active" data-tab="portraits">🖼️ Portraits</button>
+                <button class="tab-btn" data-tab="events">📜 Events</button>
+            </nav>
+            <div class="header-actions">
+                <button id="pack-btn" class="btn btn-primary">
+                    <span class="icon">🚀</span> Pack & Apply
+                </button>
+            </div>
+        </header>
+
+        <main>
+            <!-- Portrait Editor Section -->
+            <section id="tab-portraits" class="tab-content active">
+                <div class="toolbar">
+                    <p class="status-msg" id="status-msg">Click any portrait to replace it.</p>
+                    <div class="loader-container" id="loader" style="display: none;">
+                        <div class="spinner"></div>
+                        <span>Processing...</span>
+                    </div>
+                </div>
+                <div class="grid-container" id="gallery">
+                    <!-- Images will be dynamically loaded here -->
+                </div>
+            </section>
+
+            <!-- Event Editor Section -->
+            <section id="tab-events" class="tab-content">
+                <div class="event-editor-wrapper">
+                    <div class="event-toolbar">
+                        <select id="scenario-select" class="btn scenario-selector">
+                            <option value="1/0">Scenario 1 (Joan) - Block 0</option>
+                            <option value="2/0">Scenario 2 (Catalina) - Block 0</option>
+                            <option value="3/0">Scenario 3 (Otto) - Block 0</option>
+                            <option value="4/0">Scenario 4 (Ernst) - Block 0</option>
+                            <option value="5/0">Scenario 5 (Pietro) - Block 0</option>
+                            <option value="6/0">Scenario 6 (Ali) - Block 0</option>
+                        </select>
+                        <button id="undo-btn" class="btn">↩️ Undo</button>
+                        <button id="redo-btn" class="btn">↪️ Redo</button>
+                        <button id="add-node-btn" class="btn">➕ Add Node</button>
+                        <button id="refresh-event-btn" class="btn">🔄 Reload</button>
+                        <button id="save-event-btn" class="btn btn-primary">💾 Save Scenario</button>
+                    </div>
+                    <div id="event-canvas-container" class="event-canvas">
+                        <svg id="event-svg-layer"></svg>
+                        <div id="event-node-layer"></div>
+                    </div>
+                </div>
+            </section>
+        </main>
+        
+        <!-- Hidden file input for uploading -->
+        <input type="file" id="file-input" accept=".png,.jpg,.jpeg" style="display: none;">
+        <input type="file" id="p2-input" accept=".png,.jpg,.jpeg" style="display: none;">
+        <input type="file" id="hover-input" accept=".gif,.png,.jpg,.jpeg" style="display: none;">
+    </div>
+
+    <script src="/static/script_v4.js?v=final_fix_v4"></script>
+    <script src="/static/event_editor.js"></script>
+
+    <!-- Crop Modal -->
+    <div id="crop-modal" class="modal" style="display: none;">
+        <div class="modal-content glass-panel">
+            <h3>Adjust Portrait (4:5 Ratio)</h3>
+            <div class="crop-wrapper" style="max-height: 400px; margin: 15px 0;">
+                <img id="crop-image" src="" style="max-width: 100%; display: block;">
+            </div>
+            <div class="modal-actions" style="display: flex; align-items: center; justify-content: flex-end; gap: 15px;">
+                <label class="checkbox-container" style="display: flex; align-items: center; gap: 8px; cursor: pointer; font-size: 14px; margin-right: 15px;">
+                    <input type="checkbox" id="generate-gif-check" checked> 
+                    ✨ 자동 애니메이션 생성
+                </label>
+                <button id="crop-cancel" class="btn">Cancel</button>
+                <button id="crop-confirm" class="btn btn-primary">Upload Crop</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

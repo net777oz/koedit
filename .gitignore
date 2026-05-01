@@ -1,0 +1,9 @@
+node_modules/
+__pycache__/
+*.pyc
+.DS_Store
+*.tar.gz
+*.zip
+web_client/dist/
+.env
+.antigravity/
