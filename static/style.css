@@ -115,7 +115,27 @@ header {
 .p2-badge { background: rgba(245, 158, 11, 0.2); } /* Transparent Orange */
 
 .card-id { font-size: 0.8rem; color: var(--text-muted); }
-.card-name { font-size: 0.85rem; margin-top: 5px; font-weight: 500; color: #fff; }
+.card-name {
+    margin-top: 8px;
+    font-weight: 500;
+    color: #e2e8f0;
+    cursor: pointer;
+    transition: color 0.2s;
+}
+.card-name:hover { color: #60a5fa; }
+
+.name-edit-input {
+    width: 90%;
+    background: rgba(255,255,255,0.1);
+    border: 1px solid #60a5fa;
+    color: white;
+    text-align: center;
+    border-radius: 4px;
+    padding: 2px 4px;
+    font-size: 0.9em;
+    outline: none;
+    margin-top: 6px;
+}
 
 .has-anim-badge {
     position: absolute; bottom: 5px; right: 5px; background: var(--primary); color: white;

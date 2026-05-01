@@ -89,6 +89,53 @@ document.addEventListener('DOMContentLoaded', () => {
             });
 
             gallery.appendChild(card);
+
+            // In-game Name Editing
+            const nameEl = card.querySelector('.card-name');
+            if (nameEl) {
+                nameEl.addEventListener('click', (e) => {
+                    e.stopPropagation();
+                    const oldName = nameEl.innerText;
+                    const input = document.createElement('input');
+                    input.type = 'text';
+                    input.value = oldName;
+                    input.className = 'name-edit-input';
+                    nameEl.replaceWith(input);
+                    input.focus();
+
+                    const saveName = () => {
+                        const newName = input.value.trim();
+                        if (newName && newName !== oldName) {
+                            input.disabled = true;
+                            fetch(`/api/update_name/${img.id}`, {
+                                method: 'POST',
+                                headers: { 'Content-Type': 'application/json' },
+                                body: JSON.stringify({ name: newName })
+                            }).then(res => res.json()).then(data => {
+                                if (data.success) {
+                                    const newLabel = document.createElement('div');
+                                    newLabel.className = 'card-name';
+                                    newLabel.innerText = newName;
+                                    input.replaceWith(newLabel);
+                                    // Recursive call to allow editing again
+                                    location.reload(); 
+                                } else {
+                                    alert(data.error);
+                                    input.replaceWith(nameEl);
+                                }
+                            });
+                        } else {
+                            input.replaceWith(nameEl);
+                        }
+                    };
+
+                    input.addEventListener('blur', saveName);
+                    input.addEventListener('keydown', (ke) => {
+                        if (ke.key === 'Enter') saveName();
+                        if (ke.key === 'Escape') input.replaceWith(nameEl);
+                    });
+                });
+            }
         });
     }
 

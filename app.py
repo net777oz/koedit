@@ -46,35 +46,43 @@ def home(): return redirect('/editor')
 @app.route('/editor/')
 def index(): return render_template('index.html')
 
+def get_in_game_names():
+    try:
+        with zipfile.ZipFile(GAME_DATA_ZIP, 'r') as z:
+            data = z.read('NAME.TBL')
+            names = {}
+            for i in range(192):
+                start = i * 13
+                end = start + 13
+                chunk = data[start:end].split(b'\x00')[0]
+                try: names[i + 1] = chunk.decode('cp949')
+                except: names[i + 1] = f"Unknown {i+1}"
+            return names
+    except: return {}
+
 @app.route('/api/images')
 def get_images():
     imgs = []
-    names = {
-        1: '조안 페레로', 2: '카탈리나 에란초', 3: '오토 스피노라', 4: '에르네스트 로페스', 5: '피에트로 콘티', 6: '알리 베자스',
-        7: '엔리코', 8: '필리', 9: '사누드', 10: '에제키엘', 11: '프랑코', 12: '샤를롯', 13: '루치아',
-        14: '안젤로', 15: '조반니', 16: '마튜', 17: '앤드류', 18: '로코', 19: '한스', 20: '카를로',
-        21: '니콜로', 22: '도메니코', 23: '안토니오', 24: '프란시스코', 25: '미구엘', 26: '호세',
-        36: '레온 페레로', 37: '파브리스 페레로', 38: '카를로타', 39: '마르코', 40: '루크레치아',
-        100: '실비아', 101: '베아트리체', 102: '마르가리타', 103: '리사', 104: '루치아'
+    hardcoded_names = {
+        1: '조안 페레로', 2: '카탈리나 에란초', 3: '오토 스피노라', 4: '에르네스트 로페스', 5: '피에트로 콘티', 6: '알리 베자스'
     }
+    game_names = get_in_game_names()
+    
     for i in range(1, 129):
         p1_static = f'{i:04d}.png'
         p1_anim = f'{i:04d}_v1_anim.webp'
         p2_static = f'{i:04d}_v2_static.png'
         p2_anim = f'{i:04d}_v2_anim.webp'
         
-        # Determine P1 source
         p1_src = f'/export/{p1_static}'
         if not os.path.exists(os.path.join(EXPORT_DIR, p1_static)):
-            # Fallback to originals if not in export
             if os.path.exists(os.path.join(BASE_DIR, 'originals', p1_static)):
                 p1_src = f'/originals/{p1_static}'
-            else:
-                continue # Skip if nowhere found
-        
+            else: continue
+            
         img_info = {
             'id': i,
-            'name': names.get(i, ''),
+            'name': game_names.get(i, hardcoded_names.get(i, '')),
             'p1_static': p1_src,
             'p1_anim': f'/export/{p1_anim}' if os.path.exists(os.path.join(EXPORT_DIR, p1_anim)) else None,
             'p2_static': f'/export/{p2_static}' if os.path.exists(os.path.join(EXPORT_DIR, p2_static)) else None,
@@ -82,6 +90,32 @@ def get_images():
         }
         imgs.append(img_info)
     return jsonify({'images': imgs})
+
+@app.route('/api/update_name/<int:image_id>', methods=['POST'])
+def update_name(image_id):
+    new_name = request.json.get('name', '')
+    if not new_name: return jsonify({'error': 'empty name'}), 400
+    
+    try:
+        # 1. Read existing NAME.TBL
+        with zipfile.ZipFile(GAME_DATA_ZIP, 'r') as z:
+            data = bytearray(z.read('NAME.TBL'))
+            
+        # 2. Update the 13-byte slot (image_id is 1-indexed, so -1)
+        idx = (image_id - 1) * 13
+        encoded = new_name.encode('cp949', 'ignore')[:12] # Max 12 bytes + null
+        new_chunk = encoded.ljust(13, b'\x00')
+        data[idx:idx+13] = new_chunk
+        
+        # 3. Write back to zip
+        tmp_zip = GAME_DATA_ZIP + '.tmp'
+        with zipfile.ZipFile(GAME_DATA_ZIP, 'r') as zin, zipfile.ZipFile(tmp_zip, 'w') as zout:
+            for item in zin.infolist():
+                if item.filename == 'NAME.TBL': zout.writestr('NAME.TBL', data)
+                else: zout.writestr(item, zin.read(item.filename))
+        os.replace(tmp_zip, GAME_DATA_ZIP)
+        return jsonify({'success': True})
+    except Exception as e: return jsonify({'error': str(e)}), 500
 
 @app.route('/api/upload_v1/<int:image_id>', methods=['POST'])
 def upload_v1(image_id):
