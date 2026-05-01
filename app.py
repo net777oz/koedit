@@ -51,9 +51,9 @@ def get_in_game_names():
         with zipfile.ZipFile(GAME_DATA_ZIP, 'r') as z:
             data = z.read('KOUKAI2.DAT')
             names = {}
-            start_off = 0x06A9
-            for i in range(128):
-                base = start_off + (i * 50)
+            # 1. Sailors (Mates/Protags): 50 bytes entries starting at 0x06A9
+            for i in range(120): # Assume first 120 are mates
+                base = 0x06A9 + (i * 50)
                 first = data[base:base+13].split(b'\x00')[0]
                 last = data[base+13:base+26].split(b'\x00')[0]
                 try: 
@@ -61,6 +61,18 @@ def get_in_game_names():
                     lname = last.decode('cp949').strip()
                     names[i + 1] = f"{fname} {lname}".strip()
                 except: names[i + 1] = f"Unknown {i+1}"
+            
+            # 2. Barmaids/Special NPCs: 17 bytes entries starting at 0x2100
+            # Mapping these to IDs 121-128 based on common UW2 data
+            for i in range(30): # Usually there are about 30+ barmaids
+                base = 0x2100 + (i * 17)
+                name_chunk = data[base:base+11].split(b'\x00')[0]
+                try:
+                    name = name_chunk.decode('cp949').strip()
+                    # We need to map these to the portrait IDs (97-128 area)
+                    # For now, let's assume barmaids start from 97
+                    names[97 + i] = name
+                except: pass
             return names
     except: return {}
 
@@ -94,21 +106,26 @@ def update_name(image_id):
     full_name = request.json.get('name', '')
     if not full_name: return jsonify({'error': 'empty name'}), 400
     
-    parts = full_name.split(' ', 1)
-    fname = parts[0]
-    lname = parts[1] if len(parts) > 1 else ""
-    
     try:
         with zipfile.ZipFile(GAME_DATA_ZIP, 'r') as z:
             data = bytearray(z.read('KOUKAI2.DAT'))
         
-        idx = 0x06A9 + (image_id - 1) * 50
-        # Update First Name
-        f_enc = fname.encode('cp949', 'ignore')[:12]
-        data[idx:idx+13] = f_enc.ljust(13, b'\x00')
-        # Update Last Name
-        l_enc = lname.encode('cp949', 'ignore')[:12]
-        data[idx+13:idx+26] = l_enc.ljust(13, b'\x00')
+        if image_id >= 97:
+            # Barmaid logic (17 bytes entries at 0x2100)
+            idx = 0x2100 + (image_id - 97) * 17
+            encoded = full_name.encode('cp949', 'ignore')[:10]
+            data[idx:idx+11] = encoded.ljust(11, b'\x00')
+        else:
+            # Sailor logic (50 bytes entries at 0x06A9)
+            parts = full_name.split(' ', 1)
+            fname = parts[0]
+            lname = parts[1] if len(parts) > 1 else ""
+            
+            idx = 0x06A9 + (image_id - 1) * 50
+            f_enc = fname.encode('cp949', 'ignore')[:12]
+            data[idx:idx+13] = f_enc.ljust(13, b'\x00')
+            l_enc = lname.encode('cp949', 'ignore')[:12]
+            data[idx+13:idx+26] = l_enc.ljust(13, b'\x00')
         
         tmp_zip = GAME_DATA_ZIP + '.tmp'
         with zipfile.ZipFile(GAME_DATA_ZIP, 'r') as zin, zipfile.ZipFile(tmp_zip, 'w') as zout:
