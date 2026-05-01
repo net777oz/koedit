@@ -1,0 +1,46 @@
+# 🚢 Koedit Studio: Uncharted Waters 2 Reverse Engineering Suite
+
+대항해시대 2(Uncharted Waters 2)의 자산 추출, 편집 및 실시간 검증을 위한 올인원 리버스 엔지니어링 툴킷입니다.
+
+## 🌟 주요 기능
+
+### 1. 고품격 포트레이트 시스템 (Portrait Studio)
+*   **다이내믹 풀스크린 오버레이:** 게임 내에서 어떤 비율의 이미지라도 화면에 꽉 차게 표시하며, 16세기풍 금박 액자가 이미지 테두리에 완벽하게 밀착됩니다.
+*   **P1/P2 듀얼 모드:** 한 캐릭터에 대해 두 가지 버전의 초상화를 관리하고, 클릭 한 번으로 실시간 전환하며 비교할 수 있습니다.
+*   **숨결 애니메이션 생성:** 정지 이미지를 업로드하면 AI 기반의 줌/팬 효과를 적용한 WebP 애니메이션을 자동으로 생성하여 생동감을 부여합니다.
+*   **실시간 패킹:** 편집한 초상화는 `KAO.LZW` 포맷으로 즉시 컴파일되어 게임 데이터(`water2.zip`)에 자동 반영됩니다.
+
+### 2. 지능형 이벤트 노드 에디터 (Event Node Editor)
+*   **하이브리드 대사 파서:** 메시지 ID 참조 방식(주안)과 인라인 텍스트 방식(카탈리나)을 자동으로 감지하여 모든 캐릭터의 시나리오를 깨짐 없이 편집할 수 있습니다.
+*   **시각적 워크플로우:** 복잡한 시나리오 흐름을 노드 기반으로 시각화하여 분기점과 이동 경로를 한눈에 파악합니다.
+*   **강력한 편집 도구:** 
+    *   대사 내용 실시간 수정 및 화자(Speaker) 선택 메뉴 제공
+    *   **Undo/Redo (Ctrl+Z/Y):** 모든 편집 동작을 안전하게 되돌리거나 다시 실행할 수 있습니다.
+*   **자동 오프셋 관리:** 대사 길이가 변하더라도 시나리오 내부의 모든 점프 주소를 자동으로 재계산하여 데이터 오염을 방지합니다.
+
+### 3. 통합 게임 에뮬레이터 (Integrated Emulator)
+*   **js-dos 기반:** 브라우저 내에서 즉시 게임을 실행하고 수정 사항을 실시간으로 확인합니다.
+*   **오프닝 스킵:** 지루한 오프닝 시퀀스를 자동으로 건너뛰어 바로 메인 메뉴로 진입할 수 있습니다.
+*   **스냅샷 관리:** 세이브 파일과 게임 상태를 IndexedDB에 영구 저장하여 브라우저를 껐다 켜도 작업 내용이 유지됩니다.
+
+## 🛠 기술 스택
+*   **Backend:** Python 3, Flask, Pillow (이미지 처리)
+*   **Frontend:** Vanilla JS, Preact (Game Component), Tailwind CSS
+*   **Emulator:** js-dos v7 (DOSBox Core)
+*   **Data Handling:** 리틀/빅 엔디언 바이너리 파싱, LZW 압축 처리
+
+## 🚀 시작하기
+
+1.  의존성 설치:
+    ```bash
+    pip install -r requirements.txt
+    cd web_client && npm install
+    ```
+2.  서버 실행:
+    ```bash
+    python app.py
+    ```
+3.  브라우저에서 `http://localhost:5005` 접속
+
+---
+*Developed with ❤️ by Antigravity AI for Koedit Community*
