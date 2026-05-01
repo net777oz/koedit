@@ -66,7 +66,7 @@ def decompile_block_to_nodes(data, messages=None):
     # ... (rest of the logic remains similar but with text lookup)
 
 OPCODE_LENGTHS = {
-    0xC0: 2, 0xCC: 3, 0xC8: 3, 0xC7: 1,
+    0xC0: 2, 0xCC: 3, 0xC7: 1,
     0xAD: 4, 0xAC: 4, 0xAF: 4, 0xDC: 4,
     0x01: 1, 0x02: 1, 0x0F: 3, 0x8E: 5, 0x8F: 5,
     0xF1: 1, 0xF2: 1, 0xFE: 1, 0xCA: 5, 0xCB: 5,
@@ -90,7 +90,17 @@ def decompile_block_to_nodes(data, messages=None):
     while i < len(data):
         op = data[i]
         length = OPCODE_LENGTHS.get(op, 1)
-        if op in [0xAD, 0xAC, 0xAF, 0xDC]:
+        if op == 0xC8:
+            if i + 1 < len(data):
+                msg_len = data[i+1]
+                if msg_len > 0 and i + 2 + msg_len < len(data) and data[i + 2 + msg_len] == 0x00:
+                    length = 2 + msg_len + 1
+                else:
+                    length = 3
+            else:
+                length = 1
+        
+        if op in [0xAD, 0xAC, 0xAF, 0xDC] and i + 3 < len(data):
             addr = (data[i+2] << 8) | data[i+3]
             if addr < len(data):
                 labels.add(addr)
@@ -112,14 +122,40 @@ def decompile_block_to_nodes(data, messages=None):
         while curr < end:
             op = data[curr]
             length = OPCODE_LENGTHS.get(op, 1)
+            
+            # Special case for variable length dialogue
+            if op == 0xC8:
+                # Check if it looks like inlined text: C8 [LEN] [TEXT...] [00]
+                is_inlined = False
+                if curr + 1 < len(data):
+                    msg_len = data[curr + 1]
+                    # UW2 inlined text: the byte at (curr + 2 + msg_len) MUST be 0x00
+                    if msg_len > 0 and curr + 2 + msg_len < len(data) and data[curr + 2 + msg_len] == 0x00:
+                        is_inlined = True
+                
+                if is_inlined:
+                    length = 2 + msg_len + 1
+                else:
+                    length = 3 # Fixed 3-byte ID reference
+            
             cmd_bytes = data[curr:curr+length]
             
             human_info = ""
             is_significant = True
             
-            if op == 0xC8 and messages:
-                msg_id = (cmd_bytes[1] << 8) | cmd_bytes[2]
-                human_info = f'💬 "{messages.get(msg_id, f"대사 {msg_id}")}"'
+            if op == 0xC8:
+                # If length > 3, it's definitely inlined
+                if len(cmd_bytes) > 3:
+                    try:
+                        txt_bytes = cmd_bytes[2:]
+                        if txt_bytes.endswith(b'\x00'): txt_bytes = txt_bytes[:-1]
+                        human_info = f'💬 "{txt_bytes.decode("cp949")}"'
+                    except:
+                        human_info = f'💬 [인라인 데이터 오류]'
+                else:
+                    # 3-byte ID reference
+                    msg_id = (cmd_bytes[1] << 8) | cmd_bytes[2]
+                    human_info = f'💬 "{messages.get(msg_id, f"대사 {msg_id}")}"'
             elif op == 0xCC:
                 char_id = cmd_bytes[2]
                 human_info = f'👤 {CHAR_NAMES.get(char_id, f"인물 {char_id}")} 등장'
@@ -141,13 +177,15 @@ def decompile_block_to_nodes(data, messages=None):
                 else:
                     human_info = f'⚙️ 기타 동작 ({op:02X})'
 
-            if is_significant or human_info:
+            if op == 0xC8:
+                is_inlined = (len(cmd_bytes) > 3)
                 node_cmds.append({
                     "op": f"{op:02X}",
                     "bytes": cmd_bytes.hex(' '),
                     "offset": curr,
                     "text": human_info or f"코드 {op:02X}",
-                    "significant": is_significant
+                    "significant": is_significant,
+                    "is_inlined": is_inlined
                 })
             
             # If this is a jump, record the exit target
@@ -226,10 +264,18 @@ def compile_nodes_to_block(nodes_dict):
             op = int(cmd['op'], 16)
             block_bytes.append(op)
             if op == 0xC8:
-                txt = cmd['text'].replace('💬 "', '').rstrip('"').encode('cp949', 'ignore')
-                block_bytes.append(len(txt) + 1)
-                block_bytes.extend(txt)
-                block_bytes.append(0x00)
+                is_inlined = cmd.get('is_inlined', True)
+                if is_inlined:
+                    txt = cmd['text'].replace('💬 "', '').rstrip('"').encode('cp949', 'ignore')
+                    block_bytes.append(len(txt) + 1)
+                    block_bytes.extend(txt)
+                    block_bytes.append(0x00)
+                else:
+                    # Keep original ID reference if text wasn't modified significantly
+                    # (In a real case we might want to check if text matches MES, but for now
+                    # we trust the is_inlined flag from decompiler)
+                    orig = bytes.fromhex(cmd['bytes'])
+                    block_bytes.extend(orig[1:])
             elif op in [0xAD, 0xAC]:
                 target = node['next_nodes'][0] if node['next_nodes'] else nid
                 off = node_offsets.get(target, 0)
