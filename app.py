@@ -3,7 +3,7 @@ from flask import Flask, render_template, request, jsonify, send_from_directory,
 from PIL import Image
 import scenario_engine
 
-app = Flask(__name__)
+app = Flask(__name__, template_folder=os.path.join('/home/net77/koedit', 'templates'))
 BASE_DIR = '/home/net77/koedit'
 EXPORT_DIR = os.path.join(BASE_DIR, 'export')
 VENV_PYTHON = os.path.join(BASE_DIR, 'venv/bin/python3')
@@ -279,5 +279,8 @@ def serve_favicon_ico():
     path = os.path.join(GAME_DIST, 'favicon.ico')
     if os.path.exists(path): return send_from_directory(GAME_DIST, 'favicon.ico')
     return '', 204
+
+@app.route('/viewer')
+def viewer(): return render_template('viewer.html')
 
 if __name__ == '__main__': app.run(host='0.0.0.0', port=5005)
