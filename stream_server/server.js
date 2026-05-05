@@ -25,6 +25,7 @@ wss.on('connection', (ws, req) => {
       if (msg.type === 'keydown') await page.keyboard.down(msg.key).catch(() => {});
       else if (msg.type === 'keyup') await page.keyboard.up(msg.key).catch(() => {});
       else if (msg.type === 'click') await page.mouse.click(msg.x, msg.y).catch(() => {});
+      else if (msg.type === 'mousemove') await page.mouse.move(msg.x, msg.y).catch(() => {});
     } catch (e) {}
   });
 

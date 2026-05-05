@@ -215,29 +215,77 @@
 
     // ── 게임패드 지원 (Web Gamepad API) ──────────────────────────────────
     var BUTTON_MAP = {
-      0:  'Enter',      // A / Cross
-      1:  'Escape',     // B / Circle
-      2:  'Space',      // X / Square
-      3:  'Tab',        // Y / Triangle
-      4:  'PageUp',     // L1
-      5:  'PageDown',   // R1
-      8:  'Escape',     // Select
-      9:  'Enter',      // Start
-      12: 'ArrowUp',    // D-pad ↑
-      13: 'ArrowDown',  // D-pad ↓
-      14: 'ArrowLeft',  // D-pad ←
-      15: 'ArrowRight', // D-pad →
+      0:  'Enter',     // A / Cross
+      1:  'Escape',    // B / Circle
+      2:  'Space',     // X / Square
+      3:  'Tab',       // Y / Triangle
+      4:  'PageUp',    // L1
+      5:  'PageDown',  // R1
+      6:  'F9',        // L2 → 매크로 녹화
+      7:  'F10',       // R2 → 매크로 재생
+      // 8: Select → Escape (별도 처리)
+      9:  'Enter',     // Start
+      12: 'Numpad8',   // D-pad ↑
+      13: 'Numpad2',   // D-pad ↓
+      14: 'Numpad4',   // D-pad ←
+      15: 'Numpad6',   // D-pad →
     };
-    var AXIS_DEADZONE = 0.5;
-    var AXIS_DIRS = [
-      { name:'axisLeft',  key:'ArrowLeft',  axis:0, sign:-1 },
-      { name:'axisRight', key:'ArrowRight', axis:0, sign: 1 },
-      { name:'axisUp',    key:'ArrowUp',    axis:1, sign:-1 },
-      { name:'axisDown',  key:'ArrowDown',  axis:1, sign: 1 },
-    ];
+    var AXIS_DEADZONE   = 0.4;
+    var CURSOR_DEADZONE = 0.15;
+    var CURSOR_SPEED    = 5;   // 게임 픽셀 per frame (full deflection 기준)
+    var CURSOR_INTERVAL = 33;  // mousemove 전송 최소 간격 ms (~30fps)
+
+    // 8방향 넘패드 dirs (atan2 기반)
+    var EIGHT_DIRS = ['Numpad6','Numpad3','Numpad2','Numpad1',
+                      'Numpad4','Numpad7','Numpad8','Numpad9'];
+    function get8Dir(x, y, dz) {
+      if (Math.sqrt(x*x + y*y) < dz) return null;
+      var deg = ((Math.atan2(y, x) * 180 / Math.PI) + 360) % 360;
+      return EIGHT_DIRS[Math.round(deg / 45) % 8];
+    }
+
     var prevButtons = {};
-    var prevAxes = {};
-    var padRaf = null;
+    var prevDir     = null;  // 왼쪽 스틱 8방향
+    var padRaf      = null;
+
+    // 게임패드 가상 커서 (게임 픽셀 좌표)
+    var cursorGameX = 0;
+    var cursorGameY = 0;
+    var lastMoveSent = 0;
+
+    // 커서 div
+    var padCursor = document.createElement('div');
+    padCursor.style.cssText = 'position:fixed;display:none;pointer-events:none;z-index:600;' +
+      'width:20px;height:20px;line-height:20px;text-align:center;font-size:18px;color:#fff;' +
+      'transform:translate(-10px,-10px);filter:drop-shadow(0 0 2px #000);user-select:none;';
+    padCursor.textContent = '✛';
+    document.body.appendChild(padCursor);
+
+    // 게임 픽셀 → 화면 CSS 좌표 변환 (letterbox 고려)
+    function gamePxToClient(gx, gy) {
+      var rect = canvas.getBoundingClientRect();
+      var imgRatio = canvas.width / canvas.height;
+      var elRatio  = rect.width / rect.height;
+      var actualWidth, actualHeight, offsetX, offsetY;
+      if (elRatio > imgRatio) {
+        actualWidth  = rect.height * imgRatio; actualHeight = rect.height;
+        offsetX = (rect.width - actualWidth) / 2; offsetY = 0;
+      } else {
+        actualWidth  = rect.width; actualHeight = rect.width / imgRatio;
+        offsetX = 0; offsetY = (rect.height - actualHeight) / 2;
+      }
+      return {
+        x: rect.left + offsetX + gx * (actualWidth / canvas.width),
+        y: rect.top  + offsetY + gy * (actualHeight / canvas.height),
+      };
+    }
+
+    function updateCursorDiv(gx, gy) {
+      var p = gamePxToClient(gx, gy);
+      padCursor.style.left = p.x + 'px';
+      padCursor.style.top  = p.y + 'px';
+      padCursor.style.display = 'block';
+    }
 
     var padIndicator = document.createElement('div');
     padIndicator.style.cssText = 'position:fixed;top:10px;left:14px;font-size:13px;' +
@@ -256,32 +304,60 @@
       var pad = null;
       for (var i = 0; i < pads.length; i++) { if (pads[i]) { pad = pads[i]; break; } }
       if (pad) {
-        // 버튼
-        for (var idx in BUTTON_MAP) {
-          var btn = pad.buttons[idx];
-          if (!btn) continue;
+        // ── 버튼 ─────────────────────────────────────────────────────
+        pad.buttons.forEach(function(btn, idx) {
           var pressed = btn.pressed;
           var was = prevButtons[idx] || false;
-          if (pressed && !was) sendGamepadKey('keydown', BUTTON_MAP[idx]);
-          if (!pressed && was) sendGamepadKey('keyup', BUTTON_MAP[idx]);
+          if (idx === 8) {
+            // Select → Escape
+            if (pressed && !was) sendGamepadKey('keydown', 'Escape');
+            if (!pressed && was) sendGamepadKey('keyup',   'Escape');
+          } else if (idx === 11) {
+            // R3 → 커서 위치 클릭
+            if (pressed && !was) {
+              if (ws && ws.readyState === 1) {
+                ws.send(JSON.stringify({ type: 'click',
+                  x: Math.round(cursorGameX), y: Math.round(cursorGameY) }));
+              }
+            }
+          } else if (BUTTON_MAP[idx] !== undefined) {
+            if (pressed && !was) sendGamepadKey('keydown', BUTTON_MAP[idx]);
+            if (!pressed && was) sendGamepadKey('keyup',   BUTTON_MAP[idx]);
+          }
           prevButtons[idx] = pressed;
-        }
-        // 왼쪽 아날로그 스틱
-        AXIS_DIRS.forEach(function(d) {
-          var val = (pad.axes[d.axis] || 0) * d.sign;
-          var active = val > AXIS_DEADZONE;
-          var wasActive = prevAxes[d.name] || false;
-          if (active && !wasActive) sendGamepadKey('keydown', d.key);
-          if (!active && wasActive) sendGamepadKey('keyup', d.key);
-          prevAxes[d.name] = active;
         });
+
+        // ── 왼쪽 스틱 → 8방향 넘패드 ────────────────────────────────
+        var newDir = get8Dir(pad.axes[0] || 0, pad.axes[1] || 0, AXIS_DEADZONE);
+        if (newDir !== prevDir) {
+          if (prevDir) sendGamepadKey('keyup',   prevDir);
+          if (newDir)  sendGamepadKey('keydown', newDir);
+          prevDir = newDir;
+        }
+
+        // ── 오른쪽 스틱 → 커서 ───────────────────────────────────────
+        var rx = pad.axes[2] || 0;
+        var ry = pad.axes[3] || 0;
+        var dx = Math.abs(rx) > CURSOR_DEADZONE ? rx * CURSOR_SPEED : 0;
+        var dy = Math.abs(ry) > CURSOR_DEADZONE ? ry * CURSOR_SPEED : 0;
+        if (dx !== 0 || dy !== 0) {
+          cursorGameX = Math.max(0, Math.min(canvas.width,  cursorGameX + dx));
+          cursorGameY = Math.max(0, Math.min(canvas.height, cursorGameY + dy));
+          updateCursorDiv(cursorGameX, cursorGameY);
+          var now = Date.now();
+          if (now - lastMoveSent >= CURSOR_INTERVAL && ws && ws.readyState === 1) {
+            var gp = gamePxToClient(cursorGameX, cursorGameY);
+            ws.send(JSON.stringify({ type: 'mousemove', x: Math.round(gp.x), y: Math.round(gp.y) }));
+            lastMoveSent = now;
+          }
+        }
       }
       padRaf = requestAnimationFrame(pollGamepad);
     }
 
     function startPadPolling() {
       if (padRaf) cancelAnimationFrame(padRaf);
-      prevButtons = {}; prevAxes = {};
+      prevButtons = {}; prevDir = null;
       padRaf = requestAnimationFrame(pollGamepad);
     }
 
@@ -295,9 +371,8 @@
         var pads = navigator.getGamepads();
         var remaining = null;
         for (var i = 0; i < pads.length; i++) { if (pads[i]) { remaining = pads[i]; break; } }
-        if (!remaining) { padIndicator.style.display = 'none'; }
+        if (!remaining) { padIndicator.style.display = 'none'; padCursor.style.display = 'none'; }
       });
-      // 이미 연결된 패드
       var existing = null;
       var gps = navigator.getGamepads();
       for (var gi = 0; gi < gps.length; gi++) { if (gps[gi]) { existing = gps[gi]; break; } }
