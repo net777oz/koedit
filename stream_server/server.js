@@ -4,7 +4,7 @@ const { WebSocketServer } = require('ws');
 const GAME_URL     = 'http://localhost:5005/emulator/?stream=true';
 const WS_PORT      = 5174;
 const TARGET_FPS   = 30;
-const JPEG_QUALITY = 75;
+const JPEG_QUALITY = 90;
 const VIEWPORT     = { width: 1280, height: 960 };
 
 let page = null;
@@ -48,31 +48,47 @@ function broadcastAudio(audioData) {
 }
 
 function startCapture() {
-  if (captureInterval) clearInterval(captureInterval);
-  const interval = Math.floor(1000 / TARGET_FPS);
-  let capturing = false;
-  captureInterval = setInterval(async () => {
-    if (clients.size === 0 || !page || capturing) return;
-    capturing = true;
+  if (captureInterval) clearTimeout(captureInterval);
+  captureInterval = null;
+
+  const minInterval = Math.floor(1000 / TARGET_FPS);
+  let loopId = 0;
+  startCapture._loopId = (startCapture._loopId || 0) + 1;
+  const myId = startCapture._loopId;
+
+  // 게임 캔버스 영역 캐시 (첫 캡처 시 한 번만 조회)
+  let clipRect = null;
+
+  async function captureLoop() {
+    if (!page || startCapture._loopId !== myId) return;
+    const t0 = Date.now();
     try {
-      const frame = await page.screenshot({
-        type: 'jpeg',
-        quality: JPEG_QUALITY,
-        encoding: 'binary',
-      });
-      const buf = Buffer.isBuffer(frame) ? frame : Buffer.from(frame);
-      // 비디오 데이터 앞에 0x00 태그를 붙여 전송
-      const taggedBuf = Buffer.concat([Buffer.from([0x00]), buf]);
-      for (const ws of clients) {
-        if (ws.readyState === 1) {
-          ws.send(taggedBuf, { binary: true }, (err) => {
-            if (err) clients.delete(ws);
-          });
+      if (clients.size > 0) {
+        const frame = await page.screenshot({
+          type: 'jpeg',
+          quality: JPEG_QUALITY,
+          encoding: 'binary',
+        });
+        const buf = Buffer.isBuffer(frame) ? frame : Buffer.from(frame);
+        const taggedBuf = Buffer.concat([Buffer.from([0x00]), buf]);
+        for (const ws of clients) {
+          if (ws.readyState === 1) {
+            ws.send(taggedBuf, { binary: true }, (err) => {
+              if (err) clients.delete(ws);
+            });
+          }
         }
       }
     } catch (e) {}
-    finally { capturing = false; }
-  }, interval);
+    if (startCapture._loopId !== myId) return;
+    const elapsed = Date.now() - t0;
+    const wait = clients.size > 0
+      ? Math.max(0, minInterval - elapsed)
+      : 500; // 클라이언트 없으면 500ms 대기
+    captureInterval = setTimeout(captureLoop, wait);
+  }
+
+  captureLoop();
 }
 
 async function startBrowser() {
@@ -153,7 +169,7 @@ async function startBrowser() {
 
   browser.on('disconnected', () => {
     console.error('[Stream] Browser disconnected. Restarting in 3s...');
-    clearInterval(captureInterval);
+    clearTimeout(captureInterval);
     page = null;
     setTimeout(() => startBrowser(), 3000);
   });
@@ -166,7 +182,7 @@ startBrowser().catch((err) => {
 
 process.on('SIGINT', () => {
   console.log('\n[Stream] Shutting down...');
-  clearInterval(captureInterval);
+  clearTimeout(captureInterval);
   wss.close();
   process.exit(0);
 });

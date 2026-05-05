@@ -3,11 +3,12 @@ from flask import Flask, render_template, request, jsonify, send_from_directory,
 from PIL import Image
 import scenario_engine
 
-app = Flask(__name__, template_folder=os.path.join('/home/net77/koedit', 'templates'))
+app = Flask(__name__, template_folder=os.path.join('/home/net77/koedit', 'templates'), static_folder=None)
 BASE_DIR = '/home/net77/koedit'
 EXPORT_DIR = os.path.join(BASE_DIR, 'export')
 VENV_PYTHON = os.path.join(BASE_DIR, 'venv/bin/python3')
 GAME_DATA_DIR = os.path.join(BASE_DIR, 'game_data')
+GAME_ZIP_DIR = os.path.join(BASE_DIR, 'web_client/game')
 GAME_DATA_ZIP = os.path.join(GAME_DATA_DIR, 'water2.zip')
 GAME_DIST = os.path.join(BASE_DIR, 'web_client/dist')
 
@@ -254,19 +255,36 @@ def save_scenario(snr_id, block_idx):
 def get_characters(): return jsonify(scenario_engine.CHAR_NAMES)
 
 @app.route('/export/<filename>')
-def serve_export(filename): return send_from_directory(EXPORT_DIR, filename)
+def serve_export(filename):
+    path = os.path.join(EXPORT_DIR, filename)
+    if os.path.exists(path):
+        return send_from_directory(EXPORT_DIR, filename)
+    # fallback to originals/
+    orig = os.path.join(BASE_DIR, 'originals', filename)
+    if os.path.exists(orig):
+        return send_from_directory(os.path.join(BASE_DIR, 'originals'), filename)
+    return ('Not found', 404)
 
 @app.route('/originals/<filename>')
 def serve_originals(filename): return send_from_directory(os.path.join(BASE_DIR, 'originals'), filename)
+
+@app.route('/assets/<path:filename>')
+def serve_dist_assets(filename):
+    return send_from_directory(os.path.join(GAME_DIST, 'assets'), filename)
 
 @app.route('/emulator')
 @app.route('/emulator/')
 def serve_emulator(): return send_from_directory(GAME_DIST, 'index.html')
 
 @app.route('/emulator/<path:filename>')
-@app.route('/static/game/<path:filename>')
+@app.route('/static/<path:filename>')
 def serve_assets(filename):
-    if filename.endswith('water2.zip'): return send_from_directory(GAME_DATA_DIR, 'water2.zip')
+    if filename.endswith('.zip') and os.path.exists(os.path.join(GAME_ZIP_DIR, os.path.basename(filename))):
+        return send_from_directory(GAME_ZIP_DIR, os.path.basename(filename))
+    # check static/ folder first (for style.css, js files, etc.)
+    static_path = os.path.join(BASE_DIR, 'static', filename)
+    if os.path.exists(static_path):
+        return send_from_directory(os.path.join(BASE_DIR, 'static'), filename)
     return send_from_directory(GAME_DIST, filename)
 
 @app.route('/favicon-128x128.png')

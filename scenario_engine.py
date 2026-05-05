@@ -60,11 +60,6 @@ def get_message_map(snr_id):
             idx = end + 1
     return messages
 
-def decompile_block_to_nodes(data, messages=None):
-    nodes = {}
-    labels = {0}
-    # ... (rest of the logic remains similar but with text lookup)
-
 OPCODE_LENGTHS = {
     0xC0: 2, 0xCC: 3, 0xC7: 1,
     0xAD: 4, 0xAC: 4, 0xAF: 4, 0xDC: 4,
@@ -177,17 +172,17 @@ def decompile_block_to_nodes(data, messages=None):
                 else:
                     human_info = f'⚙️ 기타 동작 ({op:02X})'
 
+            cmd_entry = {
+                "op": f"{op:02X}",
+                "bytes": cmd_bytes.hex(' '),
+                "offset": curr,
+                "text": human_info or f"코드 {op:02X}",
+                "significant": is_significant,
+            }
             if op == 0xC8:
-                is_inlined = (len(cmd_bytes) > 3)
-                node_cmds.append({
-                    "op": f"{op:02X}",
-                    "bytes": cmd_bytes.hex(' '),
-                    "offset": curr,
-                    "text": human_info or f"코드 {op:02X}",
-                    "significant": is_significant,
-                    "is_inlined": is_inlined
-                })
-            
+                cmd_entry["is_inlined"] = (len(cmd_bytes) > 3)
+            node_cmds.append(cmd_entry)
+
             # If this is a jump, record the exit target
             exit_target = None
             if op in [0xAD, 0xAC, 0xAF, 0xDC]:
@@ -204,36 +199,6 @@ def decompile_block_to_nodes(data, messages=None):
         
     return nodes
 
-def compile_nodes_to_block(nodes_dict):
-    # Sort nodes by their original order (though we could reorder them)
-    sorted_node_ids = sorted(nodes_dict.keys(), key=lambda x: int(x.split('_')[1], 16))
-    
-    # 1. First pass: Assign new offsets
-    new_offsets = {}
-    current_offset = 0
-    for nid in sorted_node_ids:
-        new_offsets[nid] = current_offset
-        node = nodes_dict[nid]
-        for cmd in node['commands']:
-            current_offset += len(bytes.fromhex(cmd['bytes']))
-            
-    # 2. Second pass: Update jump targets and assemble bytes
-    final_bytes = bytearray()
-    for nid in sorted_node_ids:
-        node = nodes_dict[nid]
-        for cmd in node['commands']:
-            raw = bytearray(bytes.fromhex(cmd['bytes']))
-            op = raw[0]
-            if op in [0xAD, 0xAC, 0xAF, 0xDC]:
-                # Update the target address
-                target_id = node['next_nodes'][0]
-                if target_id in new_offsets:
-                    new_addr = new_offsets[target_id]
-                    raw[2] = (new_addr >> 8) & 0xFF
-                    raw[3] = new_addr & 0xFF
-            final_bytes.extend(raw)
-            
-    return bytes(final_bytes)
 def compile_nodes_to_block(nodes_dict):
     # Pass 1: Calculate offsets for each node
     node_offsets = {}
