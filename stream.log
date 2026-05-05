@@ -1,5 +1,5 @@
 [Stream] WebSocket server started -> ws://0.0.0.0:5174
 [Stream] Starting headless Chromium with Audio Capture...
 [Stream] Loading game page: http://localhost:5005/emulator/?stream=true
-[Stream] Client connected: ::1 (total: 1)
 [Stream] Game loaded! Capture started.
+[Stream] Client connected: ::1 (total: 1)
