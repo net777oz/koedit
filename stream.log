@@ -3,5 +3,3 @@
 [Stream] Loading game page: http://localhost:5005/emulator/?stream=true
 [Stream] Game loaded! Capture started.
 [Stream] Client connected: ::1 (total: 1)
-[Stream] Client disconnected. Remaining: 0
-[Stream] Client connected: ::1 (total: 1)

@@ -268,6 +268,43 @@ def serve_export(filename):
 @app.route('/originals/<filename>')
 def serve_originals(filename): return send_from_directory(os.path.join(BASE_DIR, 'originals'), filename)
 
+GAMEPAD_MAPPING_PATH = os.path.join(BASE_DIR, 'game_data', 'gamepad_mapping.json')
+DEFAULT_GAMEPAD_MAPPING = {
+    "buttons": {
+        "0":  {"code": "Enter",    "key": "Enter"},
+        "1":  {"code": "Escape",   "key": "Escape"},
+        "2":  {"code": "Space",    "key": " "},
+        "3":  {"code": "Tab",      "key": "Tab"},
+        "4":  {"code": "PageUp",   "key": "PageUp"},
+        "5":  {"code": "PageDown", "key": "PageDown"},
+        "6":  {"code": "F9",       "key": "F9"},
+        "7":  {"code": "F10",      "key": "F10"},
+        "8":  {"code": "Escape",   "key": "Escape"},
+        "9":  {"code": "Enter",    "key": "Enter"},
+        "12": {"code": "Numpad8",  "key": "8"},
+        "13": {"code": "Numpad2",  "key": "2"},
+        "14": {"code": "Numpad4",  "key": "4"},
+        "15": {"code": "Numpad6",  "key": "6"},
+    }
+}
+
+@app.route('/api/gamepad-mapping', methods=['GET'])
+def get_gamepad_mapping():
+    if os.path.exists(GAMEPAD_MAPPING_PATH):
+        with open(GAMEPAD_MAPPING_PATH, 'r', encoding='utf-8') as f:
+            return json.dumps(json.load(f)), 200, {'Content-Type': 'application/json'}
+    return json.dumps(DEFAULT_GAMEPAD_MAPPING), 200, {'Content-Type': 'application/json'}
+
+@app.route('/api/gamepad-mapping', methods=['POST'])
+def set_gamepad_mapping():
+    data = request.get_json(silent=True)
+    if not data or 'buttons' not in data:
+        return json.dumps({'error': 'invalid'}), 400, {'Content-Type': 'application/json'}
+    os.makedirs(os.path.dirname(GAMEPAD_MAPPING_PATH), exist_ok=True)
+    with open(GAMEPAD_MAPPING_PATH, 'w', encoding='utf-8') as f:
+        json.dump(data, f, ensure_ascii=False, indent=2)
+    return json.dumps({'ok': True}), 200, {'Content-Type': 'application/json'}
+
 @app.route('/assets/<path:filename>')
 def serve_dist_assets(filename):
     return send_from_directory(os.path.join(GAME_DIST, 'assets'), filename)
