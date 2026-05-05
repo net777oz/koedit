@@ -213,6 +213,102 @@
     document.addEventListener('keydown', function(e) { sendKey('keydown', e); });
     document.addEventListener('keyup',   function(e) { sendKey('keyup', e); });
 
+    // ── 게임패드 지원 (Web Gamepad API) ──────────────────────────────────
+    var BUTTON_MAP = {
+      0:  'Enter',      // A / Cross
+      1:  'Escape',     // B / Circle
+      2:  'Space',      // X / Square
+      3:  'Tab',        // Y / Triangle
+      4:  'PageUp',     // L1
+      5:  'PageDown',   // R1
+      8:  'Escape',     // Select
+      9:  'Enter',      // Start
+      12: 'ArrowUp',    // D-pad ↑
+      13: 'ArrowDown',  // D-pad ↓
+      14: 'ArrowLeft',  // D-pad ←
+      15: 'ArrowRight', // D-pad →
+    };
+    var AXIS_DEADZONE = 0.5;
+    var AXIS_DIRS = [
+      { name:'axisLeft',  key:'ArrowLeft',  axis:0, sign:-1 },
+      { name:'axisRight', key:'ArrowRight', axis:0, sign: 1 },
+      { name:'axisUp',    key:'ArrowUp',    axis:1, sign:-1 },
+      { name:'axisDown',  key:'ArrowDown',  axis:1, sign: 1 },
+    ];
+    var prevButtons = {};
+    var prevAxes = {};
+    var padRaf = null;
+
+    var padIndicator = document.createElement('div');
+    padIndicator.style.cssText = 'position:fixed;top:10px;left:14px;font-size:13px;' +
+      'color:#fff;background:rgba(0,80,200,0.85);padding:3px 10px;border-radius:4px;' +
+      'pointer-events:none;z-index:200;display:none;text-shadow:1px 1px 2px #000';
+    document.body.appendChild(padIndicator);
+
+    function sendGamepadKey(type, key) {
+      if (!ws || ws.readyState !== 1) return;
+      ws.send(JSON.stringify({ type: type, key: key }));
+    }
+
+    function pollGamepad() {
+      if (!navigator.getGamepads) return;
+      var pads = navigator.getGamepads();
+      var pad = null;
+      for (var i = 0; i < pads.length; i++) { if (pads[i]) { pad = pads[i]; break; } }
+      if (pad) {
+        // 버튼
+        for (var idx in BUTTON_MAP) {
+          var btn = pad.buttons[idx];
+          if (!btn) continue;
+          var pressed = btn.pressed;
+          var was = prevButtons[idx] || false;
+          if (pressed && !was) sendGamepadKey('keydown', BUTTON_MAP[idx]);
+          if (!pressed && was) sendGamepadKey('keyup', BUTTON_MAP[idx]);
+          prevButtons[idx] = pressed;
+        }
+        // 왼쪽 아날로그 스틱
+        AXIS_DIRS.forEach(function(d) {
+          var val = (pad.axes[d.axis] || 0) * d.sign;
+          var active = val > AXIS_DEADZONE;
+          var wasActive = prevAxes[d.name] || false;
+          if (active && !wasActive) sendGamepadKey('keydown', d.key);
+          if (!active && wasActive) sendGamepadKey('keyup', d.key);
+          prevAxes[d.name] = active;
+        });
+      }
+      padRaf = requestAnimationFrame(pollGamepad);
+    }
+
+    function startPadPolling() {
+      if (padRaf) cancelAnimationFrame(padRaf);
+      prevButtons = {}; prevAxes = {};
+      padRaf = requestAnimationFrame(pollGamepad);
+    }
+
+    if (typeof navigator.getGamepads === 'function') {
+      window.addEventListener('gamepadconnected', function(e) {
+        padIndicator.textContent = '🎮 ' + (e.gamepad.id.split('(')[0].trim() || '게임패드 연결됨');
+        padIndicator.style.display = 'block';
+        startPadPolling();
+      });
+      window.addEventListener('gamepaddisconnected', function() {
+        var pads = navigator.getGamepads();
+        var remaining = null;
+        for (var i = 0; i < pads.length; i++) { if (pads[i]) { remaining = pads[i]; break; } }
+        if (!remaining) { padIndicator.style.display = 'none'; }
+      });
+      // 이미 연결된 패드
+      var existing = null;
+      var gps = navigator.getGamepads();
+      for (var gi = 0; gi < gps.length; gi++) { if (gps[gi]) { existing = gps[gi]; break; } }
+      if (existing) {
+        padIndicator.textContent = '🎮 ' + (existing.id.split('(')[0].trim() || '게임패드');
+        padIndicator.style.display = 'block';
+        startPadPolling();
+      }
+    }
+    // ─────────────────────────────────────────────────────────────────────
+
     canvas.addEventListener('click', function(e) {
       if (!ws || ws.readyState !== 1) return;
       var rect = canvas.getBoundingClientRect();
