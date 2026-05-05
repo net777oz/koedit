@@ -1,0 +1,60 @@
+{
+  "buttons": {
+    "0": {
+      "code": "Enter",
+      "key": "Enter"
+    },
+    "1": {
+      "code": "Escape",
+      "key": "Escape"
+    },
+    "2": {
+      "code": "NumpadDivide",
+      "key": "/"
+    },
+    "3": {
+      "code": "NumpadMultiply",
+      "key": "*"
+    },
+    "4": {
+      "code": "F9",
+      "key": "F9"
+    },
+    "5": {
+      "code": "NumpadSubtract",
+      "key": "-"
+    },
+    "6": {
+      "code": "F10",
+      "key": "F10"
+    },
+    "7": {
+      "code": "NumpadAdd",
+      "key": "+"
+    },
+    "8": {
+      "code": "Escape",
+      "key": "Escape"
+    },
+    "9": {
+      "code": "Enter",
+      "key": "Enter"
+    },
+    "12": {
+      "code": "Numpad8",
+      "key": "8"
+    },
+    "13": {
+      "code": "Numpad2",
+      "key": "2"
+    },
+    "14": {
+      "code": "Numpad4",
+      "key": "4"
+    },
+    "15": {
+      "code": "Numpad6",
+      "key": "6"
+    }
+  }
+}
